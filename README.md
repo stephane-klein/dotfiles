@@ -10,9 +10,15 @@ So far, only GNU/Linux Fedora is supported.
 
 Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_once_install-fedora-packages.sh.tmpl) (idempotent and POSIX compliant) script would be executed once.
 
+## What I use
+
+- OS: Fedora 36
+- Text Editor: Neovim
+- Shell: zsh with oh-my-zsh
+
 ## Getting started
 
-## Install chezmoi and the dotfiles on any new machine
+### Install chezmoi and the dotfiles on any new machine
 
 With a single command:
 
