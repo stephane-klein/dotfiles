@@ -4,6 +4,37 @@ lua require('plugins')
 set background=dark
 colorscheme gruvbox
 
+" Misc config to be documented
+set clipboard=unnamedplus
+
+set cmdheight=1
+set cursorline
+
+" Indentline
+set expandtab
+set shiftwidth=4
+set smartindent
+set tabstop=4
+
+set ignorecase
+set mouse=a
+
+set number
+set numberwidth=2
+set norelativenumber
+set ruler
+
+set signcolumn=yes
+set splitbelow
+set splitright
+set termguicolors
+
+set timeoutlen=600 " keyboard sequence
+
+set undofile
+
+" End misc config
+
 " Configure keyboard shortcuts
 let mapleader =" "
 
