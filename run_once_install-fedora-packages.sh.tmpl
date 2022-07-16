@@ -26,12 +26,18 @@ sudo dnf install -y \
     jq \
     dnf-plugins-core
 
-# Install Docker
+# Install Docker (see https://docs.docker.com/engine/install/fedora/)
+sudo dnf remove -y podman
 sudo dnf config-manager -y \
     --add-repo \
     https://download.docker.com/linux/fedora/docker-ce.repo
 
-sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin iptables fuse-overlayfs
+
+# https://docs.docker.com/engine/install/linux-postinstall/
+sudo usermod -aG docker $USER
+
+dockerd-rootless-setuptool.sh install
 
 sudo dnf builddep -y python3
 
@@ -58,6 +64,7 @@ asdf plugin add yarn || true
 
 echo "Launch 'source ~/.zshrc' to reload zsh configuration"
 echo "Launch 'asdf install' to install ~/.tool-versions dependencies"
+echo "User added to docker group, then you need to restart session"
 
 {{   end }}
 {{ end }}
