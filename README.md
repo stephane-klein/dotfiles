@@ -13,7 +13,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 ## What I use
 
 - OS: Fedora 36
-- Text Editor: Neovim
+- Text Editor: [neovim](https://github.com/neovim/neovim) with [Packer](https://github.com/wbthomason/packer.nvim) plugin manager
 - Shell: zsh with oh-my-zsh
 - [asdf](https://github.com/asdf-vm/asdf) for manage Python, Node, Go, pnpm, terraform… installation
 - Docker
