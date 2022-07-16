@@ -1,0 +1,16 @@
+[init]
+        defaultBranch = main
+[user]
+        email = contact@stephane-klein.info
+        name = Stéphane Klein
+[push]
+        default = current
+[pull]
+        rebase = true
+[color]
+        ui = true
+[core]
+        pager = cat
+[merge]
+        conflictstyle = diff3
+
