@@ -15,6 +15,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 - OS: Fedora 36
 - Text Editor: Neovim
 - Shell: zsh with oh-my-zsh
+- [asdf](https://github.com/asdf-vm/asdf) for manage Python, Node, Go, pnpm, terraform… installation
 
 ## Getting started
 
