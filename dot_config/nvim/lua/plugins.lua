@@ -10,4 +10,7 @@ return require('packer').startup(function()
 
   -- Theme
   use { 'morhetz/gruvbox' }
+
+  -- Git
+  use 'tpope/vim-fugitive'
 end)
