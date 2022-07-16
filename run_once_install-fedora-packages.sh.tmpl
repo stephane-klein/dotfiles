@@ -20,12 +20,15 @@ if ! [ -d ~/.oh-my-zsh ]; then
 fi
 
 # Install asdf
-
 if ! [ -d ~/.asdf ]; then
     git -c advice.detachedHead=false clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 fi
 . $HOME/.asdf/asdf.sh
 asdf update
+asdf plugin add nodejs
+asdf plugin add pnpm
+asdf plugin add python
+asdf plugin add yarn
 
 {{   end }}
 {{ end }}
