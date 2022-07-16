@@ -11,8 +11,12 @@ sudo dnf install -y \
     zsh \
     neovim \
     ripgrep \
-    patch \
-    bzip2-devel
+    patch
+
+sudo dnf builddep python3
+
+# neovim dependencies: ripgrep
+# asdf python dependencies: patch and "dnf builddep python3"
 
 set -e # -e: exit on error
 
