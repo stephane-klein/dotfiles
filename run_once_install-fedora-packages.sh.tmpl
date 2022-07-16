@@ -10,9 +10,9 @@ sudo dnf install -y \
     util-linux-user \
     zsh \
     neovim \
-    ripgrep \ # neovim dependency
-    patch \ # asdf python dependency
-    bzip2-devel # asdf python dependency
+    ripgrep \
+    patch \
+    bzip2-devel
 
 set -e # -e: exit on error
 
@@ -27,10 +27,10 @@ if ! [ -d ~/.asdf ]; then
 fi
 . $HOME/.asdf/asdf.sh
 asdf update
-asdf plugin add nodejs
-asdf plugin add pnpm
-asdf plugin add python
-asdf plugin add yarn
+asdf plugin add nodejs || true
+asdf plugin add pnpm  || true
+asdf plugin add python  || true
+asdf plugin add yarn || true
 
 echo "Launch 'source ~/.zshrc' to reload zsh configuration"
 echo "Launch 'asdf install' to install ~/.tool-versions dependencies"
