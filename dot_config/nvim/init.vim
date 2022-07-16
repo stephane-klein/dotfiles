@@ -1,5 +1,9 @@
 lua require('plugins')
 
+" Theme
+set background=dark
+colorscheme gruvbox
+
 " Configure keyboard shortcuts
 let mapleader =" "
 
