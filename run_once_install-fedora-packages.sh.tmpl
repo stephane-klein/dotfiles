@@ -10,7 +10,9 @@ sudo dnf install git util-linux-user zsh
 set -e # -e: exit on error
 
 chsh -s $(which zsh)
-CHSH=no sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if ! [ -d ~/.oh-my-zsh ]; then
+    CHSH=no sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
 {{   end }}
 {{ end }}
