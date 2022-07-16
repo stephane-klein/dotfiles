@@ -1,0 +1,16 @@
+#!/bin/sh
+
+{{ if eq .chezmoi.os "linux" }}
+{{   if eq .chezmoi.osRelease.id "fedora" }}
+# Fedora-specific code
+
+sudo dnf update -y
+sudo dnf install zsh
+
+set -e # -e: exit on error
+
+chsh -s $(which zsh)
+CHSH=no sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+{{   end }}
+{{ end }}
