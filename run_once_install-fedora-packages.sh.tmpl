@@ -14,7 +14,24 @@ sudo dnf install -y \
     patch \
     lm_sensors \
     hddtemp \
-    nvme-cli 
+    nvme-cli \
+    neofetch \
+    ncdu \
+    rsync \
+    pwgen \
+    mc \
+    direnv \
+    htop \
+    alacritty \
+    jq \
+    dnf-plugins-core
+
+# Install Docker
+sudo dnf config-manager -y \
+    --add-repo \
+    https://download.docker.com/linux/fedora/docker-ce.repo
+
+sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 sudo dnf builddep -y python3
 
