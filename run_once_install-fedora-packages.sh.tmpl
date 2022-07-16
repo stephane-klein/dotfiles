@@ -11,9 +11,12 @@ sudo dnf install -y \
     zsh \
     neovim \
     ripgrep \
-    patch
+    patch \
+    lm_sensors \
+    hddtemp \
+    nvme-cli 
 
-sudo dnf builddep python3
+sudo dnf builddep -y python3
 
 # neovim dependencies: ripgrep
 # asdf python dependencies: patch and "dnf builddep python3"
