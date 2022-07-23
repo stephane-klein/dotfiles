@@ -22,4 +22,7 @@ return require('packer').startup(function()
             {'pangloss/vim-javascript'}
         }
     }
+
+    -- for handel .editorconfig files
+    use { 'gpanders/editorconfig.nvim' }
 end)
