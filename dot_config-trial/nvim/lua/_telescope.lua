@@ -139,11 +139,13 @@ telescope.setup({
   }
 })
 
+telescope.load_extension('fzf')
+
 local use_layout = function(picker, layout)
   return function() picker(themes[layout]) end
 end
---
--- Telescope
+
+-- Telescope keymaps
 vim.keymap.set('n', '<leader>t', use_layout(telescope_builtin.builtin, 'popup_list'),           { noremap = true, desc = "See all Pickers"})
 vim.keymap.set('n', '<leader>o', use_layout(telescope_builtin.find_files, 'popup_list'),        { noremap = true, desc = "Lists files in current working directory"})
 vim.keymap.set('n', '<leader>b', use_layout(telescope_builtin.buffers, 'popup_extended'),       { noremap = true, desc = "Lists open buffers"})
