@@ -42,4 +42,26 @@ return require('packer').startup(function()
             }
         end
     }
+
+    -- https://github.com/nvim-treesitter/nvim-treesitter
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        config = function()
+            require('nvim-treesitter.configs').setup({
+              -- A list of parser names, or "all"
+              ensure_installed = {
+                  "python", "lua", "javascript", "bash", "css",
+                  "go", "graphql", "html", "json", "markdown",
+                  "ninja", "sql", "svelte", "toml",
+                  "vim", "yaml"
+              },
+              auto_install = true,
+              highlight = {
+                enable = true,
+                additional_vim_regex_highlighting = false,
+              },
+            })
+        end
+    }
+
 end)

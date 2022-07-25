@@ -20,6 +20,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 - [fzf](https://github.com/junegunn/fzf)
 - Neovim plugins:
   - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+  - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 ## Getting started
 
