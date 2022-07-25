@@ -57,6 +57,10 @@ fi
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
+# Install neovim dependencies for nvim trial instance
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share-trial/nvim/site/pack/packer/start/packer.nvim
+
 # Install asdf
 if ! [ -d ~/.asdf ]; then
     git -c advice.detachedHead=false clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
