@@ -1,5 +1,6 @@
 lua require('plugins')
 lua require('keymap')
+lua require('_telescope')
 
 " Theme
 set background=dark

@@ -18,6 +18,8 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 - [asdf](https://github.com/asdf-vm/asdf) for manage Python, Node, Go, pnpm, terraform… installation
 - Docker
 - [fzf](https://github.com/junegunn/fzf)
+- Neovim plugins:
+  - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 
 ## Getting started
 

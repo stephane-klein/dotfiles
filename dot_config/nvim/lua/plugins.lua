@@ -25,4 +25,16 @@ return require('packer').startup(function()
 
     -- for handel .editorconfig files
     use { 'gpanders/editorconfig.nvim' }
+
+    -- https://github.com/AckslD/nvim-neoclip.lua
+    use {
+        "AckslD/nvim-neoclip.lua",
+        requires = {
+            {'nvim-telescope/telescope.nvim'},
+            -- {'ibhagwan/fzf-lua'},
+        },
+        config = function()
+            require('neoclip').setup()
+        end,
+    }
 end)
