@@ -64,4 +64,26 @@ return require('packer').startup(function()
         end
     }
 
+    -- Mason
+    -- use {
+    --     "williamboman/mason.nvim",
+    --     config = function()
+    --         require("mason").setup()
+    --     end
+    -- }
+    -- use {
+    --     "WhoIsSethDaniel/mason-tool-installer.nvim",
+    --     requires = {
+    --         "williamboman/mason.nvim"
+    --     },
+    --     config = function()
+    --         require('mason-tool-installer').setup({
+    --             ensure_installed = {
+    --
+    --             },
+    --             auto_update = false,
+    --             run_on_start = true
+    --         })
+    --     end
+    -- }
 end)
