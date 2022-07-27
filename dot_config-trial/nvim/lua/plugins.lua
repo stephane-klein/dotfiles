@@ -98,4 +98,13 @@ return require('packer').startup(function()
         end
     }
 
+    -- https://github.com/stephane-klein/dotfiles/issues/17
+    use {
+        's1n7ax/nvim-window-picker',
+        tag = 'v1.*',
+        config = function()
+            require('window-picker').setup()
+        end,
+    }
+
 end)

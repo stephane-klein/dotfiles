@@ -14,3 +14,12 @@ vim.keymap.set('n', '<Leader><Leader><Right>', '<Cmd>:vs<CR>',           { desc 
 vim.keymap.set('n', '<Leader><Leader><Down>',  '<Cmd>:sp<CR>',           { desc = "Split on the bottom"})
 
 -- Telescope keymap are defined in _telescope.lua
+
+vim.keymap.set(
+    'n', '<leader>-',
+    function()
+        local picked_window_id = require('window-picker').pick_window() or vim.api.nvim_get_current_win()
+        vim.api.nvim_set_current_win(picked_window_id)
+    end,
+    { desc = "Pick a window" }
+)
