@@ -143,6 +143,7 @@ return require('packer').startup(function()
             vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
             require("neo-tree").setup({
                 close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
+                open_files_in_last_window = false,
                 popup_border_style = "rounded",
                 enable_git_status = true,
                 enable_diagnostics = true,
@@ -153,6 +154,9 @@ return require('packer').startup(function()
                             nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use
                         }
                     }
+                },
+                filesystem = {
+                    hijack_netrw_behavior = "open_split"
                 }
             })
         end
