@@ -160,4 +160,10 @@ return require('packer').startup(function()
 
     use { 'ntpeters/vim-better-whitespace' }
 
+    use {
+        'terrortylor/nvim-comment',
+        config = function ()
+            require('nvim_comment').setup()
+        end
+    }
 end)

@@ -26,6 +26,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [nvim-window-picker](https://github.com/s1n7ax/nvim-window-picker)
   - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
   - [vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace)
+  - [terrortylor/nvim-comment](https://github.com/terrortylor/nvim-comment)
 
 ## Getting started
 
