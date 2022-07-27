@@ -64,6 +64,9 @@ return require('packer').startup(function()
         end
     }
 
+    -- https://github.com/neovim/nvim-lspconfig
+    use { 'neovim/nvim-lspconfig' }
+
     -- Mason
     -- use {
     --     "williamboman/mason.nvim",
