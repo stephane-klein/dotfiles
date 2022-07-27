@@ -68,25 +68,34 @@ return require('packer').startup(function()
     use { 'neovim/nvim-lspconfig' }
 
     -- Mason
-    -- use {
-    --     "williamboman/mason.nvim",
-    --     config = function()
-    --         require("mason").setup()
-    --     end
-    -- }
-    -- use {
-    --     "WhoIsSethDaniel/mason-tool-installer.nvim",
-    --     requires = {
-    --         "williamboman/mason.nvim"
-    --     },
-    --     config = function()
-    --         require('mason-tool-installer').setup({
-    --             ensure_installed = {
-    --
-    --             },
-    --             auto_update = false,
-    --             run_on_start = true
-    --         })
-    --     end
-    -- }
+    use {
+        "williamboman/mason.nvim",
+        config = function()
+            require("mason").setup()
+        end
+    }
+    use {
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
+        requires = {
+            "williamboman/mason.nvim"
+        },
+        config = function()
+            require('mason-tool-installer').setup({
+                ensure_installed = {
+                    'lua-language-server',
+                    'vim-language-server',
+                    'sqls'
+                    -- 'shellcheck',
+                    -- 'ansible-language-server',
+                    -- 'bash-language-server',
+                    -- 'css-lsp',
+                    -- 'flake8',
+                    -- 'html-lsp',
+                },
+                auto_update = false,
+                run_on_start = true
+            })
+        end
+    }
+
 end)
