@@ -157,4 +157,7 @@ return require('packer').startup(function()
             })
         end
     }
+
+    use { 'ntpeters/vim-better-whitespace' }
+
 end)

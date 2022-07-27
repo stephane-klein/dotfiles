@@ -10,7 +10,7 @@ So far, only GNU/Linux Fedora is supported.
 
 Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_once_install-fedora-packages.sh.tmpl) (idempotent and POSIX compliant) script would be executed once.
 
-## What I use
+## What I use  
 
 - OS: Fedora 36
 - Text Editor: [neovim](https://github.com/neovim/neovim) with [Packer](https://github.com/wbthomason/packer.nvim) plugin manager
@@ -25,6 +25,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [mason.nvim](https://github.com/williamboman/mason.nvim)
   - [nvim-window-picker](https://github.com/s1n7ax/nvim-window-picker)
   - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
+  - [vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace)
 
 ## Getting started
 
