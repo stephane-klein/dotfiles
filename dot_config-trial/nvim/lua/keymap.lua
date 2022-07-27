@@ -23,3 +23,5 @@ vim.keymap.set(
     end,
     { desc = "Pick a window" }
 )
+
+vim.keymap.set('n', '<leader><tab>', '<Cmd>:Neotree reveal<CR>', { desc = "Open Neotree"})

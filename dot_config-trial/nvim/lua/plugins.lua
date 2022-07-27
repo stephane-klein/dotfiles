@@ -107,4 +107,54 @@ return require('packer').startup(function()
         end,
     }
 
+    -- https://github.com/stephane-klein/dotfiles/issues/16
+
+    use {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v2.x",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+            {
+                "s1n7ax/nvim-window-picker",
+                tag = "v1.*",
+                config = function()
+                    require'window-picker'.setup({
+                        autoselect_one = true,
+                        include_current = false,
+                        filter_rules = {
+                            -- filter using buffer options
+                            bo = {
+                                -- if the file type is one of following, the window will be ignored
+                                filetype = { 'neo-tree', "neo-tree-popup", "notify", "quickfix" },
+
+                                -- if the buffer type is one of following, the window will be ignored
+                                buftype = { 'terminal' },
+                            },
+                        },
+                        other_win_hl_color = '#e35e4f',
+                    })
+                end,
+            }
+        },
+        config = function ()
+            -- Unless you are still migrating, remove the deprecated commands from v1.x
+            vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+            require("neo-tree").setup({
+                close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
+                popup_border_style = "rounded",
+                enable_git_status = true,
+                enable_diagnostics = true,
+                window = {
+                    mappings = {
+                        ["<space>"] = {
+                            "toggle_node",
+                            nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use
+                        }
+                    }
+                }
+            })
+        end
+    }
 end)

@@ -24,6 +24,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
   - [mason.nvim](https://github.com/williamboman/mason.nvim)
   - [nvim-window-picker](https://github.com/s1n7ax/nvim-window-picker)
+  - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
 
 ## Getting started
 
