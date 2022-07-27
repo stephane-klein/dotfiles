@@ -24,4 +24,5 @@ vim.keymap.set(
     { desc = "Pick a window" }
 )
 
-vim.keymap.set('n', '<leader><tab>', '<Cmd>:Neotree reveal<CR>', { desc = "Open Neotree"})
+vim.keymap.set('n', '<leader>.', '<Cmd>:Neotree action=show position=current reveal_force_cwd<CR>', { desc = "Open Neotree explorer"})
+vim.keymap.set('n', '<leader><tab>', '<Cmd>:Neotree toggle position=left reveal_force_cwd<CR>', { desc = "Open Neotree drawer"})
