@@ -27,6 +27,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
   - [vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace)
   - [nvim-comment](https://github.com/terrortylor/nvim-comment)
+  - [leap](https://github.com/ggandor/leap.nvim)
 
 ## Getting started
 

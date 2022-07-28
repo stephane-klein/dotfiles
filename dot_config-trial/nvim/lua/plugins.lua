@@ -170,4 +170,17 @@ return require('packer').startup(function()
             require('nvim_comment').setup()
         end
     }
+
+    use { 'tpope/vim-repeat' }
+    -- https://github.com/stephane-klein/dotfiles/issues/18
+    use {
+        'ggandor/leap.nvim',
+        requires = {
+            { 'tpope/vim-repeat' }
+        },
+        config = function()
+            -- require('leap').setup()
+            require('leap').set_default_keymaps()
+        end
+    }
 end)
