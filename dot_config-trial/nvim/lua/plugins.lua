@@ -156,7 +156,7 @@ return require('packer').startup(function()
                     }
                 },
                 filesystem = {
-                    hijack_netrw_behavior = "open_split"
+                    hijack_netrw_behavior = "open_current"
                 }
             })
         end
