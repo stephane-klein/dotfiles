@@ -44,3 +44,13 @@ $ sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply stephane-klein
 I don't want to update `~/.config/nvim/` directly, before update my config, I test new configuration in
 `~/.config-trial/nvim`. I can commit / push the content of this folder.  
 If all works perfectly, I merge `~/.config-trial/nvim` to `~/.config/nvim` which is my "stable" Neovim configuration.
+
+## Neovim ressources
+
+Here is my source of inspiration to find Neovim plugin and configuration settings:
+
+- https://www.reddit.com/r/neovim/
+- https://neovimcraft.com/
+- https://vimawesome.com/
+- https://github.com/WhoIsSethDaniel/dotfiles/ (configuration 100% based on Lua)
+- https://github.com/topics/dotfiles
