@@ -59,3 +59,7 @@ vim.opt.history = 10000
 vim.opt.clipboard = 'unnamedplus'
 
 vim.opt.showmatch = true
+
+-- 'enhanced' command-line completion (sensible turns this on)
+vim.opt.wildmenu = true
+vim.opt.wildmode = 'longest:full,full'
