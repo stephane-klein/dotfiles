@@ -217,6 +217,7 @@ return require('packer').startup(function()
                 options = {
                     theme = 'kanagawa',
                 },
+                extensions = { 'fugitive' }
             })
         end
     }
