@@ -1,3 +1,6 @@
+-- make certain folding is turned off
+vim.opt.foldenable = false
+
 -- ignore case in search patterns;
 -- can be overridden using \C
 vim.opt.ignorecase = true
@@ -55,3 +58,4 @@ vim.opt.history = 10000
 
 vim.opt.clipboard = 'unnamedplus'
 
+vim.opt.showmatch = true

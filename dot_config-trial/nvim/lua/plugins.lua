@@ -57,18 +57,21 @@ return require('packer').startup(function()
         "nvim-treesitter/nvim-treesitter",
         config = function()
             require('nvim-treesitter.configs').setup({
-              -- A list of parser names, or "all"
-              ensure_installed = {
-                  "python", "lua", "javascript", "bash", "css",
-                  "go", "graphql", "html", "json", "markdown",
-                  "ninja", "sql", "svelte", "toml",
-                  "vim", "yaml"
-              },
-              auto_install = true,
-              highlight = {
-                enable = true,
-                additional_vim_regex_highlighting = false,
-              },
+                -- A list of parser names, or "all"
+                ensure_installed = {
+                    "python", "lua", "javascript", "bash", "css",
+                    "go", "graphql", "html", "json", "markdown",
+                    "ninja", "sql", "svelte", "toml",
+                    "vim", "yaml"
+                },
+                auto_install = true,
+                highlight = {
+                    enable = true,
+                    additional_vim_regex_highlighting = false,
+                },
+                matchup = {
+                    enable = true
+                }
             })
         end
     }
@@ -194,4 +197,6 @@ return require('packer').startup(function()
     }
 
 
+
+    use { 'andymass/vim-matchup' }
 end)

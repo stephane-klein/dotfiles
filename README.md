@@ -29,6 +29,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [nvim-comment](https://github.com/terrortylor/nvim-comment)
   - [leap](https://github.com/ggandor/leap.nvim)
   - [telescope-live-grep-args.nvim](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
+  - [vim-matchup](https://github.com/andymass/vim-matchup)
 
 ## Getting started
 
