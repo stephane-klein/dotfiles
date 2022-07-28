@@ -16,7 +16,12 @@ return require('packer').startup(function()
     }
 
     -- Theme
-    use { 'morhetz/gruvbox' }
+    use {
+        'rebelot/kanagawa.nvim',
+        config = function()
+            vim.cmd("colorscheme kanagawa")
+        end
+    }
 
     -- Git
     use 'tpope/vim-fugitive'
