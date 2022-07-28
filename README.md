@@ -54,4 +54,5 @@ Here is my source of inspiration to find Neovim plugin and configuration setting
 - https://neovimcraft.com/
 - https://vimawesome.com/
 - https://github.com/WhoIsSethDaniel/dotfiles/ (configuration 100% based on Lua)
+  - https://www.sethdaniel.dev/vim/plugins/
 - https://github.com/topics/dotfiles
