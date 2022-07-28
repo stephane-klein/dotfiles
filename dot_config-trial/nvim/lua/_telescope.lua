@@ -146,12 +146,18 @@ local use_layout = function(picker, layout)
 end
 
 -- Telescope keymaps
-vim.keymap.set('n', '<leader>t', use_layout(telescope_builtin.builtin, 'popup_list'),           { noremap = true, desc = "See all Pickers"})
-vim.keymap.set('n', '<leader>o', use_layout(telescope_builtin.find_files, 'popup_list'),        { noremap = true, desc = "Lists files in current working directory"})
-vim.keymap.set('n', '<leader>b', use_layout(telescope_builtin.buffers, 'popup_extended'),       { noremap = true, desc = "Lists open buffers"})
-vim.keymap.set('n', '<leader>p', use_layout(telescope_builtin.commands, 'command_pane'),        { noremap = true, desc = "Lists commands"})
-vim.keymap.set('n', '<leader>gs', use_layout(telescope_builtin.git_status, 'popup_extended'),   { noremap = true, desc = "Lists git status"})
-vim.keymap.set('n', '<leader>gb', use_layout(telescope_builtin.git_branches, 'popup_extended'), { noremap = true, desc = "Lists git branches"})
-vim.keymap.set('n', '<leader>q', use_layout(telescope_builtin.quickfix, 'ivy_plus') ,           { noremap = true, desc = "Lists all quickfix lists"})
-vim.keymap.set('n', '<leader>l', use_layout(telescope_builtin.loclist, 'ivy_plus'),             { noremap = true, desc = "Lists items from the current window's location list"})
-vim.keymap.set('n', '<F1>',      use_layout(telescope_builtin.help_tags, 'popup_extended'),     { noremap = true, desc = "Lists available help tags"})
+vim.keymap.set('n', '<leader>t',  use_layout(telescope_builtin.builtin, 'popup_list'),           { noremap = true, desc = "See all Pickers"})
+vim.keymap.set('n', '<leader>o',  use_layout(telescope_builtin.find_files, 'popup_list'),        { noremap = true, desc = "Lists files in current working directory"})
+vim.keymap.set('n', '<leader>b',  use_layout(telescope_builtin.buffers, 'popup_extended'),       { noremap = true, desc = "Lists open buffers"})
+vim.keymap.set('n', '<leader>p',  use_layout(telescope_builtin.commands, 'command_pane'),        { noremap = true, desc = "Lists commands"})
+vim.keymap.set('n', '<leader>gs', use_layout(telescope_builtin.git_status, 'popup_extended'),    { noremap = true, desc = "Lists git status"})
+vim.keymap.set('n', '<leader>gb', use_layout(telescope_builtin.git_branches, 'popup_extended'),  { noremap = true, desc = "Lists git branches"})
+vim.keymap.set('n', '<leader>q',  use_layout(telescope_builtin.quickfix, 'ivy_plus') ,           { noremap = true, desc = "Lists all quickfix lists"})
+vim.keymap.set('n', '<leader>l',  use_layout(telescope_builtin.loclist, 'ivy_plus'),             { noremap = true, desc = "Lists items from the current window's location list"})
+vim.keymap.set('n', '<F1>',       use_layout(telescope_builtin.help_tags, 'popup_extended'),     { noremap = true, desc = "Lists available help tags"})
+
+vim.keymap.set(
+    'n', '<leader>/',
+    use_layout(telescope.extensions.live_grep_args.live_grep_args, 'popup_list'),
+    { noremap = true, desc = "Live ripgrep"}
+)

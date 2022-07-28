@@ -6,9 +6,13 @@ return require('packer').startup(function()
     use {
         'nvim-telescope/telescope.nvim',
         requires = {
-            {'nvim-lua/plenary.nvim'},
-            { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-        }
+            { 'nvim-lua/plenary.nvim' },
+            { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+            { 'nvim-telescope/telescope-live-grep-args.nvim' }
+        },
+        config = function()
+            require("telescope").load_extension("live_grep_args")
+        end
     }
 
     -- Theme
@@ -183,4 +187,6 @@ return require('packer').startup(function()
             require('leap').set_default_keymaps()
         end
     }
+
+
 end)

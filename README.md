@@ -28,6 +28,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace)
   - [nvim-comment](https://github.com/terrortylor/nvim-comment)
   - [leap](https://github.com/ggandor/leap.nvim)
+  - [telescope-live-grep-args.nvim](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
 
 ## Getting started
 
