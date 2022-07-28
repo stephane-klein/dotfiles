@@ -63,3 +63,21 @@ vim.opt.showmatch = true
 -- 'enhanced' command-line completion (sensible turns this on)
 vim.opt.wildmenu = true
 vim.opt.wildmode = 'longest:full,full'
+
+--  swap and backup files
+vim.opt.directory = vim.env.XDG_DATA_HOME .. '/nvim/swap'
+vim.opt.backupdir = vim.env.XDG_DATA_HOME .. '/nvim/backup'
+
+-- buffer control; usetab = use already open buffer(s) or tab(s), if possible, when switching tabs
+vim.opt.switchbuf = 'usetab'
+
+-- terminal
+-- scroll buffer; 100000 is the max
+vim.opt.scrollback = 100000
+-- vim.opt.scrolloff = 25
+
+-- -- color scheme -- set actual scheme in colorscheme.vim
+vim.opt.termguicolors = true
+vim.opt.background = 'dark'
+
+vim.opt.scrolloff = 999
