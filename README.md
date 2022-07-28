@@ -22,6 +22,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - Theme: [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim)
   - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
   - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+    - [nvim-ts-rainbow](https://github.com/p00f/nvim-ts-rainbow/)
   - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
   - [mason.nvim](https://github.com/williamboman/mason.nvim)
   - [nvim-window-picker](https://github.com/s1n7ax/nvim-window-picker)

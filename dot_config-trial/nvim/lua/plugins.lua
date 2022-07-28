@@ -53,6 +53,7 @@ return require('packer').startup(function()
     }
 
     -- https://github.com/nvim-treesitter/nvim-treesitter
+    use { 'p00f/nvim-ts-rainbow' }
     use {
         "nvim-treesitter/nvim-treesitter",
         config = function()
@@ -81,6 +82,10 @@ return require('packer').startup(function()
                 autopairs = {
                     enable = true
                 },
+                rainbow = {
+                    enable = true,
+                    extended_mode = true
+                }
             })
         end
     }
