@@ -19,6 +19,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 - Docker
 - [fzf](https://github.com/junegunn/fzf)
 - Neovim plugins:
+  - Theme: [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim)
   - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
   - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
   - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
@@ -29,7 +30,12 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [nvim-comment](https://github.com/terrortylor/nvim-comment)
   - [leap](https://github.com/ggandor/leap.nvim)
   - [telescope-live-grep-args.nvim](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
+  - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+    - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+    - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+    - [cmp-path](https://github.com/hrsh7th/cmp-path)
   - [vim-matchup](https://github.com/andymass/vim-matchup)
+  - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 
 ## Getting started
 
