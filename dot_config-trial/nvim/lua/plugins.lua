@@ -71,7 +71,16 @@ return require('packer').startup(function()
                 },
                 matchup = {
                     enable = true
-                }
+                },
+                indent = {
+                    enable = true
+                },
+                incremental_selection = {
+                    enable = true
+                },
+                autopairs = {
+                    enable = true
+                },
             })
         end
     }
