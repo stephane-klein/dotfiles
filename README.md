@@ -35,6 +35,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
     - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
     - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
     - [cmp-path](https://github.com/hrsh7th/cmp-path)
+    - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
   - [vim-matchup](https://github.com/andymass/vim-matchup)
   - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
   - [vim-sandwich](https://github.com/nvim-lualine/machakann/vim-sandwich)
@@ -47,6 +48,8 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [alpha-nvim](https://github.com/goolord/alpha-nvim/)
   - [focus.nvim](https://github.com/beauwilliams/focus.nvim)
   - [NeoZoom.lua](https://github.com/nyngwang/NeoZoom.lua/tree/neo-zoom-original)
+  - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+    - [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 
 
 ## Getting started
