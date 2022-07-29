@@ -238,6 +238,12 @@ return require('packer').startup(function()
             })
         end
     }
+    use {
+        'stevearc/dressing.nvim',
+        config = function()
+            require('dressing').setup()
+        end
+    }
     use {'machakann/vim-sandwich'}
     use {
         "AckslD/nvim-neoclip.lua",
