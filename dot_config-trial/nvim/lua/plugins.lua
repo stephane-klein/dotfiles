@@ -256,11 +256,23 @@ return require('packer').startup(function()
     }
 
     use {
-        'svermeulen/vim-cutlass'
+        'svermeulen/vim-cutlass',
         config = function()
-            vim.keymap.set('n', 'm', 'd', { noremap = true, desc = "Cut current character"})
-            vim.keymap.set('n', 'mm', 'dd', { noremap = true, desc = "Cut current line"})
-            vim.keymap.set('n', 'M', 'D', { noremap = true, desc = "Cut until end of line"})
+            vim.g['yoinkIncludeDeleteOperations'] = 1
+            vim.keymap.set({'n', 'x'}, 'm',  'd', { noremap = true, desc = "Cut current character"})
+            vim.keymap.set('n',        'mm', 'dd', { noremap = true, desc = "Cut current line"})
+            vim.keymap.set('n',        'M',  'D', { noremap = true, desc = "Cut until end of line"})
+        end
+    }
+    use {
+        'svermeulen/vim-yoink',
+        config = function()
+            vim.keymap.set('n', 'p', '<plug>(YoinkPaste_p)', { desc = "Paste" })
+            vim.keymap.set('n', 'P', '<plug>(YoinkPaste_P)')
+
+            -- " Also replace the default gp with yoink paste so we can toggle paste in this case too
+            vim.keymap.set('n', 'gp', '<plug>(YoinkPaste_gp)')
+            vim.keymap.set('n', 'gP', '<plug>(YoinkPaste_gP)')
         end
     }
 end)

@@ -43,6 +43,8 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
   - [nvim-neoclip.lua](https://github.com/AckslD/nvim-neoclip.lua)
   - [vim-cutlass](https://github.com/svermeulen/vim-cutlass)
+  - [vim-yoink](https://github.com/svermeulen/vim-yoink)
+
 
 ## Getting started
 
