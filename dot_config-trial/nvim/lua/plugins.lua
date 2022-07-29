@@ -239,4 +239,13 @@ return require('packer').startup(function()
         end
     }
     use {'machakann/vim-sandwich'}
+    use {
+        "AckslD/nvim-neoclip.lua",
+        requires = {
+            {'nvim-telescope/telescope.nvim'},
+        },
+        config = function()
+            require('neoclip').setup()
+        end,
+    }
 end)
