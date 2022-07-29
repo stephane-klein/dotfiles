@@ -275,4 +275,11 @@ return require('packer').startup(function()
             vim.keymap.set('n', 'gP', '<plug>(YoinkPaste_gP)')
         end
     }
+
+    use {
+        'goolord/alpha-nvim',
+        config = function ()
+            require('alpha').setup(require('alpha.themes.startify').config)
+        end
+    }
 end)
