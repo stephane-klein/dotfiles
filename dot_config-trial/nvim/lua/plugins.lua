@@ -24,7 +24,13 @@ return require('packer').startup(function()
     }
 
     -- Git
-    use 'tpope/vim-fugitive'
+    use { 'tpope/vim-fugitive' }
+    use {
+        'shumphrey/fugitive-gitlab.vim',
+        requires = {
+            { 'tpope/vim-fugitive' }
+        }
+    }
 
     -- Svelte packages (https://github.com/evanleck/vim-svelte)
     use {
