@@ -250,17 +250,28 @@ return require('packer').startup(function()
                 }),
             })
             cmp.setup.cmdline('/', {
-                mapping = cmp.mapping.preset.cmdline(),
+                completion = {
+                    autocomplete = false
+                },
+                mapping = cmp.mapping.preset.cmdline({
+                    ['<C-Space>'] = { c = cmp.mapping.complete() },
+                    ['<Down>'] = { c = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert })},
+                    ['<Up>'] = { c = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert })},
+                    ['<CR>'] = { c = cmp.mapping.confirm({ select = true })}, -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+                }),
                 sources = {
                     { name = 'buffer' }
                 }
             })
             cmp.setup.cmdline(':', {
+                completion = {
+                    autocomplete = false
+                },
                 mapping = cmp.mapping.preset.cmdline({
-                    ['<C-Space>'] = cmp.mapping.complete(),
-                    ['<Down>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-                    ['<Up>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-                    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+                    ['<C-Space>'] = { c = cmp.mapping.complete() },
+                    ['<Down>'] = { c = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert })},
+                    ['<Up>'] = { c = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert })},
+                    ['<CR>'] = { c = cmp.mapping.confirm({ select = true })}, -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
                 }),
                 sources = cmp.config.sources(
                     {{ name = 'path' }},
