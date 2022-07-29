@@ -226,4 +226,5 @@ return require('packer').startup(function()
             })
         end
     }
+    use {'machakann/vim-sandwich'}
 end)
