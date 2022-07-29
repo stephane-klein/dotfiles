@@ -244,7 +244,7 @@ return require('packer').startup(function()
             require('dressing').setup()
         end
     }
-    use {'machakann/vim-sandwich'}
+    use { 'machakann/vim-sandwich' }
     use {
         "AckslD/nvim-neoclip.lua",
         requires = {
@@ -252,6 +252,15 @@ return require('packer').startup(function()
         },
         config = function()
             require('neoclip').setup()
-        end,
+        end
+    }
+
+    use {
+        'svermeulen/vim-cutlass'
+        config = function()
+            vim.keymap.set('n', 'm', 'd', { noremap = true, desc = "Cut current character"})
+            vim.keymap.set('n', 'mm', 'dd', { noremap = true, desc = "Cut current line"})
+            vim.keymap.set('n', 'M', 'D', { noremap = true, desc = "Cut until end of line"})
+        end
     }
 end)

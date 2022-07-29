@@ -42,6 +42,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [fugitive-gitlab.vim](https://github.com/shumphrey/fugitive-gitlab.vim)
   - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
   - [nvim-neoclip.lua](https://github.com/AckslD/nvim-neoclip.lua)
+  - [vim-cutlass](https://github.com/svermeulen/vim-cutlass)
 
 ## Getting started
 
