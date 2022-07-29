@@ -222,7 +222,53 @@ return require('packer').startup(function()
         end
     }
 
-
+    use {
+        'hrsh7th/nvim-cmp',
+        requires = {
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'hrsh7th/cmp-buffer' },
+            { 'hrsh7th/cmp-path' },
+            { 'hrsh7th/cmp-cmdline' },
+        },
+        config = function()
+            vim.g.completeopt='menu,menuone,noselect'
+            local cmp = require'cmp'
+            cmp.setup({
+                sources = {
+                    { name = 'nvim-lsp' },
+                    { name = 'buffer' },
+                    { name = 'path' }
+                },
+                window = {
+                    completion = cmp.config.window.bordered(),
+                    documentation = cmp.config.window.bordered()
+                },
+                mapping = cmp.mapping.preset.insert({
+                    ['<C-Space>'] = cmp.mapping.complete(),
+                    ['<C-e>'] = cmp.mapping.abort(),
+                    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+                }),
+            })
+            cmp.setup.cmdline('/', {
+                mapping = cmp.mapping.preset.cmdline(),
+                sources = {
+                    { name = 'buffer' }
+                }
+            })
+            cmp.setup.cmdline(':', {
+                mapping = cmp.mapping.preset.cmdline({
+                    ['<C-Space>'] = cmp.mapping.complete(),
+                    ['<Down>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+                    ['<Up>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+                    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+                }),
+                sources = cmp.config.sources(
+                    {{ name = 'path' }},
+                    {{ name = 'cmdline' }}
+                )
+            })
+        end
+    }
 
     use { 'andymass/vim-matchup' }
 
@@ -244,7 +290,7 @@ return require('packer').startup(function()
             require('dressing').setup()
         end
     }
-    use { 'machakann/vim-sandwich' }
+    use {'machakann/vim-sandwich'}
     use {
         "AckslD/nvim-neoclip.lua",
         requires = {
