@@ -46,6 +46,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [vim-yoink](https://github.com/svermeulen/vim-yoink)
   - [alpha-nvim](https://github.com/goolord/alpha-nvim/)
   - [focus.nvim](https://github.com/beauwilliams/focus.nvim)
+  - [NeoZoom.lua](https://github.com/nyngwang/NeoZoom.lua/tree/neo-zoom-original)
 
 
 ## Getting started

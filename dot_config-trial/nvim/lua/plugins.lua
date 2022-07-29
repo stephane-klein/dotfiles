@@ -289,4 +289,21 @@ return require('packer').startup(function()
             require("focus").setup()
         end
     }
+
+    use {
+        'nyngwang/NeoZoom.lua',
+        branch = 'neo-zoom-original',
+        config = function()
+            vim.api.nvim_set_keymap(
+                'n', '<leader>z',
+                '<cmd>NeoZoomToggle<CR>',
+                {
+                    noremap=true,
+                    silent=true,
+                    nowait=true,
+                    desc="Zoom"
+                }
+            )
+        end
+    }
 end)
