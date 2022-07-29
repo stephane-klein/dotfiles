@@ -38,7 +38,9 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [vim-matchup](https://github.com/andymass/vim-matchup)
   - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
   - [vim-sandwich](https://github.com/nvim-lualine/machakann/vim-sandwich)
+  - [vim-fugitive](https://github.com/tpope/vim-fugitive)
   - [fugitive-gitlab.vim](https://github.com/shumphrey/fugitive-gitlab.vim)
+  - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 
 ## Getting started
 

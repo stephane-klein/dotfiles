@@ -31,6 +31,12 @@ return require('packer').startup(function()
             { 'tpope/vim-fugitive' }
         }
     }
+    use {
+      'lewis6991/gitsigns.nvim',
+      config = function()
+        require('gitsigns').setup()
+      end
+    }
 
     -- Svelte packages (https://github.com/evanleck/vim-svelte)
     use {
