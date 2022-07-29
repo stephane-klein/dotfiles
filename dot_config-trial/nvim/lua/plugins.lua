@@ -282,4 +282,11 @@ return require('packer').startup(function()
             require('alpha').setup(require('alpha.themes.startify').config)
         end
     }
+
+    use {
+        'beauwilliams/focus.nvim',
+        config = function()
+            require("focus").setup()
+        end
+    }
 end)

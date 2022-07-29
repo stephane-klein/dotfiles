@@ -45,6 +45,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [vim-cutlass](https://github.com/svermeulen/vim-cutlass)
   - [vim-yoink](https://github.com/svermeulen/vim-yoink)
   - [alpha-nvim](https://github.com/goolord/alpha-nvim/)
+  - [focus.nvim](https://github.com/beauwilliams/focus.nvim)
 
 
 ## Getting started
