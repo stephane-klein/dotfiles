@@ -50,6 +50,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [NeoZoom.lua](https://github.com/nyngwang/NeoZoom.lua/tree/neo-zoom-original)
   - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
     - [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
+  - [true-zen.nvim](https://github.com/Pocco81/true-zen.nvim)
 
 
 ## Getting started
