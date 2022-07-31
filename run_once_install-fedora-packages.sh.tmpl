@@ -41,7 +41,7 @@ sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin 
 # https://docs.docker.com/engine/install/linux-postinstall/
 sudo usermod -aG docker $USER
 
-dockerd-rootless-setuptool.sh install
+dockerd-rootless-setuptool.sh install --force --skip-iptables
 
 sudo dnf builddep -y python3
 
@@ -54,12 +54,16 @@ if ! [ -d ~/.oh-my-zsh ]; then
 fi
 
 # Install neovim dependencies
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+if ! [ -d ~/.local/share/nvim/site/pack/packer/start/packer.nvim ]; then
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+fi
 
+if ! [ -d ~/.local/share-trial/nvim/site/pack/packer/start/packer.nvim ]; then
 # Install neovim dependencies for nvim trial instance
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share-trial/nvim/site/pack/packer/start/packer.nvim
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+     ~/.local/share-trial/nvim/site/pack/packer/start/packer.nvim
+fi
 
 # Install asdf
 if ! [ -d ~/.asdf ]; then
@@ -72,6 +76,10 @@ asdf plugin add pnpm  || true
 asdf plugin add python  || true
 asdf plugin add yarn || true
 asdf plugin add golang || true
+(
+    cd ~/
+    asdf install
+)
 
 echo "Launch 'source ~/.zshrc' to reload zsh configuration"
 echo "Launch 'asdf install' to install ~/.tool-versions dependencies"
