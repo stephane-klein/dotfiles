@@ -52,6 +52,8 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
     - [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
   - [true-zen.nvim](https://github.com/Pocco81/true-zen.nvim)
   - [neoclip](https://github.com/matveyt/neoclip) (to fix Wayland bug)
+  - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
+  - [toggletasks.nvim](https://github.com/jedrzejboczar/toggletasks.nvim)
 
 
 ## Getting started

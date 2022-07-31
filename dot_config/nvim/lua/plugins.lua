@@ -377,7 +377,21 @@ return require('packer').startup(function()
         "Pocco81/true-zen.nvim",
         config = function()
              require("true-zen").setup({})
-        end,
+        end
     })
     use { 'matveyt/neoclip' }
+
+    use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
+        require("toggleterm").setup()
+    end}
+    use {
+        'jedrzejboczar/toggletasks.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'akinsho/toggleterm.nvim',
+        },
+        config = function()
+            require('telescope').load_extension('toggletasks')
+        end
+    }
 end)
