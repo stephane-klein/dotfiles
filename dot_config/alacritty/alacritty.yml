@@ -1,0 +1,107 @@
+window:
+  decorations: none
+
+# On ArchLinux, install this font with "yay -S nerd-fonts-complete"
+# On MacOS, install this font with "brew install font-hack-nerd-font"
+font:
+  normal:
+    family: Hack Nerd Font Mono
+    style: Regular
+
+  bold:
+    family: Hack Nerd Font Mono
+    style: Bold
+
+  italic:
+    family: Hack Nerd Font Mono
+    style: Italic
+
+  bold_italic:
+    family: Hack Nerd Font Mono
+    style: Bold Italic
+
+  size: 11
+
+shell:
+  #program: /usr/local/bin/tmux
+  program: /bin/zsh
+
+env:
+  TERM: alacritty
+
+key_bindings:
+  - { key: Grave, mods: Alt, chars: "~" }
+  - { key: Minus, mods: Alt, chars: "_" }
+  - { key: 6, mods: Alt, chars: "\\"}
+  - { key: 12, mods: Alt, chars: "|"}
+  - { key: 7, mods: Alt, chars: "{"}
+  - { key: 8, mods: Alt, chars: "}"}
+  - { key: 19, mods: Alt, chars: "<"}
+  - { key: 20, mods: Alt, chars: ">"}
+  - { key: 21, mods: Alt, chars: "["}
+  - { key: 23, mods: Alt, chars: "]"}
+  - { key: 22, mods: Alt, chars: "^"}
+  - { key: 14, mods: Alt, chars: "&"}
+  - { key: Home, mode: Vi, action: Left}
+  - { key: End, mode: Vi, action: Right}
+
+# colors:
+#   primary:
+#     foreground: '#d0cfcc'
+#     background: '#171421'
+#     bright_foreground: '#ffffff'
+#
+#   normal:
+#     black:   '#171421'
+#     red:     '#c01c28'
+#     green:   '#26a269'
+#     yellow:  '#a2734c'
+#     blue:    '#12488b'
+#     magenta: '#a347ba'
+#     cyan:    '#2aa1b3'
+#     white:   '#d0cfcc'
+#
+#   bright:
+#     black:   '#5e5c64'
+#     red:     '#f66151'
+#     green:   '#33d17a'
+#     yellow:  '#e9ad0c'
+#     blue:    '#2a7bde'
+#     magenta: '#c061cb'
+#     cyan:    '#33c7de'
+#     white:   '#ffffff'
+
+
+# Kanagawa Alacritty Colors (https://github.com/rebelot/kanagawa.nvim/blob/master/extras/alacritty_kanagawa.yml)
+colors:
+  primary:
+    background: '0x1f1f28'
+    foreground: '0xdcd7ba'
+
+  normal:
+    black:   '0x090618'
+    red:     '0xc34043'
+    green:   '0x76946a'
+    yellow:  '0xc0a36e'
+    blue:    '0x7e9cd8'
+    magenta: '0x957fb8'
+    cyan:    '0x6a9589'
+    white:   '0xc8c093'
+
+  bright:
+    black:   '0x727169'
+    red:     '0xe82424'
+    green:   '0x98bb6c'
+    yellow:  '0xe6c384'
+    blue:    '0x7fb4ca'
+    magenta: '0x938aa9'
+    cyan:    '0x7aa89f'
+    white:   '0xdcd7ba'
+
+  selection:
+    background: '0x2d4f67'
+    foreground: '0xc8c093'
+
+  indexed_colors:
+    - { index: 16, color: '0xffa066' }
+    - { index: 17, color: '0xff5d62' }
