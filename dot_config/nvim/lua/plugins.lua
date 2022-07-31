@@ -379,4 +379,5 @@ return require('packer').startup(function()
              require("true-zen").setup({})
         end,
     })
+    use { 'matveyt/neoclip' }
 end)
