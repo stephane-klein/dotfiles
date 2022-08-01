@@ -87,4 +87,7 @@ vim.opt.list = true
 vim.opt.listchars:append("space:⋅")
 vim.opt.listchars:append("eol:↴")
 
-vim.opt.wrap = true
+vim.api.nvim_create_autocmd(
+    { "BufRead", "BufNewFile" },
+    { command = "set wrap" }
+)
