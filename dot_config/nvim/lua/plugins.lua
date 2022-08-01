@@ -33,10 +33,10 @@ return require('packer').startup(function()
         }
     }
     use {
-      'lewis6991/gitsigns.nvim',
-      config = function()
-        require('gitsigns').setup()
-      end
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end
     }
 
     -- Svelte packages (https://github.com/evanleck/vim-svelte)
@@ -58,9 +58,9 @@ return require('packer').startup(function()
         "folke/which-key.nvim",
         config = function()
             require("which-key").setup {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
             }
         end
     }
@@ -240,9 +240,9 @@ return require('packer').startup(function()
             local cmp = require'cmp'
             cmp.setup({
                 snippet = {
-                  expand = function(args)
-                    require'luasnip'.lsp_expand(args.body)
-                  end
+                    expand = function(args)
+                        require'luasnip'.lsp_expand(args.body)
+                    end
                 },
                 sources = {
                     { name = 'nvim-lsp' },
@@ -377,7 +377,7 @@ return require('packer').startup(function()
     use({
         "Pocco81/true-zen.nvim",
         config = function()
-             require("true-zen").setup({})
+            require("true-zen").setup({})
         end
     })
     use { 'matveyt/neoclip' }
