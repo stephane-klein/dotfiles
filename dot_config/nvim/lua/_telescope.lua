@@ -136,8 +136,21 @@ telescope.setup({
             override_file_sorter = true,     -- override the file sorter
             case_mode = 'smart_case',        -- other options: 'ignore_case' or 'respect_case'
         }
-    }}
-)
+    },
+    pickers = {
+        buffers = {
+            show_all_buffers = true,
+            sort_lastused = true,
+            theme = "dropdown",
+            previewer = false,
+            mappings = {
+                i = {
+                    ["<c-d>"] = "delete_buffer",
+                }
+            }
+        }
+    }
+})
 
 telescope.load_extension('fzf')
 
