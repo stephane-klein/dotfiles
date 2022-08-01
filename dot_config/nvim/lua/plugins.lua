@@ -17,11 +17,12 @@ return require('packer').startup(function()
 
     -- Theme
     use {
-        'rebelot/kanagawa.nvim',
+        'folke/tokyonight.nvim',
         config = function()
-            vim.cmd("colorscheme kanagawa")
+            vim.cmd("colorscheme tokyonight")
         end
     }
+
 
     -- Git
     use { 'tpope/vim-fugitive' }
@@ -299,7 +300,7 @@ return require('packer').startup(function()
         config = function()
             require('lualine').setup({
                 options = {
-                    theme = 'kanagawa',
+                    theme = 'tokyonight',
                 },
                 extensions = { 'fugitive' }
             })
