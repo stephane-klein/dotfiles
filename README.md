@@ -16,6 +16,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 - Text Editor: [neovim](https://github.com/neovim/neovim) with [Packer](https://github.com/wbthomason/packer.nvim) plugin manager
 - Shell: zsh with oh-my-zsh
 - [asdf](https://github.com/asdf-vm/asdf) for manage Python, Node, Go, pnpm, terraform… installation
+- [tmux](https://en.wikipedia.org/wiki/Tmux)
 - Docker
 - [fzf](https://github.com/junegunn/fzf)
 - Neovim plugins:
