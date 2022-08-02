@@ -19,6 +19,7 @@ return require('packer').startup(function()
     use {
         'folke/tokyonight.nvim',
         config = function()
+            vim.g.tokyonight_style = "night"
             vim.cmd("colorscheme tokyonight")
         end
     }
@@ -344,6 +345,7 @@ return require('packer').startup(function()
     use {
         'svermeulen/vim-yoink',
         config = function()
+            vim.g['yoinkSyncSystemClipboardOnFocus'] = 0
             vim.keymap.set('n', 'p', '<plug>(YoinkPaste_p)', { desc = "Paste" })
             vim.keymap.set('n', 'P', '<plug>(YoinkPaste_P)')
 
