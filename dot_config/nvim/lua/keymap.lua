@@ -32,7 +32,6 @@ vim.keymap.set('c', '<up>', 'pumvisible() ? "<C-p>" : "<up>"', { expr = true })
 vim.keymap.set('c', '<down>', 'pumvisible() ? "<C-n>" : "<down>"', { expr = true })
 
 function toggle_style()
-  print(vim.g.tokyonight_style)
   if vim.g.tokyonight_style == "night" then
     vim.g.tokyonight_style = "day"
     vim.opt.background = "light"
@@ -44,3 +43,34 @@ function toggle_style()
   vim.cmd("colorscheme tokyonight")
 end
 vim.keymap.set('n', '<leader>ts', ":lua toggle_style()<CR>")
+
+-- Configure ToggleTerm
+local Terminal  = require('toggleterm.terminal').Terminal
+local float_terminal = Terminal:new({
+    direction = "float",
+    float_opts = {
+        border = "curved",
+    },
+    on_open = function(term)
+        vim.cmd("startinsert!")
+        vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
+        vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+    end,
+})
+function open_float_term()
+    float_terminal:toggle()
+end
+vim.keymap.set('n', '<leader>t<up>', ":lua open_float_term()<CR>")
+
+local bottom_terminal = Terminal:new({
+    direction = "horizontal",
+    on_open = function(term)
+        vim.cmd("startinsert!")
+        vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
+        vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+    end,
+})
+function open_bottom_terminal()
+    bottom_terminal:open()
+end
+vim.keymap.set('n', '<leader>t<down>', ":lua open_bottom_terminal()<CR>")

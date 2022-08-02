@@ -398,7 +398,11 @@ return require('packer').startup(function()
     use { 'matveyt/neoclip' }
 
     use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
-        require("toggleterm").setup()
+        require("toggleterm").setup({
+            open_mapping = false,
+            terminal_mappings = true,
+            insert_mappings = false
+        })
     end}
     use {
         'jedrzejboczar/toggletasks.nvim',
