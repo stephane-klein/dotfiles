@@ -30,3 +30,17 @@ vim.keymap.set('n', '<leader><tab>', '<Cmd>:Neotree toggle position=left reveal_
 -- Configure wildmenu
 vim.keymap.set('c', '<up>', 'pumvisible() ? "<C-p>" : "<up>"', { expr = true })
 vim.keymap.set('c', '<down>', 'pumvisible() ? "<C-n>" : "<down>"', { expr = true })
+
+function toggle_style()
+  print(vim.g.tokyonight_style)
+  if vim.g.tokyonight_style == "night" then
+    vim.g.tokyonight_style = "day"
+    vim.opt.background = "light"
+  elseif vim.g.tokyonight_style == "day" then
+    vim.g.tokyonight_style = "night"
+    vim.opt.background = "dark"
+  end
+
+  vim.cmd("colorscheme tokyonight")
+end
+vim.keymap.set('n', '<leader>ts', ":lua toggle_style()<CR>")
