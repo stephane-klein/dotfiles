@@ -363,7 +363,11 @@ return require('packer').startup(function()
     use {
         'beauwilliams/focus.nvim',
         config = function()
-            require("focus").setup()
+            require("focus").setup({
+                autoresize = false,
+                signcolumn = false,
+                number = false
+            })
         end
     }
 
