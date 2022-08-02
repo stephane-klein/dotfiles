@@ -174,3 +174,25 @@ vim.keymap.set(
     use_layout(telescope.extensions.live_grep_args.live_grep_args, 'popup_list'),
     { noremap = true, desc = "Live ripgrep"}
 )
+-- https://github.com/nvim-telescope/telescope-live-grep-args.nvim/issues/14
+vim.keymap.set(
+    'n', '<leader>*',
+    function()
+        telescope.extensions.live_grep_args.live_grep_raw({
+            default_text = vim.fn.expand("<cword>"),
+            theme = 'popup_list',
+            border = true,
+            preview = false,
+            prompt_title = false,
+            results_title = false,
+            sorting_strategy = 'ascending',
+            layout_strategy = 'center',
+            borderchars = {
+                prompt  = { '─', '│', '─', '│', '┌', '┐', '┤', '└' },
+                results = { '─', '│', '─', '│', '├', '┤', '┘', '└' },
+                preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+            },
+        })
+    end,
+    { noremap = true, desc = "Live ripgrep with word under cursor"}
+)
