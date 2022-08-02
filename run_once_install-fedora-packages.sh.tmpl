@@ -31,17 +31,14 @@ sudo dnf install -y \
     fzf
 
 # Install Docker (see https://docs.docker.com/engine/install/fedora/)
+# https://developer.fedoraproject.org/tools/docker/docker-installation.html
 sudo dnf remove -y podman
-sudo dnf config-manager -y \
-    --add-repo \
-    https://download.docker.com/linux/fedora/docker-ce.repo
-
+sudo dnf config-manager -y --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin iptables fuse-overlayfs
 
 # https://docs.docker.com/engine/install/linux-postinstall/
-sudo usermod -aG docker $USER
-
-dockerd-rootless-setuptool.sh install --force --skip-iptables
+sudo groupadd docker && sudo gpasswd -a ${USER} docker && sudo systemctl restart docker
+sudo systemctl enable docker
 
 sudo dnf builddep -y python3
 
