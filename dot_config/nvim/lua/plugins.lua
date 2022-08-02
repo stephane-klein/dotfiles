@@ -302,7 +302,16 @@ return require('packer').startup(function()
                 options = {
                     theme = 'tokyonight',
                 },
-                extensions = { 'fugitive' }
+                extensions = { 'fugitive' },
+                sections = {
+                    lualine_a = {
+                        {
+                            'filename',
+                            file_status = true,
+                            path = 1
+                        }
+                    }
+                }
             })
         end
     }
