@@ -34,7 +34,7 @@ sudo dnf install -y \
 # https://developer.fedoraproject.org/tools/docker/docker-installation.html
 sudo dnf remove -y podman
 sudo dnf config-manager -y --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
-sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin iptables fuse-overlayfs
+sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin iptables fuse-overlayfs docker-compose
 
 # https://docs.docker.com/engine/install/linux-postinstall/
 sudo groupadd docker && sudo gpasswd -a ${USER} docker && sudo systemctl restart docker
