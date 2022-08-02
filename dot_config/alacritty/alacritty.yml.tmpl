@@ -29,7 +29,7 @@ shell:
 {{ end }}
 {{ if eq .chezmoi.os "linux" }}
 {{   if eq .chezmoi.osRelease.id "fedora" }}
-  program: /bin/zsh
+  program: /usr/bin/tmux
 {{   end }}
 {{ end }}
 
