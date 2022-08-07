@@ -74,3 +74,7 @@ function open_bottom_terminal()
     bottom_terminal:open()
 end
 vim.keymap.set('n', '<leader>t<down>', ":lua open_bottom_terminal()<CR>")
+
+-- Emmet
+vim.g['user_emmet_leader_key'] = '<C-e>'
+

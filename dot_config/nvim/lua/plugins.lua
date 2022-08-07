@@ -414,4 +414,6 @@ return require('packer').startup(function()
             require('telescope').load_extension('toggletasks')
         end
     }
+
+    use { 'mattn/emmet-vim' }
 end)
