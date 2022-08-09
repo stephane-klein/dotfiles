@@ -224,10 +224,6 @@ return require('packer').startup(function()
         end
     }
 
-    use { 'L3MON4D3/LuaSnip' }
-    use { 'rafamadriz/friendly-snippets'}
-    use { 'saadparwaiz1/cmp_luasnip' }
-
     use {
         'hrsh7th/nvim-cmp',
         requires = {
@@ -235,14 +231,17 @@ return require('packer').startup(function()
             { 'hrsh7th/cmp-buffer' },
             { 'hrsh7th/cmp-path' },
             { 'hrsh7th/cmp-cmdline' },
+            { 'saadparwaiz1/cmp_luasnip' },
+            { 'rafamadriz/friendly-snippets' },
+            { 'L3MON4D3/LuaSnip' }
         },
         config = function()
             vim.g.completeopt='menu,menuone,noselect'
-            local cmp = require'cmp'
+            local cmp = require('cmp')
             cmp.setup({
                 snippet = {
                     expand = function(args)
-                        require'luasnip'.lsp_expand(args.body)
+                        require('luasnip').lsp_expand(args.body)
                     end
                 },
                 sources = {
