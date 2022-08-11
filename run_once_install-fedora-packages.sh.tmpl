@@ -65,6 +65,19 @@ if ! [ -d ~/.oh-my-zsh ]; then
     CHSH=no sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
+# Install https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack
+if ! fc-list | grep "Hack Regular Nerd Font" &> /dev/null; then
+    (
+        cd ~/
+        git clone --filter=blob:none --sparse https://github.com/ryanoasis/nerd-fonts.git ~/nerd-fonts
+        cd nerd-fonts
+        git sparse-checkout add patched-fonts/Hack
+        ./install.sh Hack
+        cd ..
+        rm -rf nerd-fonts
+    )
+fi
+
 # Install neovim dependencies
 if ! [ -d ~/.local/share/nvim/site/pack/packer/start/packer.nvim ]; then
     git clone --depth 1 https://github.com/wbthomason/packer.nvim\
