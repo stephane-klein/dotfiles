@@ -124,13 +124,13 @@ return require('packer').startup(function()
                 ensure_installed = {
                     'lua-language-server',
                     'vim-language-server',
-                    'sqls'
+                    'sqls',
                     -- 'shellcheck',
                     -- 'ansible-language-server',
                     -- 'bash-language-server',
-                    -- 'css-lsp',
+                    'css-lsp',
                     -- 'flake8',
-                    -- 'html-lsp',
+                    'html-lsp'
                 },
                 auto_update = false,
                 run_on_start = true
