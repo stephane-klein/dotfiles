@@ -6,11 +6,17 @@ require('lspconfig')['cssls'].setup({
 require('lspconfig')['svelte'].setup({
     capabilities = capabilities
 })
--- require('lspconfig')['html-lsp'].setup{}
+require('lspconfig')['html'].setup{
+    capabilities = capabilities
+}
 -- require('lspconfig')['lua-language-server'].setup{}
 -- require('lspconfig')['prettierd'].setup{}
 -- require('lspconfig')['sql-formatter'].setup{}
--- require('lspconfig')['sqls'].setup{}
--- require('lspconfig')['typescript-language-server'].setup{}
+require('lspconfig')['sqls'].setup{
+    capabilities = capabilities
+}
+require('lspconfig')['tsserver'].setup{
+    capabilities = capabilities
+}
 -- require('lspconfig')['vim-language-server'].setup{}
 
