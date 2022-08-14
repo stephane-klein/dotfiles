@@ -56,6 +56,8 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
   - [toggletasks.nvim](https://github.com/jedrzejboczar/toggletasks.nvim)
   - [emmet-vim](https://github.com/mattn/emmet-vim)
+  - [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim)
+    - [eslint](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#eslint) enabled
 
 
 ## Getting started

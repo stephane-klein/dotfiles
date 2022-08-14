@@ -361,4 +361,7 @@ return require('packer').startup(function()
     }
 
     use { 'mattn/emmet-vim' }
+
+    -- See configuration in _null-ls.lua
+    use { 'jose-elias-alvarez/null-ls.nvim' }
 end)
