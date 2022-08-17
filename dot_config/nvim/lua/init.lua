@@ -92,3 +92,5 @@ vim.api.nvim_create_autocmd(
     { command = "set wrap" }
 )
 vim.opt.laststatus = 3
+
+vim.opt.swapfile = off
