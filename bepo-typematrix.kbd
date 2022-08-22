@@ -1,0 +1,39 @@
+(defcfg
+  input  (device-file "/dev/input/by-id/usb-TypeMatrix.com_USB_Keyboard-event-kbd")
+  output (uinput-sink "kmonad_output_kb")
+)
+
+(defsrc
+  esc   f1    f2    f3   f4   f5   del     f6    f7   f8    f9    f10   f11    f12   -
+  grv   1     2     3    4    5    bspc    6     7    8     9     0     -      =
+  tab   q     w     e    r    t    -       y     u    i     o     p     [      ]
+  lsft  a     s     d    f    g    ret     h     j    k     l     ;     '      rsft
+  -     z     x     c    v    b    -       n     m    ,     .     /     \      -
+  lctl  -     -     -              spc                      home  up    end    rctl  pgup
+  -     lmet  lalt                                    ralt  left  down  right  rctl  pgdn
+)
+
+(defalias
+nav   (layer-toggle navigator)
+)
+
+(deflayer bepo
+  esc   f1    f2    f3   f4   f5   del     f6    f7   f8    f9    f10   f11    f12   -
+  grv   1     2     3    4    5    bspc    6     7    8     9     0     -      =
+  tab  q     w     e    r    t    -       y     u    i     o     p     [      ]
+  lsft  a     s     d    f    g    ret     h     j    k     l     ;     '      rsft
+  -     z     x     c    v    b    -       n     m    ,     .     /     \      -
+  lctl  -     -     -              spc                      home  up    end    rctl  pgup
+  -     lmet  @nav                                    ralt  left  down  right  rctl  pgdn
+)
+
+
+(deflayer navigator
+  -     -     -     -    -    -    -       -     -    -     -     -     -      -     -
+  -     -     -     -    -    -    -       -     -    -     -     -     -      -
+  -     -     -     -    -    -    -       -      -   pgup  pgdn  -     -      -
+  -     -     -     -    -    -    -       home  left up    down  right end    -
+  -     -     -     -    -    -    -       -     -    -     -     -     -      -
+  -     -     -     -              -                        -     -     -      -     -
+  -     -     -                                       -     -     -     -      -     -
+)
