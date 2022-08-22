@@ -22,3 +22,6 @@ require('lspconfig')['tsserver'].setup{
 }
 -- require('lspconfig')['vim-language-server'].setup{}
 
+require('lspconfig')['pylsp'].setup{
+    capabilities = capabilities
+}

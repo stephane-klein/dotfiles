@@ -130,7 +130,8 @@ return require('packer').startup(function()
                     -- 'bash-language-server',
                     'css-lsp',
                     -- 'flake8',
-                    'html-lsp'
+                    'html-lsp',
+                    'python-lsp-server'
                 },
                 auto_update = false,
                 run_on_start = true

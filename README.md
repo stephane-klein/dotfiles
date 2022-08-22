@@ -25,6 +25,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
     - [nvim-ts-rainbow](https://github.com/p00f/nvim-ts-rainbow/)
   - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+    - [python-lsp-server](https://github.com/python-lsp/python-lsp-server)
   - [mason.nvim](https://github.com/williamboman/mason.nvim)
   - [nvim-window-picker](https://github.com/s1n7ax/nvim-window-picker)
   - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
