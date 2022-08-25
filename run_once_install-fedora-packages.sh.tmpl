@@ -30,6 +30,9 @@ sudo dnf install -y \
     ffmpeg-free \
     fzf
 
+sudo dnf copr enable vstanek/gnome-info-collect
+sudo dnf install gnome-info-collect
+
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 flatpak install -y flathub com.bitwarden.desktop
