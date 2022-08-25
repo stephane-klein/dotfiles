@@ -81,6 +81,7 @@ vim.g['user_emmet_leader_key'] = '<C-e>'
 -- LSP
 vim.keymap.set('n', '<leader><leader>rn', vim.lsp.buf.rename, { desc = '[R]e[n]ame' })
 vim.keymap.set('n', '<leader><leader>ca', vim.lsp.buf.code_action, { desc = '[C]ode [A]ction' })
+vim.keymap.set('n', '<leader><leader>f', vim.lsp.buf.formatting, { desc = '[F]ormat' })
 
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = '[G]oto [D]efinition' })
 vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { desc = '[G]oto [I]mplementation' })

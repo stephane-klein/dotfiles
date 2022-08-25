@@ -59,6 +59,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [emmet-vim](https://github.com/mattn/emmet-vim)
   - [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim)
     - [eslint](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#eslint) enabled
+    - [prettierd](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#prettierd)
 - Gnome extensions:
   - [AATWS - Advanced Alt-Tab Window Switcher](https://github.com/G-dH/advanced-alttab-window-switcher)
   - [Emoji Selector (for GNOME Shell)](https://github.com/maoschanz/emoji-selector-for-gnome)
