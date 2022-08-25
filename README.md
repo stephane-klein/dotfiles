@@ -12,7 +12,8 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 
 ## What I use  
 
-- OS: Fedora 36
+### On Linux and macOS
+
 - Text Editor: [neovim](https://github.com/neovim/neovim) with [Packer](https://github.com/wbthomason/packer.nvim) plugin manager
 - Shell: zsh with oh-my-zsh
 - [asdf](https://github.com/asdf-vm/asdf) for manage Python, Node, Go, pnpm, terraform… installation
@@ -60,12 +61,20 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim)
     - [eslint](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#eslint) enabled
     - [prettierd](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#prettierd)
+
+### On Linux
+
+- OS: Fedora 36
 - Gnome extensions:
   - [AATWS - Advanced Alt-Tab Window Switcher](https://github.com/G-dH/advanced-alttab-window-switcher)
   - [Emoji Selector (for GNOME Shell)](https://github.com/maoschanz/emoji-selector-for-gnome)
   - [gTile](https://github.com/gTile/gTile) (in practice, I don't use this extension very often)
   - [Time ++](https://github.com/zagortenay333/timepp) (See https://github.com/stephane-klein/dotfiles/issues/38)
   - [Hot Edge](https://github.com/jdoda/hotedge) (I replaced [Dash to Dock for Pop!_OS](https://github.com/halfmexican/dash-to-dock-pop/tree/ubuntu-dock) by [Hot Edge](https://github.com/jdoda/hotedge) since 2022-08-19)
+
+### On macOS
+
+- [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
 
 
 ## Getting started
