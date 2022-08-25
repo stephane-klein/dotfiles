@@ -77,6 +77,30 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 - [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
 
 
+### Firefox extensions
+
+- https://github.com/fabiocchetti/wide-github/
+- https://addons.mozilla.org/fr/firefox/addon/close-all-button/
+- https://addons.mozilla.org/fr/firefox/addon/languagetool/
+- https://darkreader.org/
+- https://duckduckgo.com/app
+- https://github.com/mozilla/multi-account-containers
+- https://addons.mozilla.org/fr/firefox/addon/hnes/
+- https://addons.mozilla.org/fr/firefox/addon/hohser/
+- https://addons.mozilla.org/fr/firefox/addon/joplin-web-clipper/
+- https://addons.mozilla.org/fr/firefox/addon/old-reddit-redirect/
+- https://addons.mozilla.org/fr/firefox/addon/reddit-enhancement-suite/
+- https://addons.mozilla.org/fr/firefox/addon/sponsorblock/
+- https://addons.mozilla.org/fr/firefox/addon/styl-us/
+- https://addons.mozilla.org/fr/firefox/addon/tab-counter-webext/
+- https://addons.mozilla.org/fr/firefox/addon/tournesol-extension/
+- https://addons.mozilla.org/fr/firefox/addon/ublock-origin/
+- https://addons.mozilla.org/fr/firefox/addon/video-downloadhelper/
+- https://addons.mozilla.org/fr/firefox/addon/vimium-ff/
+- https://addons.mozilla.org/fr/firefox/addon/wappalyzer/
+- https://addons.mozilla.org/fr/firefox/addon/view-page-archive/
+
+
 ## Getting started
 
 ### Install chezmoi and the dotfiles on any new machine
