@@ -61,6 +61,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
   - [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim)
     - [eslint](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#eslint) enabled
     - [prettierd](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#prettierd)
+  - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 
 ### On Linux
 
