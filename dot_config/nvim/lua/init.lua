@@ -94,3 +94,7 @@ vim.api.nvim_create_autocmd(
 vim.opt.laststatus = 3
 
 vim.opt.swapfile = off
+
+vim.g.vim_markdown_folding_disabled = 1
+vim.g.vim_markdown_no_default_key_mappings = 1
+vim.g.vim_markdown_frontmatter = 1

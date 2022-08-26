@@ -376,4 +376,6 @@ return require('packer').startup(function()
         end,
         ft = { "markdown" }
     })
+
+    use { 'preservim/vim-markdown' } -- See configuration in init.lua
 end)
