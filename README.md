@@ -100,6 +100,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 - https://addons.mozilla.org/fr/firefox/addon/vimium-ff/
 - https://addons.mozilla.org/fr/firefox/addon/wappalyzer/
 - https://addons.mozilla.org/fr/firefox/addon/view-page-archive/
+- https://addons.mozilla.org/en-US/firefox/addon/always-open-in-current-tab/
 
 
 ## Getting started
