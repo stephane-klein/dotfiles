@@ -1,27 +1,24 @@
-   -- Setup lspconfig.
+-- Setup lspconfig.
+local nvim_lsp = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- Disable because this issue: https://github.com/stephane-klein/dotfiles/issues/27
--- require('lspconfig')['cssls'].setup({
+-- nvim_lsp['cssls'].setup({
 --     capabilities = capabilities
 -- })
-require('lspconfig')['svelte'].setup({
+nvim_lsp['svelte'].setup({
     capabilities = capabilities
 })
-require('lspconfig')['html'].setup{
+nvim_lsp['html'].setup{
     capabilities = capabilities
 }
--- require('lspconfig')['lua-language-server'].setup{}
--- require('lspconfig')['prettierd'].setup{}
--- require('lspconfig')['sql-formatter'].setup{}
-require('lspconfig')['sqls'].setup{
+nvim_lsp['sqls'].setup{
     capabilities = capabilities
 }
-require('lspconfig')['tsserver'].setup{
+nvim_lsp['tsserver'].setup{
     capabilities = capabilities
 }
--- require('lspconfig')['vim-language-server'].setup{}
 
-require('lspconfig')['pylsp'].setup{
+nvim_lsp['pylsp'].setup{
     capabilities = capabilities
 }
