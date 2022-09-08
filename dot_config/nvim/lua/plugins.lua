@@ -131,7 +131,7 @@ return require('packer').startup(function()
                     'css-lsp',
                     -- 'flake8',
                     'html-lsp',
-                    'python-lsp-server'
+                    'pyright',
                 },
                 auto_update = false,
                 run_on_start = true

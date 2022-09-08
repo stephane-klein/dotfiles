@@ -19,6 +19,6 @@ nvim_lsp['tsserver'].setup{
     capabilities = capabilities
 }
 
-nvim_lsp['pylsp'].setup{
+nvim_lsp['pyright'].setup{
     capabilities = capabilities
 }
