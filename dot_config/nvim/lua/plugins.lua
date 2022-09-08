@@ -129,9 +129,15 @@ return require('packer').startup(function()
                     -- 'ansible-language-server',
                     -- 'bash-language-server',
                     'css-lsp',
-                    -- 'flake8',
                     'html-lsp',
                     'pyright',
+                    'autopep8',
+                    'flake8',
+                    'isort',
+                    'prettierd',
+                    'sql-formatter',
+                    'svelte-language-server',
+                    'typescript-language-server'
                 },
                 auto_update = false,
                 run_on_start = true
