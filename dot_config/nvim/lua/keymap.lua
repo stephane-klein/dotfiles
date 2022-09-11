@@ -91,3 +91,5 @@ vim.keymap.set('n', '<leader>ws', require('telescope.builtin').lsp_dynamic_works
 
 vim.keymap.set('n', 'h', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
 vim.keymap.set('n', '<C-h>', vim.lsp.buf.signature_help, { desc = 'Signature Documentation' })
+
+vim.keymap.set('n', '<leader>?', vim.diagnostic.open_float, { desc = 'Show diagnostic detail'})
