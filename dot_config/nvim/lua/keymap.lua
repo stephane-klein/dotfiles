@@ -93,5 +93,5 @@ vim.keymap.set('n', 'h', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
 vim.keymap.set('n', '<C-h>', vim.lsp.buf.signature_help, { desc = 'Signature Documentation' })
 
 vim.keymap.set('n', '<leader>?', vim.diagnostic.open_float, { desc = 'Show diagnostic detail'})
-vim.keymap.set('n', '<leader>n', '<Cmd>:cn<CR>', { dest ="Display next item in list" })
-vim.keymap.set('n', '<leader>p', '<Cmd>:cp<CR>', { dest ="Display previous item in list" })
+vim.keymap.set('n', '<leader>n', '<Cmd>:cn<CR>', { desc ="Display next item in list" })
+vim.keymap.set('n', '<leader>p', '<Cmd>:cp<CR>', { desc ="Display previous item in list" })
