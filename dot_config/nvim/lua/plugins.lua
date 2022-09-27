@@ -101,7 +101,8 @@ return require('packer').startup(function()
                     extended_mode = true
                 }
             })
-        end
+        end,
+        run = ':TSUpdate'
     }
 
     -- https://github.com/neovim/nvim-lspconfig
