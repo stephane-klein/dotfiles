@@ -100,3 +100,19 @@ vim.g.vim_markdown_no_default_key_mappings = 1
 vim.g.vim_markdown_frontmatter = 1
 
 vim.opt.diffopt='internal,filler,closeoff,vertical'
+
+if vim.g.neovide then
+  vim.opt.guifont = "JetBrainsMono Nerd Font Mono:h12"
+  -- vim.opt.guifont = "JetBrains Mono:h12,FiraCode Nerd Font Mono:h12,Hack:h12,JetBrainsMono Nerd Font Mono:h12"
+  -- vim.opt.guifontwide = "JetBrains Mono:h12,FiraCode Nerd Font Mono Regular:h12,Hack:h12,JetBrainsMono Nerd Font Mono Regular:h12"
+
+  vim.g.neovide_cursor_animation_length = 0.015
+  vim.g.neovide_cursor_trail_length = 0.15
+  vim.g.neovide_input_macos_alt_is_meta = true
+  vim.g.neovide_floating_blur_amount_x = 3.0
+  vim.g.neovide_floating_blur_amount_y = 3.0
+
+  -- Allow clipboard copy paste in Neovide
+  vim.g.neovide_input_use_logo = 1
+  -- vim.g.neovide_fullscreen = true
+end
