@@ -392,5 +392,5 @@ return require('packer').startup(function()
     })
 
     use { 'preservim/vim-markdown' } -- See configuration in init.lua
-    use { 'gabrielpoca/replacer.nvim' } -- https://github.com/stephane-klein/dotfiles/issues/60
+    use { 'kevinhwang91/nvim-bqf' } -- https://github.com/stephane-klein/dotfiles/issues/60
 end)
