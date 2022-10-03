@@ -257,24 +257,7 @@ return require('packer').startup(function()
 
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-        config = function()
-            require('lualine').setup({
-                options = {
-                    theme = 'tokyonight',
-                },
-                extensions = { 'fugitive' },
-                sections = {
-                    lualine_a = {
-                        {
-                            'filename',
-                            file_status = true,
-                            path = 1
-                        }
-                    }
-                }
-            })
-        end
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     use {
         'stevearc/dressing.nvim',
