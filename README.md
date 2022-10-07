@@ -21,7 +21,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 - Docker
 - [fzf](https://github.com/junegunn/fzf)
 - Neovim plugins:
-  - Theme: [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+  - Theme: [catppuccin](https://github.com/catppuccin/nvim)
   - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
   - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
     - [nvim-ts-rainbow](https://github.com/p00f/nvim-ts-rainbow/)

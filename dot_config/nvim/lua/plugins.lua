@@ -17,13 +17,22 @@ return require('packer').startup(function()
 
     -- Theme
     use {
-        'folke/tokyonight.nvim',
+        "catppuccin/nvim",
+        as = "catppuccin",
         config = function()
-            vim.g.tokyonight_style = "night"
-            vim.cmd("colorscheme tokyonight")
+            vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+            require("catppuccin").setup({
+                integrations = {
+                    gitsigns = true,
+                    nvimtree = true,
+                    telescope = true,
+                    treesitter = true,
+                    which_key = true
+                }
+            })
+            vim.api.nvim_command "colorscheme catppuccin"
         end
     }
-
 
     -- Git
     use { 'tpope/vim-fugitive' }
