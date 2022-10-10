@@ -383,6 +383,11 @@ return require('packer').startup(function()
         ft = { "markdown" }
     })
 
-    use { 'preservim/vim-markdown' } -- See configuration in init.lua
+    use {
+        'preservim/vim-markdown',
+        requires = {
+            { 'godlygeek/tabular' }
+        }
+    } -- See configuration in init.lua
     use { 'kevinhwang91/nvim-bqf' } -- https://github.com/stephane-klein/dotfiles/issues/60
 end)
