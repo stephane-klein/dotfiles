@@ -27,10 +27,6 @@ vim.keymap.set(
 vim.keymap.set('n', '<leader>.', '<Cmd>:Neotree action=show position=current reveal_force_cwd<CR>', { desc = "Open Neotree explorer"})
 vim.keymap.set('n', '<leader><tab>', '<Cmd>:Neotree toggle position=left reveal_force_cwd<CR>', { desc = "Open Neotree drawer"})
 
--- Configure wildmenu
-vim.keymap.set('c', '<up>', 'pumvisible() ? "<C-p>" : "<up>"', { expr = true })
-vim.keymap.set('c', '<down>', 'pumvisible() ? "<C-n>" : "<down>"', { expr = true })
-
 function toggle_style()
   if vim.g.tokyonight_style == "night" then
     vim.g.tokyonight_style = "day"
