@@ -48,6 +48,9 @@ flatpak install -y flathub org.telegram.desktop
 flatpak install -y flathub org.videolan.VLC
 flatpak install -y flathub com.github.eneshecan.WhatsAppForLinux
 
+# https://github.com/stephane-klein/dotfiles/issues/67
+sudo flatpak override --env=MOZ_ENABLE_WAYLAND=1
+
 # Install Docker (see https://docs.docker.com/engine/install/fedora/)
 # https://developer.fedoraproject.org/tools/docker/docker-installation.html
 sudo dnf remove -y podman
