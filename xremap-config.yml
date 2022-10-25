@@ -1,0 +1,7 @@
+keypress_delay_ms: 20
+keymap:
+  - name: Configure paste without shift in Alacritty
+    application:
+      only: Alacritty
+    remap:
+      CTRL-u: CTRL-Shift-u
