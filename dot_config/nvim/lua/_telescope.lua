@@ -171,7 +171,7 @@ vim.keymap.set('n', '<F1>',       use_layout(telescope_builtin.help_tags, 'popup
 
 vim.keymap.set(
     'n', '<leader>/',
-    use_layout(telescope.extensions.live_grep_args.live_grep_args, 'popup_list'),
+    telescope.extensions.live_grep_args.live_grep_args,
     { noremap = true, desc = "Live ripgrep"}
 )
 -- https://github.com/nvim-telescope/telescope-live-grep-args.nvim/issues/14
@@ -180,7 +180,7 @@ vim.keymap.set(
     function()
         telescope.extensions.live_grep_args.live_grep_raw({
             default_text = vim.fn.expand("<cword>"),
-            theme = 'popup_list',
+            -- theme = 'popup_list',
             border = true,
             preview = false,
             prompt_title = false,
