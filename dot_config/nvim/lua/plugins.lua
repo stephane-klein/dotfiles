@@ -8,7 +8,10 @@ return require('packer').startup(function()
         requires = {
             { 'nvim-lua/plenary.nvim' },
             { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
-            { 'nvim-telescope/telescope-live-grep-args.nvim' }
+            {
+                'nvim-telescope/telescope-live-grep-args.nvim',
+                branch='improve-theme-support'
+            }
         },
         config = function()
             require("telescope").load_extension("live_grep_args")
