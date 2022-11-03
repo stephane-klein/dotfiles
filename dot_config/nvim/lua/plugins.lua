@@ -380,4 +380,5 @@ return require('packer').startup(function()
         }
     } -- See configuration in init.lua
     use { 'kevinhwang91/nvim-bqf' } -- https://github.com/stephane-klein/dotfiles/issues/60
+    use { 'direnv/direnv.vim' }
 end)
