@@ -210,7 +210,18 @@ return require('packer').startup(function()
                     }
                 },
                 filesystem = {
-                    hijack_netrw_behavior = "open_current"
+                    hijack_netrw_behavior = "open_current",
+                    commands = {
+                        copy_file_name =  function(state)
+                            local node = state.tree:get_node()
+                            vim.fn.setreg('*', node.path, 'c')
+                        end
+                    },
+                    window = {
+                        mappings = {
+                            ["Y"] = "copy_file_name"
+                        }
+                    }
                 }
             })
         end
@@ -380,5 +391,8 @@ return require('packer').startup(function()
         }
     } -- See configuration in init.lua
     use { 'kevinhwang91/nvim-bqf' } -- https://github.com/stephane-klein/dotfiles/issues/60
+
     use { 'direnv/direnv.vim' }
+
+    use { 'sbdchd/neoformat' } -- Maybe later I will migrate to https://github.com/neoclide/coc.nvim 🤷🏻
 end)

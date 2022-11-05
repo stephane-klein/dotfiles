@@ -116,3 +116,13 @@ if vim.g.neovide then
   vim.g.neovide_input_use_logo = 1
   -- vim.g.neovide_fullscreen = true
 end
+
+-- Neoformat from https://prettier.io/docs/en/vim.html#neoformathttpsgithubcomsbdchdneoformat
+vim.g.neoformat_try_node_exe = 1
+vim.api.nvim_create_autocmd(
+    { "InsertLeave" },
+    {
+        pattern = { "*.svelte" },
+        command = "Neoformat"
+    }
+)
