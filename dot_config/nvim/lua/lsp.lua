@@ -21,4 +21,12 @@ nvim_lsp['tsserver'].setup{
 
 nvim_lsp['pyright'].setup{
     capabilities = capabilities
+    capabilities = capabilities,
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = "off"
+            }
+        }
+    }
 }
