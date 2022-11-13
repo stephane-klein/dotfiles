@@ -5,3 +5,8 @@ brew install \
     karabiner-elements \
     starship
 {{ end }}
+
+if ! [ -d ~/.oh-my-zsh/custom}/plugins/pnpm ]; then
+    mkdir -p ~/.oh-my-zsh/custom}/plugins/pnpm
+    git clone --depth=1 https://github.com/ntnyq/omz-plugin-pnpm.git ~/.oh-my-zsh/custom/plugins/pnpm
+fi
