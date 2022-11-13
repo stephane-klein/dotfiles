@@ -120,7 +120,7 @@ end
 -- Neoformat from https://prettier.io/docs/en/vim.html#neoformathttpsgithubcomsbdchdneoformat
 vim.g.neoformat_try_node_exe = 1
 vim.api.nvim_create_autocmd(
-    { "InsertLeave" },
+    { "BufWritePre" },
     {
         pattern = { "*.svelte", "*.md" },
         command = "Neoformat"
