@@ -395,5 +395,8 @@ return require('packer').startup(function()
     use { 'direnv/direnv.vim' }
 
     use { 'sbdchd/neoformat' } -- Maybe later I will migrate to https://github.com/neoclide/coc.nvim 🤷🏻
+
     use { 'lukas-reineke/indent-blankline.nvim' }
+
+    use { 'ledger/vim-ledger' }
 end)
