@@ -348,6 +348,22 @@ return require('packer').startup(function()
             require("true-zen").setup({})
         end
     })
+    -- sudo dnf install luajit-devel libX11-devel wayland-devel extra-cmake-modules
+    -- cd /home/stephane/.local/share/nvim/site/pack/packer/start/neoclip/src
+    --
+    -- $ cmake -B build -G Ninja && ninja -C build install/strip
+    -- -- Found Wayland_Client: /usr/lib64/libwayland-client.so (found version "1.21.0")
+    -- -- Found Wayland_Server: /usr/lib64/libwayland-server.so (found version "1.21.0")
+    -- -- Found Wayland_Cursor: /usr/lib64/libwayland-cursor.so (found version "1.21.0")
+    -- -- Found Wayland_Egl: /usr/lib64/libwayland-egl.so (found version "18.1.0")
+    -- -- Configuring done
+    -- -- Generating done
+    -- -- Build files have been written to: /home/stephane/.local/share/nvim/site/pack/packer/start/neoclip/src/build
+    -- ninja: Entering directory `build'
+    -- [7/8] Installing the project stripped...
+    -- -- Install configuration: "release"
+    -- -- Up-to-date: /home/stephane/.local/share/nvim/site/pack/packer/start/neoclip/src/../lua/neoclip_x11.so
+    -- -- Installing: /home/stephane/.local/share/nvim/site/pack/packer/start/neoclip/src/../lua/neoclip_wl.so
     use { 'matveyt/neoclip' }
 
     use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
