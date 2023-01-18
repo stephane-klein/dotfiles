@@ -69,11 +69,10 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 
 - OS: Fedora 36
 - Gnome extensions:
-  - [AATWS - Advanced Alt-Tab Window Switcher](https://github.com/G-dH/advanced-alttab-window-switcher)
-  - [Emoji Selector (for GNOME Shell)](https://github.com/maoschanz/emoji-selector-for-gnome)
-  - [gTile](https://github.com/gTile/gTile) (in practice, I don't use this extension very often)
-  - [Time ++](https://github.com/zagortenay333/timepp) (See https://github.com/stephane-klein/dotfiles/issues/38)
-  - [Hot Edge](https://github.com/jdoda/hotedge) (I replaced [Dash to Dock for Pop!_OS](https://github.com/halfmexican/dash-to-dock-pop/tree/ubuntu-dock) by [Hot Edge](https://github.com/jdoda/hotedge) since 2022-08-19)
+  - [A dock for the COSMIC/GNOME Shell, fixes conflict with COSMIC Workspaces](https://github.com/halfmexican/dash-to-dock-pop/tree/ubuntu-dock)
+  - [NoAnnoyance v2 GNOME Shell Extension](https://github.com/bdaase/noannoyance)
+  - [gTile - Gnome-shell extension that improves window tiling capabilities of stock gnome-shell](https://github.com/gTile/gTile)
+  - [WindowIsReady_Remover](https://github.com/nunofarruca/WindowIsReady_Remover)
 
 ### On macOS
 
