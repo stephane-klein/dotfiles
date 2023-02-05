@@ -1,0 +1,6 @@
+input * {
+    xkb_layout "fr"
+    xkb_variant "bepo"
+    repeat_delay 300
+    repeat_rate 30
+}
