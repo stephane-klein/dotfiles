@@ -5,13 +5,19 @@
 input * {
     xkb_layout "fr"
     xkb_variant "bepo"
-    repeat_delay 300
-    repeat_rate 30
+    xkb_options ctrlwin:swap_ctrl_lwin
+    repeat_rate 60
+    repeat_delay 250
+
+    dwt enabled
+    tap enabled
 }
 
-# Ctrl on my TypeMatrix
+# Ctrl on my TypeMatrix or Win on Thinkpad
 set $mod Mod4
+
 set $term foot
+set $menu fuzzel | xargs swaymsg exec --
 
 ### Key bindings
 #
@@ -19,6 +25,8 @@ set $term foot
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+
+    bindsym $mod+Space exec $menu
 
     # Kill focused window
     bindsym $mod+q kill
