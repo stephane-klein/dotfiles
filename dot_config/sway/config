@@ -47,6 +47,20 @@ set $term foot
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
 
+    # Switch to workspace
+    bindsym $mod+quotedbl workspace number 1
+    bindsym $mod+guillemotleft workspace number 2
+    bindsym $mod+guillemotright workspace number 3
+    bindsym $mod+parenleft workspace number 4
+    bindsym $mod+parenright workspace number 5
+    bindsym $mod+at workspace number 6
+    bindsym $mod+plus workspace number 7
+    bindsym $mod+minus workspace number 8
+    bindsym $mod+slash workspace number 9
+    bindsym $mod+asterisk workspace number 10
+    bindsym $mod+equal workspace number 11
+    bindsym $mod+percent workspace number 12
+
 #
 
 include /etc/sway/config.d/*
