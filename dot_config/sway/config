@@ -72,5 +72,9 @@ set $menu fuzzel | xargs swaymsg exec --
     bindsym $mod+percent workspace number 12
 
 #
+# auto launch applications
+
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec waybar
 
 include /etc/sway/config.d/*
