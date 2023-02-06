@@ -44,6 +44,9 @@ set $term foot
     bindsym $mod+b splith
     bindsym $mod+v splitv
 
+    # Make the current focus fullscreen
+    bindsym $mod+f fullscreen
+
 #
 
 include /etc/sway/config.d/*
