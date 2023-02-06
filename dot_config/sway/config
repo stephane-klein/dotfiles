@@ -41,6 +41,9 @@ set $term foot
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
 
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
+
 #
 
 include /etc/sway/config.d/*
