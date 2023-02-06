@@ -1,6 +1,28 @@
+### Variables
+#
+# Logo key. Use Mod1 for Alt.
+
 input * {
     xkb_layout "fr"
     xkb_variant "bepo"
     repeat_delay 300
     repeat_rate 30
 }
+
+# Ctrl on my TypeMatrix
+set $mod Mod4
+set $term foot
+
+### Key bindings
+#
+# Basics:
+#
+    # Start a terminal
+    bindsym $mod+Return exec $term
+
+    # Kill focused window
+    bindsym $mod+Shift+q kill
+
+#
+
+include /etc/sway/config.d/*
