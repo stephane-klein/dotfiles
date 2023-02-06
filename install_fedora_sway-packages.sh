@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sudo dnf install sway sway-systemd waybar wofi swaybg swayidle swaylock wshowkeys
+sudo dnf install sway sway-systemd waybar fuzzel swaybg swayidle swaylock wshowkeys
 
