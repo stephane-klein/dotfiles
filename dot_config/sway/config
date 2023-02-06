@@ -5,7 +5,9 @@
 input * {
     xkb_layout "fr"
     xkb_variant "bepo"
-    xkb_options ctrlwin:swap_ctrl_lwin
+
+    # Swap Left Ctrl with Left Win
+    xkb_options ctrl:swap_lwin_lctl
     repeat_rate 60
     repeat_delay 250
 
@@ -13,7 +15,7 @@ input * {
     tap enabled
 }
 
-# Ctrl on my TypeMatrix or Win on Thinkpad
+# Ctrl on my TypeMatrix and Thinkpad
 set $mod Mod4
 
 set $term foot
