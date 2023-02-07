@@ -2,6 +2,8 @@
 #
 # Logo key. Use Mod1 for Alt.
 
+default_border none
+
 input * {
     xkb_layout "fr"
     xkb_variant "bepo"
@@ -20,6 +22,9 @@ set $mod Mod4
 
 set $term foot
 set $menu fuzzel | xargs swaymsg exec --
+
+set $screenshot grim ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
+set $screenclip slurp | grim -g - ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
 
 ### Key bindings
 #
@@ -58,11 +63,11 @@ set $menu fuzzel | xargs swaymsg exec --
     bindsym $mod+f fullscreen
 
     # Switch to workspace
-    bindsym $mod+quotedbl workspace number 1
-    bindsym $mod+guillemotleft workspace number 2
-    bindsym $mod+guillemotright workspace number 3
-    bindsym $mod+parenleft workspace number 4
-    bindsym $mod+parenright workspace number 5
+    bindsym $mod+quotedbl workspace "web"
+    bindsym $mod+guillemotleft workspace "code"
+    bindsym $mod+guillemotright workspace "signal"
+    bindsym $mod+parenleft workspace "slack"
+    bindsym $mod+parenright workspace "mattermost"
     bindsym $mod+at workspace number 6
     bindsym $mod+plus workspace number 7
     bindsym $mod+minus workspace number 8
@@ -71,10 +76,34 @@ set $menu fuzzel | xargs swaymsg exec --
     bindsym $mod+equal workspace number 11
     bindsym $mod+percent workspace number 12
 
+    # Screenshot
+    bindsym --no-repeat $mod+Print exec $screenshot
+    bindsym --no-repeat $mod+Shift+Print exec $screenclip
+
 #
 # auto launch applications
 
+workspace "web"
+exec flatpak run org.mozilla.firefox
+
+workspace "code"
+exec foot
+
+workspace "signal"
+exec flatpak run org.signal.Signal
+
+workspace "slack"
+exec flatpak run com.slack.Slack
+
+workspace "mattermost"
+exec flatpak run com.mattermost.Desktop
+
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec waybar
+exec mako
+exec ~/.config/waybar/launch-waybar.sh
+exec swayidle -w \
+         timeout 300 'swaylock -f' \
+         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f'
 
 include /etc/sway/config.d/*

@@ -1,0 +1,24 @@
+{
+    "layer": "top",
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
+    "modules-right": [
+        "clock"
+    ],
+    "clock": {
+        "timezone": "Europe/Paris",
+        "format": " {:%Y-%m-%d | %H:%M} "
+    },
+    "sway/workspaces": {
+        "persistent_workspaces": {
+            "web": [],
+            "code": [],
+            "signal": [],
+            "slack": [],
+            "mattermost": []
+        },
+        "all-outputs": true
+    }
+}
