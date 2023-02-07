@@ -12,13 +12,9 @@
         "format": " {:%Y-%m-%d | %H:%M} "
     },
     "sway/workspaces": {
-        "persistent_workspaces": {
-            "web": [],
-            "code": [],
-            "signal": [],
-            "slack": [],
-            "mattermost": []
-        },
+        "sort-by-number": true,
+        "sort-by-name": false,
+        "sort-by-coordinates": false,
         "all-outputs": true
     }
 }

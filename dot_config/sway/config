@@ -3,6 +3,7 @@
 # Logo key. Use Mod1 for Alt.
 
 default_border none
+workspace_layout tabbed
 
 input * {
     xkb_layout "fr"
@@ -26,6 +27,12 @@ set $menu fuzzel | xargs swaymsg exec --
 set $screenshot grim ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
 set $screenclip slurp | grim -g - ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
 
+set $workspace_web 1:web
+set $workspace_code 2:code
+set $workspace_signal 3:signal
+set $workspace_slack 4:slack
+set $workspace_mattermost 5:mattermost
+
 ### Key bindings
 #
 # Basics:
@@ -44,6 +51,8 @@ set $screenclip slurp | grim -g - ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S"
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
+    bindsym $mod+Shift+l exec 'swaylock -f'
+
     # Move your focus around
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
@@ -56,18 +65,12 @@ set $screenclip slurp | grim -g - ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S"
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
 
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
-
-    # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
-
     # Switch to workspace
-    bindsym $mod+quotedbl workspace "web"
-    bindsym $mod+guillemotleft workspace "code"
-    bindsym $mod+guillemotright workspace "signal"
-    bindsym $mod+parenleft workspace "slack"
-    bindsym $mod+parenright workspace "mattermost"
+    bindsym $mod+quotedbl workspace $workspace_web
+    bindsym $mod+guillemotleft workspace $workspace_code
+    bindsym $mod+guillemotright workspace $workspace_signal
+    bindsym $mod+parenleft workspace $workspace_slack
+    bindsym $mod+parenright workspace $workspace_mattermost
     bindsym $mod+at workspace number 6
     bindsym $mod+plus workspace number 7
     bindsym $mod+minus workspace number 8
@@ -80,22 +83,56 @@ set $screenclip slurp | grim -g - ~/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S"
     bindsym --no-repeat $mod+Print exec $screenshot
     bindsym --no-repeat $mod+Shift+Print exec $screenclip
 
+    bindsym $mod+Shift+quotedbl move container to workspace $workspace_web
+    bindsym $mod+Shift+guillemotleft move container to workspace $workspace_code
+    bindsym $mod+Shift+guillemotright move container to workspace $workspace_signal
+    bindsym $mod+Shift+parenleft move container to workspace $workspace_slack
+    bindsym $mod+Shift+parenright move container to workspace $workspace_mattermost
+    bindsym $mod+Shift+at move container to workspace number 6
+    bindsym $mod+Shift+plus move container to workspace number 7
+    bindsym $mod+Shift+minus move container to workspace number 8
+    bindsym $mod+Shift+slash move container to workspace number 9
+    bindsym $mod+Shift+asterisk move container to workspace number 10
+    bindsym $mod+Shift+equal move container to workspace number 11
+    bindsym $mod+Shift+percent move container to workspace number 12
+
+    bindsym $mod+Shift+space floating toggle
+    #bindsym $mod+space focus mode_toggle
+    bindsym $mod+a focus parent
+    bindsym $mod+r mode "resize"
+    bindsym $mod+t layout tabbed
+    bindsym $mod+h layout splith
+    bindsym $mod+v layout splitv
+
+    # Make the current focus fullscreen
+    bindsym $mod+f fullscreen
+
+    mode "resize" {
+        bindsym Left resize shrink width 10px
+        bindsym Down resize grow height 10px
+        bindsym Up resize shrink height 10px
+        bindsym Right resize grow width 10px
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+    }
+
 #
 # auto launch applications
 
-workspace "web"
+
+workspace $workspace_web
 exec flatpak run org.mozilla.firefox
 
-workspace "code"
+workspace $workspace_code
 exec foot
 
-workspace "signal"
+workspace $workspace_signal
 exec flatpak run org.signal.Signal
 
-workspace "slack"
+workspace $workspace_slack
 exec flatpak run com.slack.Slack
 
-workspace "mattermost"
+workspace $workspace_mattermost
 exec flatpak run com.mattermost.Desktop
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

@@ -127,6 +127,7 @@ asdf plugin add golang || true
 
 echo "Launch 'source ~/.zshrc' to reload zsh configuration"
 echo "User added to docker group, then you need to restart session"
+systemctl --user enable --now ssh-agent.service
 
 {{   end }}
 {{ end }}
