@@ -32,6 +32,10 @@ set $workspace_code 2:code
 set $workspace_signal 3:signal
 set $workspace_slack 4:slack
 set $workspace_mattermost 5:mattermost
+set $workspace_joplin 6:joplin
+
+set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
+exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 
 ### Key bindings
 #
@@ -39,11 +43,13 @@ set $workspace_mattermost 5:mattermost
 #
     # Start a terminal
     bindsym $mod+Return exec $term
-
     bindsym $mod+Space exec $menu
 
     # Kill focused window
     bindsym $mod+q kill
+
+    bindsym XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+    bindsym XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
 
     # Reload the configuration file
     bindsym $mod+Shift+r reload
@@ -71,7 +77,7 @@ set $workspace_mattermost 5:mattermost
     bindsym $mod+guillemotright workspace $workspace_signal
     bindsym $mod+parenleft workspace $workspace_slack
     bindsym $mod+parenright workspace $workspace_mattermost
-    bindsym $mod+at workspace number 6
+    bindsym $mod+at workspace number $workspace_joplin
     bindsym $mod+plus workspace number 7
     bindsym $mod+minus workspace number 8
     bindsym $mod+slash workspace number 9
@@ -88,7 +94,7 @@ set $workspace_mattermost 5:mattermost
     bindsym $mod+Shift+guillemotright move container to workspace $workspace_signal
     bindsym $mod+Shift+parenleft move container to workspace $workspace_slack
     bindsym $mod+Shift+parenright move container to workspace $workspace_mattermost
-    bindsym $mod+Shift+at move container to workspace number 6
+    bindsym $mod+Shift+at move container to workspace $workspace_joplin
     bindsym $mod+Shift+plus move container to workspace number 7
     bindsym $mod+Shift+minus move container to workspace number 8
     bindsym $mod+Shift+slash move container to workspace number 9
@@ -134,6 +140,9 @@ exec flatpak run com.slack.Slack
 
 workspace $workspace_mattermost
 exec flatpak run com.mattermost.Desktop
+
+workspace $workspace_joplin
+exec flatpak run net.cozic.joplin_desktop
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
