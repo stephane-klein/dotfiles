@@ -11,8 +11,8 @@ input * {
 
     # Swap Left Ctrl with Left Win
     xkb_options ctrl:swap_lwin_lctl
-    repeat_rate 60
-    repeat_delay 250
+    repeat_rate 50
+    repeat_delay 350
 
     dwt enabled
     tap enabled
@@ -57,7 +57,7 @@ exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
-    bindsym $mod+Shift+l exec 'swaylock -f'
+    bindsym $mod+Shift+l exec 'swaylock -f -c 000000'
 
     # Move your focus around
     bindsym $mod+Left focus left
@@ -148,8 +148,8 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
 exec ~/.config/waybar/launch-waybar.sh
 exec swayidle -w \
-         timeout 300 'swaylock -f' \
+         timeout 300 'swaylock -d -f -c 000000' \
          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f'
+         before-sleep 'swaylock -d -f -c 000000'
 
 include /etc/sway/config.d/*
