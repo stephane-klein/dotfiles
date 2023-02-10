@@ -35,6 +35,7 @@ set $workspace_signal 3:signal
 set $workspace_slack 4:slack
 set $workspace_mattermost 5:mattermost
 set $workspace_joplin 6:joplin
+set $workspace_calendar 7:cal
 
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
@@ -77,8 +78,13 @@ exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
     bindsym $mod+Shift+Right move right
 
     # Switch to workspace
+    # I use quotedbl, guillemotleft... because I use https://en.wikipedia.org/wiki/B%C3%89PO keyboard
     bindsym $mod+quotedbl workspace $workspace_web
+    # This bind does not work
+    # bindsym Control_R+quotedbl workspace $workspace_web
     bindsym $mod+guillemotleft workspace $workspace_code
+    # This bind does not work
+    # bindsym Control_R+guillemotleft workspace $workspace_code
     bindsym $mod+guillemotright workspace $workspace_signal
     bindsym $mod+parenleft workspace $workspace_slack
     bindsym $mod+parenright workspace $workspace_mattermost
@@ -135,26 +141,30 @@ exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 # auto launch applications
 
 
-# workspace $workspace_web
-# exec flatpak run org.mozilla.firefox
-exec "~/.config/sway/runner.sh '$workspace_web' flatpak run org.mozilla.firefox"
+exec flatpak run org.mozilla.firefox
+assign [app_id="firefox"] $workspace_web
 
-# workspace $workspace_code
-# exec foot
-exec "~/.config/sway/runner.sh '$workspace_code' foot"
+exec foot
+assign [app_id="foot"] $workspace_code
 
-# workspace $workspace_signal
-# exec flatpak run org.signal.Signal
-exec "~/.config/sway/runner.sh '$workspace_signal' flatpak run org.signal.Signal"
+exec flatpak run org.signal.Signal
+assign [class="Signal"] $workspace_signal
 
-# workspace $workspace_slack
-# exec flatpak run com.slack.Slack
+exec flatpak run com.slack.Slack
+assign [class="Slack"] $workspace_slack
 #
-# workspace $workspace_mattermost
-# exec flatpak run com.mattermost.Desktop
+exec flatpak run com.mattermost.Desktop
+assign [class="Mattermost"] $workspace_mattermost
 #
-# workspace $workspace_joplin
-# exec flatpak run net.cozic.joplin_desktop
+exec flatpak run net.cozic.joplin_desktop
+assign [class="Joplin"] $workspace_joplin
+
+exec flatpak run org.mozilla.firefox --new-window https://calendar.google.com
+assign [title="Google Agenda.*"] $workspace_calendar
+
+
+for_window [title="Google Agenda.*" app_id="firefox"] "7:cal"
+
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
