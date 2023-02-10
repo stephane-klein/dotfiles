@@ -4,9 +4,22 @@
         "sway/workspaces",
         "sway/mode"
     ],
+    "modules-center": [
+        "sway/window"
+    ],
     "modules-right": [
+        "battery",
         "clock"
     ],
+    "sway/window": {
+        "format": "{}",
+        "icon": true,
+        "rewrite": {
+           "(.*) - Mozilla Firefox": "🌎 $1",
+           "(.*) - vim": " $1",
+           "(.*) - zsh": " [$1]"
+        }
+    },
     "clock": {
         "timezone": "Europe/Paris",
         "format": " {:%Y-%m-%d | %H:%M} "
@@ -16,5 +29,17 @@
         "sort-by-name": false,
         "sort-by-coordinates": false,
         "all-outputs": true
-    }
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "bat:{capacity}% {time} {power}w",
+        "format-charging": " bat:{capacity}% ",
+        "format-plugged": " bat:{capacity}% ",
+        "format-alt": " bat:{time} ",
+        "format-icons": ["", "", "", "", ""]
+    },
 }

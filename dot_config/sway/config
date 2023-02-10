@@ -126,23 +126,26 @@ exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 # auto launch applications
 
 
-workspace $workspace_web
-exec flatpak run org.mozilla.firefox
+# workspace $workspace_web
+# exec flatpak run org.mozilla.firefox
+exec "~/.config/sway/runner.sh '$workspace_web' flatpak run org.mozilla.firefox"
 
-workspace $workspace_code
-exec foot
+# workspace $workspace_code
+# exec foot
+exec "~/.config/sway/runner.sh '$workspace_code' foot"
 
-workspace $workspace_signal
-exec flatpak run org.signal.Signal
+# workspace $workspace_signal
+# exec flatpak run org.signal.Signal
+exec "~/.config/sway/runner.sh '$workspace_signal' flatpak run org.signal.Signal"
 
-workspace $workspace_slack
-exec flatpak run com.slack.Slack
-
-workspace $workspace_mattermost
-exec flatpak run com.mattermost.Desktop
-
-workspace $workspace_joplin
-exec flatpak run net.cozic.joplin_desktop
+# workspace $workspace_slack
+# exec flatpak run com.slack.Slack
+#
+# workspace $workspace_mattermost
+# exec flatpak run com.mattermost.Desktop
+#
+# workspace $workspace_joplin
+# exec flatpak run net.cozic.joplin_desktop
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
