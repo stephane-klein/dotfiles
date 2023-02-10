@@ -5,6 +5,8 @@
 default_border none
 workspace_layout tabbed
 
+gaps outer 5
+
 input * {
     xkb_layout "fr"
     xkb_variant "bepo"
@@ -44,6 +46,9 @@ exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
     # Start a terminal
     bindsym $mod+Return exec $term
     bindsym $mod+Space exec $menu
+
+    # https://github.com/marty-oehme/bemoji
+    bindsym Mod4+e exec bemoji -t
 
     # Kill focused window
     bindsym $mod+q kill
@@ -121,6 +126,10 @@ exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
         bindsym Return mode "default"
         bindsym Escape mode "default"
     }
+
+    # scratchpad
+    bindsym $mod+s scratchpad show
+    bindsym $mod+Shift+s move to scratchpad
 
 #
 # auto launch applications
