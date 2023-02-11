@@ -153,32 +153,14 @@ hide_edge_borders --i3 none
 #
 # auto launch applications
 
+exec "~/.config/sway/runner.sh '$workspace_web'         firefox      flatpak run org.mozilla.firefox"
+exec "~/.config/sway/runner.sh '$workspace_code'        foot         foot"
+exec "~/.config/sway/runner.sh '$workspace_signal'      signal       flatpak run org.signal.Signal"
+exec "~/.config/sway/runner.sh '$workspace_slack'       slack        flatpak run com.slack.Slack"
+exec "~/.config/sway/runner.sh '$workspace_mattermost'  mattermost   flatpak run com.mattermost.Desktop"
+exec "~/.config/sway/runner2.sh '$workspace_joplin'      joplin       flatpak run net.cozic.joplin_desktop"
 
-workspace $workspace_web
-exec flatpak run org.mozilla.firefox
-exec sleep 2
-
-workspace $workspace_code
-exec foot
-exec sleep 1
-
-workspace $workspace_signal
-exec flatpak run org.signal.Signal
-exec sleep 1
-
-workspace $workspace_slack
-exec flatpak run com.slack.Slack
-exec sleep 1
-#
-workspace $workspace_mattermost
-exec flatpak run com.mattermost.Desktop
-exec sleep 1
-#
-workspace $workspace_joplin
-exec flatpak run net.cozic.joplin_desktop
-exec sleep 1
-
-workspace $workspace_calendar
+# workspace $workspace_calendar
 # exec flatpak run org.mozilla.firefox --new-window https://calendar.google.com
 
 

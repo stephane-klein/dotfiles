@@ -16,6 +16,8 @@ wait-for-window() {
 (
     con_id=$(window-events | wait-for-window "$2")
     swaymsg "[con_id=$con_id] move to workspace $1"
+    con_id=$(window-events | wait-for-window "$2")
+    swaymsg "[con_id=$con_id] move to workspace $1"
 ) &
 
 ${@:3} &
