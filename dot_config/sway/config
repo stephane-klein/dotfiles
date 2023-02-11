@@ -123,6 +123,7 @@ exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
+    bindsym $mod+b exec killall -SIGUSR1 waybar
 
     mode "resize" {
         bindsym Left resize shrink width 10px
