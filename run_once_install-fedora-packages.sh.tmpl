@@ -6,7 +6,9 @@
 
 set -e # -e: exit on error
 
+sudo dnf copr enable atim/starship -y
 sudo dnf update -y
+
 sudo dnf install -y \
     git \
     util-linux-user \
