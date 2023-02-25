@@ -9,6 +9,13 @@ set -e # -e: exit on error
 sudo dnf copr enable atim/starship -y
 sudo dnf update -y
 
+# Install Docker (see https://docs.docker.com/engine/install/fedora/)
+# https://developer.fedoraproject.org/tools/docker/docker-installation.html
+# Docker must be installed before distrobox
+sudo dnf remove -y podman
+sudo dnf config-manager -y --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin iptables fuse-overlayfs docker-compose
+
 sudo dnf install -y \
     flatpak \
     git \
@@ -56,11 +63,6 @@ sudo flatpak install -y flathub com.github.eneshecan.WhatsAppForLinux
 # https://github.com/stephane-klein/dotfiles/issues/67
 sudo flatpak override --env=MOZ_ENABLE_WAYLAND=1
 
-# Install Docker (see https://docs.docker.com/engine/install/fedora/)
-# https://developer.fedoraproject.org/tools/docker/docker-installation.html
-sudo dnf remove -y podman
-sudo dnf config-manager -y --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
-sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin iptables fuse-overlayfs docker-compose
 
 # https://docs.docker.com/engine/install/linux-postinstall/
 sudo groupadd docker && sudo gpasswd -a ${USER} docker && sudo systemctl restart docker
