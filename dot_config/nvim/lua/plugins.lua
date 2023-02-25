@@ -415,4 +415,6 @@ return require('packer').startup(function()
     use { 'lukas-reineke/indent-blankline.nvim' }
 
     use { 'ledger/vim-ledger' }
+
+    use { 'thoughtbot/vim-rspec' }
 end)
