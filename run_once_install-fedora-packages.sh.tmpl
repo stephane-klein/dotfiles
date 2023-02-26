@@ -32,7 +32,8 @@ sudo dnf install -y \
     ffmpeg-free \
     fzf \
     starship \
-    distrobox
+    distrobox \
+    neovim
 
 sudo dnf copr enable vstanek/gnome-info-collect -y
 sudo dnf install gnome-info-collect -y
@@ -66,11 +67,6 @@ sudo groupadd docker && sudo gpasswd -a ${USER} docker && sudo systemctl restart
 sudo systemctl enable docker
 
 sudo dnf builddep -y python3
-
-# Install neovim from binary
-rm -rf ~/neovim/
-mkdir -p ~/neovim/
-curl -fsSL "https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.tar.gz" | tar xz -C ~/neovim/ --strip-components=1
 
 # neovim dependencies: ripgrep
 # asdf python dependencies: patch and "dnf builddep python3"
