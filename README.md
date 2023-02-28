@@ -10,7 +10,7 @@ So far, only GNU/Linux Fedora is supported.
 
 Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_once_install-fedora-packages.sh.tmpl) (idempotent and POSIX compliant) script would be executed once.
 
-## What I use  
+## What I use
 
 ### On Linux and macOS
 
@@ -78,7 +78,6 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 
 - [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
 
-
 ### Firefox extensions
 
 - https://github.com/fabiocchetti/wide-github/
@@ -103,6 +102,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 - https://addons.mozilla.org/fr/firefox/addon/view-page-archive/
 - https://addons.mozilla.org/en-US/firefox/addon/always-open-in-current-tab/
 
+Firefox Theme: https://github.com/elibroftw/matte-black-theme/releases
 
 ## Getting started
 
