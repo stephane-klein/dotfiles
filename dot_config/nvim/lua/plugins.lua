@@ -78,7 +78,8 @@ return require('packer').startup(function()
                     "ninja", "sql", "svelte", "toml",
                     "vim", "yaml"
                 },
-                auto_install = true,
+                auto_install = false,
+                sync_install = true,
                 highlight = {
                     enable = true,
                     additional_vim_regex_highlighting = false,
@@ -100,8 +101,7 @@ return require('packer').startup(function()
                     extended_mode = true
                 }
             })
-        end,
-        run = ':TSUpdate'
+        end
     }
 
     -- https://github.com/neovim/nvim-lspconfig
@@ -140,7 +140,7 @@ return require('packer').startup(function()
                     'typescript-language-server'
                 },
                 auto_update = false,
-                run_on_start = true
+                run_on_start = false
             })
         end
     }
