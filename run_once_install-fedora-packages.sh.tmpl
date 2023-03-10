@@ -83,17 +83,9 @@ if ! [ -d ~/.oh-my-zsh/custom}/plugins/pnpm ]; then
 fi
 
 # Install https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack
-if ! fc-list | grep "Hack Regular Nerd Font" &> /dev/null; then
-    (
-        cd ~/
-        git clone --filter=blob:none --sparse https://github.com/ryanoasis/nerd-fonts.git ~/nerd-fonts
-        cd nerd-fonts
-        git sparse-checkout add patched-fonts/Hack
-        ./install.sh Hack
-        cd ..
-        rm -rf nerd-fonts
-    )
-fi
+# More info about this method here: https://discussion.fedoraproject.org/t/alacritty-hack-nerd-font-mono-issues/79239/6
+sudo dnf copr enable zawertun/hack-fonts -y
+sudo dnf install hack-fonts
 
 # Install neovim dependencies
 if ! [ -d ~/.local/share/nvim/site/pack/packer/start/packer.nvim ]; then
