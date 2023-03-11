@@ -64,8 +64,12 @@ sudo dnf config-manager -y --add-repo https://download.docker.com/linux/fedora/d
 sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin iptables fuse-overlayfs docker-compose
 
 # https://docs.docker.com/engine/install/linux-postinstall/
-sudo groupadd docker && sudo gpasswd -a ${USER} docker && sudo systemctl restart docker
+sudo groupadd docker
+sudo gpasswd -a ${USER} docker  # Note: I am not sure that this line is useful
+sudo usermod -aG docker $USER
 sudo systemctl enable docker
+newgrp docker
+sudo systemctl restart docker
 
 sudo dnf builddep -y python3
 
