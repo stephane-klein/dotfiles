@@ -97,7 +97,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 - https://addons.mozilla.org/fr/firefox/addon/tournesol-extension/
 - https://addons.mozilla.org/fr/firefox/addon/ublock-origin/
 - https://addons.mozilla.org/fr/firefox/addon/video-downloadhelper/
-- https://addons.mozilla.org/fr/firefox/addon/vimium-ff/
+- https://github.com/gdh1995/vimium-c ([here is](vimium_c.json) my config that I can import)
 - https://addons.mozilla.org/fr/firefox/addon/wappalyzer/
 - https://addons.mozilla.org/fr/firefox/addon/view-page-archive/
 - https://addons.mozilla.org/en-US/firefox/addon/always-open-in-current-tab/
