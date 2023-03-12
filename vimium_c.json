@@ -1,0 +1,20 @@
+{
+	"name": "Vimium C",
+	"@time": "12/03/2023 19:02:31",
+	"time": 1678644151892,
+	"environment": {
+		"extension": "1.99.97",
+		"platform": "linux",
+		"firefox": 110
+	},
+	"keyLayout": 2,
+	"keyMappings": [
+		"#!no-check",
+		"mapKey <down> j",
+		"mapKey <right> l",
+		"mapKey <left> h",
+		"mapKey <up> k",
+		""
+	],
+	"vimSync": true
+}
