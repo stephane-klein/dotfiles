@@ -93,6 +93,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 - https://addons.mozilla.org/fr/firefox/addon/reddit-enhancement-suite/
 - https://addons.mozilla.org/fr/firefox/addon/sponsorblock/
 - https://addons.mozilla.org/fr/firefox/addon/styl-us/
+  - I use this [Disable GitLab, GitHub Emoji Picker](https://userstyles.org/styles/244590/disable-gitlab-github-emoji-picker) userstyle
 - https://addons.mozilla.org/fr/firefox/addon/tab-counter-webext/
 - https://addons.mozilla.org/fr/firefox/addon/tournesol-extension/
 - https://addons.mozilla.org/fr/firefox/addon/ublock-origin/
