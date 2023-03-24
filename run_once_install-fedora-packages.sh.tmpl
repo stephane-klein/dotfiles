@@ -130,5 +130,8 @@ asdf plugin add golang || true
 echo "Launch 'source ~/.zshrc' to reload zsh configuration"
 echo "User added to docker group, then you need to restart session"
 
+# Load GNOME keyboard shortcuts and other desktop settings
+dconf load / < gnome-settings.ini
+
 {{   end }}
 {{ end }}
