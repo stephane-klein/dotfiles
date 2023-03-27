@@ -1,12 +1,14 @@
 ## stephane-klein dotfiles powered by Chezmoi
 
-Status: work in progress, pre-alpha
+Status: I use this configuration daily since about September 2022.
 
 See my initial issue: https://github.com/stephane-klein/personnal-notebook/issues/25 (in French)
 
 These dotfiles are managed using [chezmoi](https://www.chezmoi.io/).
 
-So far, only GNU/Linux Fedora is supported.
+Concerning Neovim, I am considering a migration to [LazyVim](https://www.lazyvim.org/) (more info, see [#98](https://github.com/stephane-klein/dotfiles/issues/98)).
+
+So far, only GNU/Linux Fedora 37 is supported.
 
 Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_once_install-fedora-packages.sh.tmpl) (idempotent and POSIX compliant) script would be executed once.
 
