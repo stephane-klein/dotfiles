@@ -117,6 +117,24 @@ With a single command:
 $ sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply stephane-klein
 ```
 
+## Hardware devices
+
+### Lenovo Thinkpad T14s Gen3 AMD (personnal)
+
+ ThinkPad T14s Gen 3 ([Notebookcheck review](https://www.notebookcheck.net/Lenovo-ThinkPad-T14s-G3-AMD-laptop-review-Quiet-and-efficient-workhorse-with-Ryzen-power.682906.0.html))
+
+- Processeur AMD Ryzen™ 7 Pro 6850U (2,70 GHz - 4,70 GHz)
+- 32Go RAM
+- 512 SSD
+- 14" WUXGA (1 920 x 1 200), IPS, anti-reflets, non tactile, 72 % NTSC, 400 nits 
+- 1,22 kg
+- [« Battery life was great with Linux on the T14s. I was getting somewhere near 18 hours »](https://old.reddit.com/r/thinkpad/comments/z2mxfm/appreciate_help_deciding_between_t14_gen_3_amd/ixh6jnp/)
+- 1740 € HT (France 2023-01-30)
+- [`inxi -F`](https://github.com/smxi/inxi) specification output: [inxi_2023-03-26.txt ](https://gist.github.com/stephane-klein/0735abce4359b705f85ce1502d214ba3)
+- [edid-decode output](https://discussion.fedoraproject.org/t/regalar-screen-glitch-on-thinkpad-t14s-gen3-amd/79963/4)
+- `dmidecode -s bios-version` : `R22ET55W (1.25 )`
+
+
 ## Neovim ressources
 
 Here is my source of inspiration to find Neovim plugin and configuration settings:
