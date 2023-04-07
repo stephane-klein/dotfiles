@@ -1,0 +1,6 @@
+AddKeysToAgent yes
+
+Identityfile ~/.ssh/id_rsa_2016
+Identityfile ~/.ssh/id_rsa_github-stephane-klein
+
+Include /home/stephane/git/gitlab.spacefill.fr/spacefill/spacefill/deployments/ssh_config
