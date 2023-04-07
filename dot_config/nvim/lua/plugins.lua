@@ -75,7 +75,7 @@ return require('packer').startup(function()
                 ensure_installed = {
                     "python", "lua", "javascript", "bash", "css",
                     "go", "graphql", "html", "json", "markdown",
-                    "ninja", "sql", "svelte", "toml",
+                    "ninja", "sqlls", "svelte", "toml",
                     "vim", "yaml"
                 },
                 auto_install = false,
@@ -124,7 +124,7 @@ return require('packer').startup(function()
                 ensure_installed = {
                     'lua-language-server',
                     'vim-language-server',
-                    'sqls',
+                    'sqlls',
                     -- 'shellcheck',
                     -- 'ansible-language-server',
                     -- 'bash-language-server',
