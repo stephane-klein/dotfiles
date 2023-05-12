@@ -110,6 +110,31 @@ I don't use MacOS anymore.
 
 Firefox Theme: https://github.com/elibroftw/matte-black-theme/releases
 
+## Backup
+
+As of May 12, 2023, I start using https://www.backblaze.com/ B2 Cloud Storage to backup some data, with restic.
+
+Some ressources:
+
+Documentation: https://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html#backblaze-b2
+
+See parameter in Bitwarden.
+
+```
+$ export B2_ACCOUNT_ID=xxx
+$ export B2_ACCOUNT_KEY=xxxx
+$ export RESTIC_PASSWORD="xxxx"
+```
+
+```
+$ restic version
+restic 0.15.2 compiled with go1.20.3 on darwin/amd64
+$ restic -r b2:backup-eu-santa-maria-2021: init
+$ restic -r b2:backup-eu-santa-maria-2021 backup __folder__
+$ restic -r b2:backup-eu-santa-maria-2021 snapshots
+$ restic -r b2:backup-eu-santa-maria-2021 restore __id__ --target ./
+```
+
 ## Getting started
 
 ### Install chezmoi and the dotfiles on any new machine
