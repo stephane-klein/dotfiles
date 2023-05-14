@@ -107,6 +107,7 @@ I don't use MacOS anymore.
 - https://addons.mozilla.org/fr/firefox/addon/wappalyzer/
 - https://addons.mozilla.org/fr/firefox/addon/view-page-archive/
 - https://addons.mozilla.org/en-US/firefox/addon/always-open-in-current-tab/
+- https://markdown-here.com/ (I use it to write email with Fastmail and Gmail)
 
 Firefox Theme: https://github.com/elibroftw/matte-black-theme/releases
 
