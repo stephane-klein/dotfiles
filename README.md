@@ -8,7 +8,7 @@ These dotfiles are managed using [chezmoi](https://www.chezmoi.io/).
 
 Concerning Neovim, I am considering a migration to [LazyVim](https://www.lazyvim.org/) (more info, see [#98](https://github.com/stephane-klein/dotfiles/issues/98)).
 
-So far, only GNU/Linux Fedora 37 is supported.
+So far, only GNU/Linux Fedora 38 is supported.
 
 Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_once_install-fedora-packages.sh.tmpl) (idempotent and POSIX compliant) script would be executed once.
 
@@ -72,7 +72,7 @@ I don't use MacOS anymore.
 
 ### On Linux
 
-- OS: Fedora 36
+- OS: Fedora 38
 - Gnome extensions:
   - [A dock for the COSMIC/GNOME Shell, fixes conflict with COSMIC Workspaces](https://github.com/halfmexican/dash-to-dock-pop/tree/ubuntu-dock)
   - [NoAnnoyance v2 GNOME Shell Extension](https://github.com/bdaase/noannoyance)
