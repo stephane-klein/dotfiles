@@ -99,6 +99,10 @@ return require('packer').startup(function()
                 rainbow = {
                     enable = true,
                     extended_mode = true
+                },
+                context_commentstring = {
+                    enable = true,
+                    enable_autocmd = false,
                 }
             })
         end
@@ -232,9 +236,15 @@ return require('packer').startup(function()
     use {
         'terrortylor/nvim-comment',
         config = function ()
-            require('nvim_comment').setup()
+            require('nvim_comment').setup({
+                hook = function()
+                    require('ts_context_commentstring.internal').update_commentstring()
+                end,
+            })
         end
     }
+
+    use { 'JoosepAlviste/nvim-ts-context-commentstring' }
 
     use { 'tpope/vim-repeat' }
     -- https://github.com/stephane-klein/dotfiles/issues/18
