@@ -427,4 +427,6 @@ return require('packer').startup(function()
     use { 'ledger/vim-ledger' }
 
     use { 'thoughtbot/vim-rspec' }
+
+    use { 'hashivim/vim-terraform' }
 end)
