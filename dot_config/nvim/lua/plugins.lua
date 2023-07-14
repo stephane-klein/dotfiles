@@ -65,8 +65,10 @@ return require('packer').startup(function()
         end
     }
 
+    -- https://github.com/nvim-treesitter/nvim-treesitter/wiki/Extra-modules-and-plugins
+    use { 'HiPhish/nvim-ts-rainbow2' }
+
     -- https://github.com/nvim-treesitter/nvim-treesitter
-    use { 'p00f/nvim-ts-rainbow' }
     use {
         "nvim-treesitter/nvim-treesitter",
         config = function()
