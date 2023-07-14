@@ -29,7 +29,7 @@ I don't use MacOS anymore.
   - Theme: [catppuccin](https://github.com/catppuccin/nvim)
   - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
   - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-    - [nvim-ts-rainbow](https://github.com/p00f/nvim-ts-rainbow/)
+    - [nvim-ts-rainbow2](https://github.com/HiPhish/nvim-ts-rainbow2/) ([from](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Extra-modules-and-plugins))
   - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
     - [python-lsp-server](https://github.com/python-lsp/python-lsp-server)
   - [mason.nvim](https://github.com/williamboman/mason.nvim)
