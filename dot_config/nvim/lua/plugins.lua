@@ -77,7 +77,7 @@ return require('packer').startup(function()
                 ensure_installed = {
                     "python", "lua", "javascript", "bash", "css",
                     "go", "graphql", "html", "json", "markdown",
-                    "ninja", "sqlls", "svelte", "toml",
+                    "ninja", "svelte", "toml",
                     "vim", "yaml"
                 },
                 auto_install = false,
@@ -330,11 +330,7 @@ return require('packer').startup(function()
     use {
         'beauwilliams/focus.nvim',
         config = function()
-            require("focus").setup({
-                autoresize = false,
-                signcolumn = false,
-                number = false
-            })
+            require("focus").setup({})
         end
     }
 
