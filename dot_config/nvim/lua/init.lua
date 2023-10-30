@@ -127,7 +127,10 @@ vim.api.nvim_create_autocmd(
     }
 )
 
-require("indent_blankline").setup {
-    show_current_context = true,
-    show_current_context_start = true,
-}
+require("ibl").setup({
+    scope = {
+        enabled = true,
+        highlight = { "SpecialKey", "SpecialKey", "SpecialKey" },
+        show_start = false
+    }
+})
