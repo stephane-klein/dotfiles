@@ -427,4 +427,6 @@ return require('packer').startup(function()
     use { 'thoughtbot/vim-rspec' }
 
     use { 'hashivim/vim-terraform' }
+
+    use {'kaarmu/typst.vim', ft = {'typst'}}
 end)
