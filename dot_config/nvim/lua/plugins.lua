@@ -328,9 +328,14 @@ return require('packer').startup(function()
     }
 
     use {
-        'beauwilliams/focus.nvim',
+        'nvim-focus/focus.nvim',
         config = function()
-            require("focus").setup({})
+            require("focus").setup({
+                enable = false,
+                autoresize = {
+                    enable = false
+                }
+            })
         end
     }
 
