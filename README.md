@@ -109,6 +109,7 @@ I don't use MacOS anymore.
 - https://addons.mozilla.org/en-US/firefox/addon/always-open-in-current-tab/
 - https://markdown-here.com/ (I use it to write email with Fastmail and Gmail)
 - https://github.com/filips123/PWAsForFirefox - To install all website as [Progressive Web Apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
+- https://github.com/lawrencehook/remove-youtube-suggestions
 
 Firefox Theme: https://github.com/elibroftw/matte-black-theme/releases
 
