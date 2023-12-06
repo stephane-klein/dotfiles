@@ -134,3 +134,7 @@ require("ibl").setup({
         show_start = false
     }
 })
+
+require('ts_context_commentstring').setup {
+  enable_autocmd = false,
+}

@@ -101,10 +101,6 @@ return require('packer').startup(function()
                 rainbow = {
                     enable = true,
                     extended_mode = true
-                },
-                context_commentstring = {
-                    enable = true,
-                    enable_autocmd = false,
                 }
             })
         end
@@ -235,6 +231,8 @@ return require('packer').startup(function()
 
     use { 'ntpeters/vim-better-whitespace' }
 
+    use { 'JoosepAlviste/nvim-ts-context-commentstring' }
+
     use {
         'terrortylor/nvim-comment',
         config = function ()
@@ -245,8 +243,6 @@ return require('packer').startup(function()
             })
         end
     }
-
-    use { 'JoosepAlviste/nvim-ts-context-commentstring' }
 
     use { 'tpope/vim-repeat' }
     -- https://github.com/stephane-klein/dotfiles/issues/18
