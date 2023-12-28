@@ -110,6 +110,7 @@ I don't use MacOS anymore.
 - https://markdown-here.com/ (I use it to write email with Fastmail and Gmail)
 - https://github.com/filips123/PWAsForFirefox - To install all website as [Progressive Web Apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 - https://github.com/lawrencehook/remove-youtube-suggestions
+- [DeepL Translate: Reading & writing translator by DeepL](https://addons.mozilla.org/en-US/firefox/addon/deepl-translate/)
 
 Firefox Theme: https://github.com/elibroftw/matte-black-theme/releases
 
