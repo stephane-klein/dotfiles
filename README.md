@@ -111,6 +111,7 @@ I don't use MacOS anymore.
 - https://github.com/filips123/PWAsForFirefox - To install all website as [Progressive Web Apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 - https://github.com/lawrencehook/remove-youtube-suggestions
 - [DeepL Translate: Reading & writing translator by DeepL](https://addons.mozilla.org/en-US/firefox/addon/deepl-translate/)
+- [Wayback Machine by Internet Archive](https://addons.mozilla.org/en-US/firefox/addon/wayback-machine_new/) - [My toots about this extension](https://mamot.fr/@stephane_klein/111657786068559121)
 
 Firefox Theme: https://github.com/elibroftw/matte-black-theme/releases
 
