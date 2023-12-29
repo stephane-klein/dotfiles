@@ -11,10 +11,12 @@ return require('packer').startup(function()
             {
                 'nvim-telescope/telescope-live-grep-args.nvim',
                 branch='improve-theme-support'
-            }
+            },
+            { 'benfowler/telescope-luasnip.nvim'}
         },
         config = function()
             require("telescope").load_extension("live_grep_args")
+            require("telescope").load_extension('luasnip')
         end
     }
 
@@ -256,6 +258,15 @@ return require('packer').startup(function()
             require('leap').set_default_keymaps()
         end
     }
+
+    -- Snippet
+    use({
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        -- install jsregexp (optional!:).
+        -- run = "make install_jsregexp"
+    })
 
     -- See cmp configuration in _cmp.lua
     use {

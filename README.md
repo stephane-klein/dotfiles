@@ -58,6 +58,7 @@ I don't use MacOS anymore.
   - [NeoZoom.lua](https://github.com/nyngwang/NeoZoom.lua/tree/neo-zoom-original)
   - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
     - [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
+  - [telescope-luasnip.nvim](https://github.com/benfowler/telescope-luasnip.nvim)
   - [true-zen.nvim](https://github.com/Pocco81/true-zen.nvim)
   - [neoclip](https://github.com/matveyt/neoclip) (to fix Wayland bug)
   - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)

@@ -196,3 +196,11 @@ vim.keymap.set(
     end,
     { noremap = true, desc = "Live ripgrep with word under cursor"}
 )
+
+-- Add https://github.com/benfowler/telescope-luasnip.nvim keymaps
+
+vim.keymap.set(
+    'n', '<leader>s',
+    use_layout(telescope.extensions.luasnip.luasnip, 'popup_list'),
+    { noremap = true, desc = "Snippet picker"}
+)
