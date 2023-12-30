@@ -25,9 +25,9 @@ nvim_lsp.svelte.setup({
 nvim_lsp['html'].setup{
     capabilities = capabilities
 }
-nvim_lsp['sqlls'].setup{
-    capabilities = capabilities
-}
+-- nvim_lsp['sqlls'].setup{
+--     capabilities = capabilities
+-- }
 nvim_lsp['tsserver'].setup{
     capabilities = capabilities
 }

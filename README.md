@@ -58,6 +58,8 @@ I don't use MacOS anymore.
   - [NeoZoom.lua](https://github.com/nyngwang/NeoZoom.lua/tree/neo-zoom-original)
   - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
     - [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
+    - Custom snippets:
+      - [postgres.lua](./dot_config/nvim/lua/snippets/postgres.lua) 
   - [telescope-luasnip.nvim](https://github.com/benfowler/telescope-luasnip.nvim)
   - [true-zen.nvim](https://github.com/Pocco81/true-zen.nvim)
   - [neoclip](https://github.com/matveyt/neoclip) (to fix Wayland bug)
@@ -70,6 +72,7 @@ I don't use MacOS anymore.
   - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
   - [Neoformat](https://github.com/sbdchd/neoformat)
   - [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+
 
 ### On Linux
 
