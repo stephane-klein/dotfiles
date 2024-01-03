@@ -56,6 +56,24 @@ ls.add_snippets("sql",
                     rep(2)
                 }
             )
+        ),
+        s(
+            "alter_add_column",
+            fmt(
+                [[
+                    ALTER TABLE {1}.{2}
+                        ADD COLUMN IF NOT EXISTS {3} INTEGER DEFAULT NULL REFERENCES {4}.{5} ({6}) ON DELETE CASCADE,
+                        ADD COLUMN IF NOT EXISTS ...,
+                ]],
+                {
+                    i(1, "schema"),
+                    i(2, "table_name"),
+                    i(3, "column_name"),
+                    i(4, "schema"),
+                    i(5, "table_name"),
+                    i(6, "column_name")
+                }
+            )
         )
     }
 )
