@@ -76,12 +76,27 @@ I don't use MacOS anymore.
 
 ### On Linux
 
-- OS: Fedora 38
-- Gnome extensions:
-  - [A dock for the COSMIC/GNOME Shell, fixes conflict with COSMIC Workspaces](https://github.com/halfmexican/dash-to-dock-pop/tree/ubuntu-dock)
-  - [NoAnnoyance v2 GNOME Shell Extension](https://github.com/bdaase/noannoyance)
-  - [gTile - Gnome-shell extension that improves window tiling capabilities of stock gnome-shell](https://github.com/gTile/gTile)
-  - [WindowIsReady_Remover](https://github.com/nunofarruca/WindowIsReady_Remover)
+```
+$ neofetch --stdout
+stephane@t14s
+-------------
+OS: Fedora Linux 39 (Workstation Edition) x86_64
+Host: 21CQCTO1WW ThinkPad T14s Gen 3
+Kernel: 6.6.9-200.fc39.x86_64
+Uptime: 3 days, 59 mins
+Packages: 3317 (rpm), 54 (flatpak)
+Shell: zsh 5.9
+Resolution: 3840x2160
+DE: GNOME 45.2
+WM: Mutter
+WM Theme: Adwaita
+Theme: Adwaita:dark [GTK2/3]
+Icons: Adwaita [GTK2/3]
+Terminal: tmux
+CPU: AMD Ryzen 7 PRO 6850U with Radeon Graphics (16) @ 4.768GHz
+GPU: AMD ATI Radeon 680M
+Memory: 25448MiB / 30847MiB
+```
 
 My Flatpak app list at 2023-01-08:
 
@@ -115,6 +130,22 @@ Signal Desktop                           org.signal.Signal                      
 Telegram Desktop                         org.telegram.desktop                                4.14.3                          stable           flathub           system
 VLC                                      org.videolan.VLC                                    3.0.19                          stable           flathub           system
 Zulip                                    org.zulip.Zulip                                     5.10.3                          stable           flathub           system
+```
+
+```
+$ gnome-extensions list
+just-perfection-desktop@just-perfection
+gTile@vibou
+simple-timer@majortomvr.github.com
+thinkpad-battery-threshold@marcosdalvarez.org
+freon@UshakovVasilii_Github.yahoo.com
+simple-workspaces-bar@null-git
+toggle-workspace-span@arngo.github.com
+apps-menu@gnome-shell-extensions.gcampax.github.com
+background-logo@fedorahosted.org
+launch-new-instance@gnome-shell-extensions.gcampax.github.com
+places-menu@gnome-shell-extensions.gcampax.github.com
+window-list@gnome-shell-extensions.gcampax.github.com
 ```
 
 ### On macOS
