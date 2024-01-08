@@ -83,6 +83,40 @@ I don't use MacOS anymore.
   - [gTile - Gnome-shell extension that improves window tiling capabilities of stock gnome-shell](https://github.com/gTile/gTile)
   - [WindowIsReady_Remover](https://github.com/nunofarruca/WindowIsReady_Remover)
 
+My Flatpak app list at 2023-01-08:
+
+```
+$ flatpak list --app
+Name                                     Application ID                                      Version                         Branch           Origin            Installation
+Bitwarden                                com.bitwarden.desktop                               2023.12.1                       stable           flathub           system
+Discord                                  com.discordapp.Discord                              0.0.39                          stable           flathub           system
+WhatsApp for Linux                       com.github.eneshecan.WhatsAppForLinux               1.6.4                           stable           flathub           system
+Flatseal                                 com.github.tchx84.Flatseal                          2.1.0                           stable           flathub           system
+Mattermost                               com.mattermost.Desktop                              5.6.0                           stable           flathub           system
+Blanket                                  com.rafaelmardojai.Blanket                          0.6.0                           stable           flathub           system
+Slack                                    com.slack.Slack                                     4.36.136                        stable           flathub           system
+Spotify                                  com.spotify.Client                                  1.2.26.1187.g36b715a1           stable           flathub           system
+Visual Studio Code                       com.visualstudio.code                               1.84.2-1699528352               stable           flathub           system
+Element                                  im.riot.Riot                                        1.11.53                         stable           flathub           system
+Youtube Downloader Plus                  io.github.aandrew_me.ytdn                           3.16.1                          stable           flathub           system
+Kooha                                    io.github.seadve.Kooha                              2.2.4                           stable           flathub           system
+Obsidian                                 md.obsidian.Obsidian                                1.5.3                           stable           flathub           system
+Joplin                                   net.cozic.joplin_desktop                            2.13.12                         stable           flathub           system
+Scribus                                  net.scribus.Scribus                                 1.6.0                           stable           flathub           system
+Audacity                                 org.audacityteam.Audacity                           2.3.0                           stable           fedora            system
+Chromium Web Browser                     org.chromium.Chromium                               120.0.6099.199                  stable           flathub           system
+Flatpak External Data Checker            org.flathub.flatpak-external-data-checker                                           stable           flathub           system
+Éditeur d’image GIMP                     org.gimp.GIMP                                       2.10.36                         stable           flathub           system
+D-Spy                                    org.gnome.dspy                                      44.0                            stable           fedora            system
+Inkscape                                 org.inkscape.Inkscape                               1.3.2                           stable           fedora            system
+JOSM                                     org.openstreetmap.josm                              18907                           stable           flathub           system
+Pitivi                                   org.pitivi.Pitivi                                   2023.03                         stable           flathub           system
+Signal Desktop                           org.signal.Signal                                   6.43.1                          stable           flathub           system
+Telegram Desktop                         org.telegram.desktop                                4.14.3                          stable           flathub           system
+VLC                                      org.videolan.VLC                                    3.0.19                          stable           flathub           system
+Zulip                                    org.zulip.Zulip                                     5.10.3                          stable           flathub           system
+```
+
 ### On macOS
 
 - [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
