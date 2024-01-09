@@ -21,7 +21,7 @@ I don't use MacOS anymore.
 
 - Text Editor: [neovim](https://github.com/neovim/neovim) with [Packer](https://github.com/wbthomason/packer.nvim) plugin manager
 - Shell: zsh with oh-my-zsh
-- [asdf](https://github.com/asdf-vm/asdf) for manage Python, Node, Go, pnpm, terraform… installation
+- [mise](https://github.com/jdx/mise) for manage Python, Node, Go, pnpm, terraform… installation (formely called "rtx", equivalent of [asdf](https://github.com/asdf-vm/asdf) tool)
 - [tmux](https://en.wikipedia.org/wiki/Tmux)
 - Docker
 - [fzf](https://github.com/junegunn/fzf)

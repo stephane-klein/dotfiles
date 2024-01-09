@@ -7,6 +7,7 @@
 set -e # -e: exit on error
 
 sudo dnf copr enable atim/starship -y
+sudo dnf config-manager --add-repo https://mise.jdx.dev/rpm/mise.repo -y
 sudo dnf update -y
 
 sudo dnf install -y \
@@ -37,7 +38,8 @@ sudo dnf install -y \
     neovim \
     nodejs \ # nodejs needed for https://github.com/derekstride/tree-sitter-sql
     golang \
-    gnome-extensions-app
+    gnome-extensions-app \
+    mise
 
 sudo dnf copr enable vstanek/gnome-info-collect -y
 sudo dnf install gnome-info-collect -y
@@ -76,10 +78,7 @@ sudo systemctl enable docker
 newgrp docker
 sudo systemctl restart docker
 
-sudo dnf builddep -y python3
-
 # neovim dependencies: ripgrep
-# asdf python dependencies: patch and "dnf builddep python3"
 
 chsh -s $(which zsh)
 if ! [ -d ~/.oh-my-zsh ]; then
@@ -110,22 +109,6 @@ if ! [ -d ~/.local/share-trial/nvim/site/pack/packer/start/packer.nvim ]; then
     git clone --depth 1 https://github.com/wbthomason/packer.nvim\
      ~/.local/share-trial/nvim/site/pack/packer/start/packer.nvim
 fi
-
-# Install asdf
-if ! [ -d ~/.asdf ]; then
-    git -c advice.detachedHead=false clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
-fi
-. $HOME/.asdf/asdf.sh
-asdf update
-asdf plugin add nodejs || true
-asdf plugin add pnpm  || true
-asdf plugin add python  || true
-asdf plugin add yarn || true
-asdf plugin add golang || true
-(
-    cd ~/
-    asdf install
-)
 
 echo "Launch 'source ~/.zshrc' to reload zsh configuration"
 echo "User added to docker group, then you need to restart session"
