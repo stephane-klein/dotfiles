@@ -33,7 +33,7 @@ ls.add_snippets("sql",
             "plfunc",
             fmt(
                 [[
-                    DROP FUNCTION IF EXISTS {1}:{2};
+                    DROP FUNCTION IF EXISTS {1}.{2};
                     CREATE FUNCTION {4}.{5}(
                         arg1 INTEGER
                         arg2 VARCHAR
