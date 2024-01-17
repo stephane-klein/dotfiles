@@ -441,4 +441,6 @@ return require('packer').startup(function()
     use { 'hashivim/vim-terraform' }
 
     use {'kaarmu/typst.vim', ft = {'typst'}}
+
+    use {'ActivityWatch/aw-watcher-vim' }
 end)
