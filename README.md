@@ -25,6 +25,7 @@ I don't use MacOS anymore.
 - [tmux](https://en.wikipedia.org/wiki/Tmux)
 - Docker
 - [fzf](https://github.com/junegunn/fzf)
+- [ActivityWatch](https://activitywatch.net/) (https://github.com/2e3s/awatcher/ for Wayland + Gnome support)
 - Neovim plugins:
   - Theme: [catppuccin](https://github.com/catppuccin/nvim)
   - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
