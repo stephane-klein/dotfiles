@@ -10,6 +10,9 @@ cat << EOF > ~/.config/systemd/user/awatcher.service
 [Service]
 Type=simple
 ExecStart=${HOME}/.local/opt/activitywatch/awatcher
+Restart=on-failure
+RestartSec=60
+ExecStartPre=/bin/sleep 5
 
 [Unit]
 Description=ActivityWatch Server (Rust implementation)
