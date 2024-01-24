@@ -10,5 +10,5 @@ if $PACKER_INSTALL_ONLY != "1"
     lua require('_lualine')
     lua require('_catppuccin');
     lua require('init')
-    lua require('snippets/postgres')
+    lua require('_luasnip')
 endif
