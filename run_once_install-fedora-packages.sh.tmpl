@@ -116,5 +116,7 @@ echo "User added to docker group, then you need to restart session"
 # Load GNOME keyboard shortcuts and other desktop settings
 dconf load / < gnome-settings.ini
 
+# https://old.reddit.com/r/Fedora/comments/1aod454/to_fix_a_kernel_issue_how_can_i_safely_downgrade/kpyz6xi/
+sudo sed -i -r "s/^installonly_limit=.*$/installonly=8/" /etc/dnf/dnf.conf
 {{   end }}
 {{ end }}
