@@ -39,7 +39,8 @@ sudo dnf install -y \
     nodejs \ # nodejs needed for https://github.com/derekstride/tree-sitter-sql
     golang \
     gnome-extensions-app \
-    mise
+    mise \
+    bsdtar
 
 sudo dnf copr enable vstanek/gnome-info-collect -y
 sudo dnf install gnome-info-collect -y
@@ -118,5 +119,6 @@ dconf load / < gnome-settings.ini
 
 # https://old.reddit.com/r/Fedora/comments/1aod454/to_fix_a_kernel_issue_how_can_i_safely_downgrade/kpyz6xi/
 sudo sed -i -r "s/^installonly_limit=.*$/installonly=8/" /etc/dnf/dnf.conf
+
 {{   end }}
 {{ end }}
