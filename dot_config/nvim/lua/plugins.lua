@@ -443,4 +443,6 @@ return require('packer').startup(function()
     use {'kaarmu/typst.vim', ft = {'typst'}}
 
     use {'ActivityWatch/aw-watcher-vim' }
+
+    use {'alunny/pegjs-vim'}
 end)
