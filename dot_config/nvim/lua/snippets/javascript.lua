@@ -31,7 +31,7 @@ ls.add_snippets("javascript",
         s(
             "consoledir",
             fmt(
-                "console.log({1}, {{depth: null}})",
+                "console.dir({1}, {{depth: null}});",
                 {
                     i(1, "variable")
                 }
