@@ -26,6 +26,7 @@ I don't use MacOS anymore.
 - Docker
 - [fzf](https://github.com/junegunn/fzf)
 - [ActivityWatch](https://activitywatch.net/) (https://github.com/2e3s/awatcher/ for Wayland + Gnome support)
+- [Obsidian](https://obsidian.md/)
 - Neovim plugins:
   - Theme: [catppuccin](https://github.com/catppuccin/nvim)
   - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
@@ -185,6 +186,13 @@ window-list@gnome-shell-extensions.gcampax.github.com
 - [Wayback Machine by Internet Archive](https://addons.mozilla.org/en-US/firefox/addon/wayback-machine_new/) - [My toots about this extension](https://mamot.fr/@stephane_klein/111657786068559121)
 
 Firefox Theme: https://github.com/elibroftw/matte-black-theme/releases
+
+## My default directory structure
+
+```
+$ mkdir -p ~/git/github/stephane-klein/ # My https://github.com/stephane-klein/ projects
+$ mkdir -p ~/vaults/main/               # My default Obsidian vault
+```
 
 ## Backup
 
