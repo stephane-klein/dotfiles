@@ -17,7 +17,7 @@ Upon fresh installation, the [run_once_install-fedora-packages.sh.tmpl](./run_on
 Since March 2023, I use exclusively Fedora on Thinkpad T14s Gen3 AMD.  
 I don't use MacOS anymore.
 
-### On Linux and macOS
+### On Linux
 
 - Text Editor: [neovim](https://github.com/neovim/neovim) with [Packer](https://github.com/wbthomason/packer.nvim) plugin manager
 - Shell: zsh with oh-my-zsh
