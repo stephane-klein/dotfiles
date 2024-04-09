@@ -29,12 +29,15 @@ ls.add_snippets("sh",
     {
         s(
             "script",
-            t([[
-                #!/usr/bin/env bash
-                set -e
+            fmt(
+                [[
+                    #!/usr/bin/env bash
+                    set -e
 
-                cd "$(dirname "$0")/../"
-            ]])
+                    cd "$(dirname "$0")/../"
+                ]],
+                {}
+            )
         )
     }
 )
