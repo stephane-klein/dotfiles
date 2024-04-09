@@ -112,4 +112,12 @@ vim.keymap.set('n', '<leader>p', '<Cmd>:cp<CR>', { desc ="Display previous item 
         end
     end
 
-    vim.api.nvim_set_keymap('n', '<leader>gt', ':lua _G.try_tag_then_help()<CR>', {noremap = true, silent = true})
+    vim.api.nvim_set_keymap(
+        'n',
+        '<leader>gt', ':lua _G.try_tag_then_help()<CR>',
+        {
+            noremap = true,
+            silent = true,
+            desc = "Open tag or help file on cursor position"
+        }
+    )
