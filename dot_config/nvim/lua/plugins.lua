@@ -460,8 +460,9 @@ return require('packer').startup(function()
                         path = "~/vaults/main",
                     }
                 },
-
-                -- see below for full list of options 👇
+                follow_url_func = function(url)
+                    vim.fn.jobstart({"xdg-open", url})  -- linux
+                end,
             })
         end,
     })
