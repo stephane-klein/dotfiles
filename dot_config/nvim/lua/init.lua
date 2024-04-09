@@ -138,3 +138,6 @@ require("ibl").setup({
 require('ts_context_commentstring').setup {
   enable_autocmd = false,
 }
+
+-- https://github.com/epwalsh/obsidian.nvim?tab=readme-ov-file#concealing-characters
+vim.opt.conceallevel = 1

@@ -445,4 +445,24 @@ return require('packer').startup(function()
     use {'ActivityWatch/aw-watcher-vim' }
 
     use {'alunny/pegjs-vim'}
+
+    use({
+        "epwalsh/obsidian.nvim",
+        tag = "*",  -- recommended, use latest release instead of latest commit
+        requires = {
+            "nvim-lua/plenary.nvim",
+        },
+        config = function()
+            require("obsidian").setup({
+                workspaces = {
+                    {
+                        name = "main",
+                        path = "~/vaults/main",
+                    }
+                },
+
+                -- see below for full list of options 👇
+            })
+        end,
+    })
 end)
