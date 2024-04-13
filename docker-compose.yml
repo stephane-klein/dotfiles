@@ -1,0 +1,7 @@
+services:
+  fedora:
+    image: fedora:39
+    restart: unless-stopped
+    volumes:
+      - ./home/:/home/stephane/
+      - ./:/volume/

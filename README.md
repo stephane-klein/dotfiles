@@ -258,3 +258,12 @@ Here is my source of inspiration to find Neovim plugin and configuration setting
 - https://github.com/WhoIsSethDaniel/dotfiles/ (configuration 100% based on Lua)
   - https://www.sethdaniel.dev/vim/plugins/
 - https://github.com/topics/dotfiles
+
+## How to test Chezmoi config in Docker?
+
+```sh
+$ docker compose run --rm fedora
+# dnf install -y curl
+# sh -c "$(curl -fsLS get.chezmoi.io)" -- init --help
+```
+
