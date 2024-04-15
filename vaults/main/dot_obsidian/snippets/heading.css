@@ -1,0 +1,36 @@
+:root {
+  --hh-gutter-margin: 0;
+  --hh-marker-size: 65 / 100;
+}
+
+h1:before, .is-live-preview .HyperMD-header-1:not(.cm-active):before {
+  content: "# ";
+  font-size: calc(var(--h1-size) * var(--hh-marker-size));
+  margin-left: var(--hh-gutter-margin);
+}
+
+h2:before, .is-live-preview .HyperMD-header-2:not(.cm-active):before {
+  content: "## ";
+  font-size: calc(var(--h3-size) * var(--hh-marker-size));
+  margin-left: var(--hh-gutter-margin);
+}
+h3:before, .is-live-preview .HyperMD-header-3:not(.cm-active):before {
+  content: "### ";
+  font-size: calc(var(--h3-size) * var(--hh-marker-size));
+  margin-left: var(--hh-gutter-margin);
+}
+h4:before, .is-live-preview .HyperMD-header-4:not(.cm-active):before {
+  content: "#### ";
+  font-size: calc(var(--h4-size) * var(--hh-marker-size));
+  margin-left: var(--hh-gutter-margin);
+}
+h5:before, .is-live-preview .HyperMD-header-5:not(.cm-active):before {
+  content: "##### ";
+  font-size: calc(var(--h5-size) * var(--hh-marker-size));
+  margin-left: var(--hh-gutter-margin);
+}
+h6:before, .is-live-preview .HyperMD-header-6:not(.cm-active):before {
+  content: "###### ";
+  font-size: calc(var(--h6-size) * var(--hh-marker-size));
+  margin-left: var(--hh-gutter-margin);
+}
