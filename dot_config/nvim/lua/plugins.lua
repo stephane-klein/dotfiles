@@ -467,4 +467,5 @@ return require('packer').startup(function()
         end,
     })
     use { 'alker0/chezmoi.vim' }
+    use { 'tpope/vim-abolish' } -- To convert CamelCase to snake_case and inversly
 end)
