@@ -1,0 +1,9 @@
+services:
+  fedora:
+    build: .
+    restart: unless-stopped
+    environment:
+        LANG: "C.UTF-8"
+    volumes:
+      - ./home/:/root/
+      - ./:/volume/
