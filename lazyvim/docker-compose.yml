@@ -5,5 +5,7 @@ services:
     environment:
         LANG: "C.UTF-8"
     volumes:
-      - ./home/:/root/
-      - ./:/volume/
+      - ./home/.cache/:/home/stephane/.cache/
+      - ./home/.config/:/home/stephane/.config/
+      - ./home/.local/:/home/stephane/.local/
+      - /home/stephane/git/:/home/stephane/git/

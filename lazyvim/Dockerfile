@@ -9,7 +9,8 @@ RUN dnf install -y \
     tar \
     fontconfig \
     git \
-    util-linux-user
+    util-linux-user \
+    neovim
 
 RUN curl -L -o /tmp/nerdfont.tar.xz https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.tar.xz && \
     mkdir -p /usr/local/share/fonts/ && \
@@ -18,3 +19,9 @@ RUN curl -L -o /tmp/nerdfont.tar.xz https://github.com/ryanoasis/nerd-fonts/rele
     cp /tmp/nerdfont/*.ttf /usr/local/share/fonts/ && \
     fc-cache -f -v && \
     rm -rf /tmp/nerdfont.tar.xz /tmp/nerdfont
+
+RUN useradd -m -u 1000 -s /bin/bash stephane
+RUN echo 'stephane ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/stephane
+USER stephane
+WORKDIR /home/stephane
+CMD ["/bin/bash"]
