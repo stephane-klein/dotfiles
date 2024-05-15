@@ -1,0 +1,41 @@
+import = ["/home/stephane/.config/alacritty/themes/tokyonight/tokyonight/tokyonight_storm.yml"]
+live_config_reload = true
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 11
+
+[font.bold]
+family = "Hack Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hack Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Hack Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "Hack Nerd Font Mono"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "Left"
+key = "Home"
+mode = "Vi"
+
+[[keyboard.bindings]]
+action = "Right"
+key = "End"
+mode = "Vi"
+
+[shell]
+program = "/usr/bin/tmux"
+args = ["new-session", "-n", ""]
+
+[window]
+decorations = "none"
