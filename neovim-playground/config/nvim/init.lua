@@ -1,5 +1,5 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- A lot of code is taken from https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua
 -- [[ Install `lazy.nvim` plugin manager ]]
@@ -27,7 +27,7 @@ require("lazy").setup({
                 "nvim-telescope/telescope-fzf-native.nvim",
                 build = "make",
                 cond = function()
-                  return vim.fn.executable 'make' == 1
+                  return vim.fn.executable "make" == 1
                 end
             },
             {
@@ -40,21 +40,55 @@ require("lazy").setup({
             require("telescope").load_extension("live_grep_args")
             require("telescope").load_extension("fzf")
 
-            local telescope = require('telescope')
-            local builtin = require 'telescope.builtin'
+            local telescope = require("telescope")
+            local builtin = require("telescope.builtin")
 
             -- My (Stéphane Klein) custom keymap
             vim.keymap.set(
-                'n', '<leader>/',
+                "n", "<leader>/",
                 telescope.extensions.live_grep_args.live_grep_args,
                 { desc = "[/] Live ripgrep" }
+            )
+            vim.keymap.set(
+                "n", "<leader>*",
+                function()
+                    telescope.extensions.live_grep_args.live_grep_raw({
+                        default_text = vim.fn.expand("<cword>")
+                    })
+                end,
+                { desc = "[*] Live ripgrep with word under cursor"}
+            )
+            vim.keymap.set(
+                "n", "<leader>t", builtin.builtin,
+                { desc = "[t] See all Telescrope pickers"}
+            )
+            vim.keymap.set(
+                "n", "<leader>o", builtin.find_files,
+                { desc = "[o] Lists files in current working directory"}
+            )
+            vim.keymap.set(
+                "n", "<leader>b", builtin.buffers,
+                { desc = "[b] Lists open buffers"}
             )
 
             -- https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua keymap
             vim.keymap.set(
-                'n', '<leader>sg',
+                "n", "<leader>sg",
                 telescope.extensions.live_grep_args.live_grep_args,
                 { desc = "[S]earch [S]elect Telescope" }
+            )
+            vim.keymap.set(
+                "n", "<leader>sw",
+                function()
+                    telescope.extensions.live_grep_args.live_grep_raw({
+                        default_text = vim.fn.expand("<cword>")
+                    })
+                end,
+                { desc = "[S]earch current [W]ord"}
+            )
+            vim.keymap.set(
+                "n", "<leader>ss", builtin.builtin,
+                { desc = "[S]earch [S]elect Telescope"}
             )
         end
     }
