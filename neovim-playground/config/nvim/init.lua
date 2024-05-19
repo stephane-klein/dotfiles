@@ -14,7 +14,22 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Au fur et à mesure que j'ajoute ici des plugins, je les supprimes de le fichier d'origin plugins.lua
 require("lazy").setup({
-    {"catppuccin/nvim"},
+    {
+        "catppuccin/nvim",
+        priority = 1000,
+        init = function()
+            require("catppuccin").setup({
+                integrations = {
+                    -- See https://github.com/catppuccin/nvim/tree/d97387aea8264f484bb5d5e74f2182a06c83e0d8?tab=readme-ov-file#integrations
+                    telescope = {
+                        enabled = true
+                    }
+                }
+            })
+
+            vim.cmd.colorscheme "catppuccin"
+        end,
+    },
     {"tpope/vim-fugitive"},
     {"shumphrey/fugitive-gitlab.vim"},
     { -- Fuzzy Finder (files, lsp, etc)
