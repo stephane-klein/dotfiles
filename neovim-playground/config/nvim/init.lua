@@ -1,5 +1,25 @@
+-- [[ Setting options ]]
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+--
+-- Decrease mapped sequence wait time
+-- Displays which-key popup sooner
+vim.opt.timeoutlen = 300
+
+-- [[ Basic Keymaps ]]
+--
+-- [[Window management]]
+vim.keymap.set("n", "<Leader><Up>",    "<C-W><C-K>", { desc = "Move to up window"})
+vim.keymap.set("n", "<Leader><Left>",  "<C-W><C-H>", { desc = "Move to left window"})
+vim.keymap.set("n", "<Leader><Right>", "<C-W><C-L>", { desc = "Move to right window"})
+vim.keymap.set("n", "<Leader><Down>",  "<C-W><C-J>", { desc = "Move to down window"})
+
+vim.keymap.set("n", "<Leader>c",     "<C-W><C-C>", { desc = "Close current window"})
+
+vim.keymap.set("n", "<Leader><Leader><Up>",    "<Cmd>:sp<CR><C-W><C-K>", { desc = "Split on the top"})
+vim.keymap.set("n", "<Leader><Leader><Left>",  "<Cmd>:vs<CR><C-W><C-H>", { desc = "Split on the left"})
+vim.keymap.set("n", "<Leader><Leader><Right>", "<Cmd>:vs<CR>",           { desc = "Split on the right"})
+vim.keymap.set("n", "<Leader><Leader><Down>",  "<Cmd>:sp<CR>",           { desc = "Split on the bottom"})
 
 -- A lot of code is taken from https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua
 -- [[ Install `lazy.nvim` plugin manager ]]
@@ -14,6 +34,19 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Au fur et à mesure que j'ajoute ici des plugins, je les supprimes de le fichier d'origin plugins.lua
 require("lazy").setup({
+    {
+        "folke/which-key.nvim",
+        event = "VimEnter",
+        config = function()
+            require("which-key").setup()
+
+            -- Document existing key chains
+            require("which-key").register {
+                ["<leader><leader>"] = { name = "split windows", _ = "which_key_ignore" },
+                ["<leader>s"] = { name = "[S]earch", _ = "which_key_ignore" }
+            }
+        end
+    },
     {
         "catppuccin/nvim",
         priority = 1000,
@@ -62,7 +95,7 @@ require("lazy").setup({
             vim.keymap.set(
                 "n", "<leader>/",
                 telescope.extensions.live_grep_args.live_grep_args,
-                { desc = "[/] Live ripgrep" }
+                { desc = "Live ripgrep" }
             )
             vim.keymap.set(
                 "n", "<leader>*",
@@ -71,26 +104,26 @@ require("lazy").setup({
                         default_text = vim.fn.expand("<cword>")
                     })
                 end,
-                { desc = "[*] Live ripgrep with word under cursor"}
+                { desc = "Live ripgrep with word under cursor"}
             )
             vim.keymap.set(
                 "n", "<leader>t", builtin.builtin,
-                { desc = "[t] See all Telescrope pickers"}
+                { desc = "See all [T]elescrope pickers"}
             )
             vim.keymap.set(
                 "n", "<leader>o", builtin.find_files,
-                { desc = "[o] Lists files in current working directory"}
+                { desc = "Lists files in current working directory"}
             )
             vim.keymap.set(
                 "n", "<leader>b", builtin.buffers,
-                { desc = "[b] Lists open buffers"}
+                { desc = "Lists open [b]uffers"}
             )
 
             -- https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua keymap
             vim.keymap.set(
                 "n", "<leader>sg",
                 telescope.extensions.live_grep_args.live_grep_args,
-                { desc = "[S]earch [S]elect Telescope" }
+                { desc = "[S]earch with [G]rep" }
             )
             vim.keymap.set(
                 "n", "<leader>sw",
@@ -102,8 +135,8 @@ require("lazy").setup({
                 { desc = "[S]earch current [W]ord"}
             )
             vim.keymap.set(
-                "n", "<leader>ss", builtin.builtin,
-                { desc = "[S]earch [S]elect Telescope"}
+                "n", "<leader>st", builtin.builtin,
+                { desc = "[S]earch all [T]elescope pickers"}
             )
         end
     },
