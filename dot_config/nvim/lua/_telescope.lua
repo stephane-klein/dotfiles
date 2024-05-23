@@ -126,6 +126,8 @@ telescope.setup({
         mappings = {
             i = {
                 ['<esc>'] = require('telescope.actions').close,
+                ['<C-n>'] = require('telescope.actions').cycle_history_next,
+                ['<C-p>'] = require('telescope.actions').cycle_history_prev
             },
         }
     },
