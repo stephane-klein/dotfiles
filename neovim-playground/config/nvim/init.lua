@@ -175,7 +175,8 @@ require("lazy").setup({
             },
             "saadparwaiz1/cmp_luasnip",
             "hrsh7th/cmp-nvim-lsp",
-            "hrsh7th/cmp-path"
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-buffer"
         },
         config = function()
             local cmp = require "cmp"
@@ -240,8 +241,15 @@ require("lazy").setup({
                 sources = {
                     { name = "nvim_lsp" },
                     { name = "luasnip" },
+                    {
+                        name = 'buffer',
+                        option = {
+                            get_bufnrs = function()
+                                return vim.api.nvim_list_bufs()
+                            end
+                        }
+                    },
                     { name = "path" },
-                    { name = "buffer" },
                 },
             }
         end
