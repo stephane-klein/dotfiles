@@ -121,3 +121,23 @@ vim.keymap.set('n', '<leader>p', '<Cmd>:cp<CR>', { desc ="Display previous item 
             desc = "Open tag or help file on cursor position"
         }
     )
+
+-- Tab keymap
+vim.keymap.set(
+    "n", "<leader>tc", '<Cmd>:tabnew<CR>',
+    {
+        desc = "[T]ab page [C]reate"
+    }
+)
+vim.keymap.set(
+    "n", "<leader>tn", '<Cmd>:tabn<CR>',
+    {
+        desc = "[T]ab page [N]ext"
+    }
+)
+vim.keymap.set(
+    "n", "<leader>tp", '<Cmd>:tabp<CR>',
+    {
+        desc = "[T]ab page [P]revious"
+    }
+)
