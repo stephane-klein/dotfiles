@@ -82,7 +82,8 @@ require("lazy").setup({
                 -- To enables passing arguments to the grep command
                 "nvim-telescope/telescope-live-grep-args.nvim" ,
                 version = "^1.0.0"
-            }
+            },
+            { 'nvim-tree/nvim-web-devicons', enabled = true },
         },
         config = function()
             require("telescope").load_extension("live_grep_args")
