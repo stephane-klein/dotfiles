@@ -366,4 +366,12 @@ require("lazy").setup({
             require("nvim-treesitter.configs").setup(opts)
         end
     },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = {},
+        config = function(_, opts)
+            require("ibl").setup()
+        end
+    }
 })
