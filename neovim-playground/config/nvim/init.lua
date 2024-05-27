@@ -329,5 +329,41 @@ require("lazy").setup({
                     }
             })
         end
-    }
+    },
+    { -- Highlight, edit, and navigate code
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        opts = {
+            ensure_installed = {
+                "python", "lua", "javascript", "bash", "css",
+                "go", "graphql", "html", "json", "markdown",
+                "ninja", "svelte", "toml",
+                "yaml",
+                "diff", "lua", "luadoc", "vim", "vimdoc"
+            },
+            auto_install = true,
+            sync_install = true,
+            highlight = {
+                enable = true,
+            },
+            indent = { enable = true },
+            matchup = {
+                enable = true
+            },
+            incremental_selection = {
+                enable = true
+            },
+            autopairs = {
+                enable = true
+            },
+            rainbow = {
+                enable = true,
+                extended_mode = true
+            }
+        },
+        config = function(_, opts)
+            require("nvim-treesitter.install").prefer_git = true
+            require("nvim-treesitter.configs").setup(opts)
+        end
+    },
 })
