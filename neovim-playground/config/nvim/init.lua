@@ -158,6 +158,27 @@ require("lazy").setup({
             { "folke/neodev.nvim", opts = {} },
         }
     },
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons",
+            "MunifTanjim/nui.nvim",
+        },
+        keys = {
+            {
+                "<leader>.",
+                "<Cmd>:Neotree action=show position=current reveal_force_cwd<CR>",
+                desc = "Open Neotree explorer"
+            },
+            {
+                "<leader><tab>",
+                "<Cmd>:Neotree toggle position=left reveal_force_cwd<CR>",
+                desc = "Open Neotree drawer"
+            }
+        }
+    },
     { -- Autocompletion
         "hrsh7th/nvim-cmp",
         event = "InsertEnter",
