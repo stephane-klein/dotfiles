@@ -264,7 +264,7 @@ require("lazy").setup({
                     { name = "nvim_lsp" },
                     { name = "luasnip" },
                     {
-                        name = 'buffer',
+                        name = "buffer",
                         option = {
                             get_bufnrs = function()
                                 return vim.api.nvim_list_bufs()
@@ -275,5 +275,12 @@ require("lazy").setup({
                 },
             }
         end
+    },
+    {
+        "goolord/alpha-nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function ()
+            require"alpha".setup(require"alpha.themes.startify".config)
+            end
     }
 })
