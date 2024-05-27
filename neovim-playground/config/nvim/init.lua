@@ -283,5 +283,9 @@ require("lazy").setup({
             require"alpha".setup(require"alpha.themes.startify".config)
             end
     },
-    {"gpanders/editorconfig.nvim"}
+    {"gpanders/editorconfig.nvim"},
+    {
+        "hiphish/rainbow-delimiters.nvim",
+        event = "VeryLazy",
+    },
 })
