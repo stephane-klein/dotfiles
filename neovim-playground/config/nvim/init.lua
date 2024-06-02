@@ -65,6 +65,7 @@ require("lazy").setup({
     },
     {"tpope/vim-fugitive"},
     {"shumphrey/fugitive-gitlab.vim"},
+    {"lewis6991/gitsigns.nvim"},
     { -- Fuzzy Finder (files, lsp, etc)
         "nvim-telescope/telescope.nvim",
         event = "VimEnter",
