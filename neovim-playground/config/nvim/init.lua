@@ -83,11 +83,13 @@ require("lazy").setup({
                 "nvim-telescope/telescope-live-grep-args.nvim" ,
                 version = "^1.0.0"
             },
-            { 'nvim-tree/nvim-web-devicons', enabled = true },
+            { "nvim-tree/nvim-web-devicons", enabled = true },
+            { "benfowler/telescope-luasnip.nvim" }
         },
         config = function()
             require("telescope").load_extension("live_grep_args")
             require("telescope").load_extension("fzf")
+            require("telescope").load_extension("luasnip")
 
             local telescope = require("telescope")
             local builtin = require("telescope.builtin")
@@ -138,6 +140,10 @@ require("lazy").setup({
             vim.keymap.set(
                 "n", "<leader>st", builtin.builtin,
                 { desc = "[S]earch all [T]elescope pickers"}
+            )
+            vim.keymap.set(
+                "n", "<leader>ss", telescope.extensions.luasnip.luasnip,
+                { desc = "[S]earch [S]nippet picker"}
             )
         end
     },
@@ -373,5 +379,26 @@ require("lazy").setup({
         config = function(_, opts)
             require("ibl").setup()
         end
+    },
+    {
+        "epwalsh/obsidian.nvim",
+        version = "v3.7.12",
+        lazy = true,
+        ft = "markdown",
+        event = {
+            "BufReadPre ~/vaults/main/**.md",
+            "BufNewFile ~/vaults/main/**.md"
+        },
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+        opts = {
+            workspaces = {
+                {
+                    name = "personal",
+                    path = "~/vaults/main/",
+                }
+            },
+        }
     }
 })
