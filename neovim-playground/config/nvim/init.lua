@@ -6,6 +6,9 @@ vim.g.maplocalleader = " "
 -- Displays which-key popup sooner
 vim.opt.timeoutlen = 300
 
+-- Sync clipboard between OS and Neovim.
+vim.opt.clipboard = 'unnamedplus'
+
 -- [[ Basic Keymaps ]]
 --
 -- [[Window management]]
@@ -232,7 +235,7 @@ require("lazy").setup({
                     -- Accept ([y]es) the completion.
                     --  This will auto-import if your LSP supports it.
                     --  This will expand snippets if the LSP sent a snippet.
-                    ["<C-y>"] = cmp.mapping.confirm { select = true },
+                    ["<C-Space>"] = cmp.mapping.confirm { select = true },
 
                     -- If you prefer more traditional completion keymaps,
                     -- you can uncomment the following lines
@@ -400,6 +403,9 @@ require("lazy").setup({
                     path = "~/vaults/main/",
                 }
             },
+            ui = {
+                enable = false
+            }
         }
     },
     {
