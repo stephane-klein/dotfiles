@@ -72,7 +72,7 @@ require("lazy").setup({
     { -- Fuzzy Finder (files, lsp, etc)
         "nvim-telescope/telescope.nvim",
         event = "VimEnter",
-        branch = "0.1.x",
+        branch = "master",
         dependencies = {
             "nvim-lua/plenary.nvim",
             {
@@ -96,7 +96,19 @@ require("lazy").setup({
             require("telescope").load_extension("luasnip")
 
             local telescope = require("telescope")
+            local actions = require("telescope.actions")
             local builtin = require("telescope.builtin")
+
+            telescope.setup({
+                defaults = {
+                    mappings = {
+                        i = {
+                            ["<C-Left>"] = actions.results_scrolling_left,
+                            ["<C-Right>"] = actions.results_scrolling_right
+                        },
+                    },
+                }
+            })
 
             -- My (Stéphane Klein) custom keymap
             vim.keymap.set(
