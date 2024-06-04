@@ -422,5 +422,11 @@ require("lazy").setup({
         config = function()
             require("leap").set_default_keymaps()
         end
+    },
+    {
+        "gbprod/cutlass.nvim",
+        opts = {
+            cut_key = "m"
+        }
     }
 })
