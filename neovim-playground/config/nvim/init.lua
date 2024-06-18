@@ -335,7 +335,6 @@ require("lazy").setup({
             vim.list_extend(ensure_installed, {
                 "css-lsp",
                 "eslint-lsp",
-                "eslint_d",
                 "prettier",
                 "prettierd",
                 "svelte-language-server",
