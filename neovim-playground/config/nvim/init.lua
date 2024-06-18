@@ -334,8 +334,6 @@ require("lazy").setup({
             local ensure_installed = vim.tbl_keys(servers or {})
             vim.list_extend(ensure_installed, {
                 "css-lsp",
-                "eslint-lsp",
-                "prettier",
                 "prettierd",
                 "svelte-language-server",
                 "tailwindcss-language-server",
@@ -628,5 +626,20 @@ require("lazy").setup({
         opts = {
             cut_key = "m"
         }
+    },
+    {
+        "nvimtools/none-ls.nvim",
+        dependencies = {
+            "nvimtools/none-ls-extras.nvim",
+        },
+        config = function()
+            local null_ls = require("null-ls")
+
+            null_ls.setup({
+                sources = {
+                    require("none-ls.diagnostics.eslint")
+                },
+            })
+        end
     }
 })
