@@ -189,6 +189,18 @@ require("lazy").setup({
                             ["<C-Right>"] = actions.results_scrolling_right
                         },
                     },
+                },
+                pickers = {
+                    buffers = {
+                        show_all_buffers = true,
+                        sort_lastused = true,
+                        previewer = false,
+                        mappings = {
+                            i = {
+                                ["<c-d>"] = "delete_buffer",
+                            }
+                        }
+                    }
                 }
             })
 
