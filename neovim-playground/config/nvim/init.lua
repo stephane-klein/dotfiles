@@ -684,5 +684,8 @@ require("lazy").setup({
         config = function()
             require("wrapping").setup()
         end
+    },
+    {
+        "ActivityWatch/aw-watcher-vim"
     }
 })
