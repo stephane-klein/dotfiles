@@ -680,12 +680,6 @@ require("lazy").setup({
         }
     },
     {
-        "andrewferrier/wrapping.nvim",
-        config = function()
-            require("wrapping").setup()
-        end
-    },
-    {
         "ActivityWatch/aw-watcher-vim"
     }
 })
