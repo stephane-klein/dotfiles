@@ -597,8 +597,8 @@ require("lazy").setup({
     },
     {
         "epwalsh/obsidian.nvim",
-        version = "v3.7.12",
-        lazy = true,
+        version = "v3.8.1",
+        lazy = false,
         ft = "markdown",
         event = {
             "BufReadPre ~/vaults/main/**.md",
@@ -608,10 +608,27 @@ require("lazy").setup({
             "nvim-lua/plenary.nvim",
         },
         opts = {
+            notes_subdir = "",
+            new_notes_location = "notes_subdir",
+            note_id_func = function(title)
+                local suffix = ""
+                if title ~= nil then
+                    return title
+                else
+                    for _ = 1, 4 do
+                        suffix = suffix .. string.char(math.random(65, 90))
+                    end
+                end
+                return tostring(os.time()) .. "-" .. suffix
+            end,
             workspaces = {
                 {
-                    name = "personal",
+                    name = "main",
                     path = "~/vaults/main/",
+                },
+                {
+                    name = "notes",
+                    path = "~/git/github.com/stephane-klein/obsidian-quartz-playground/content/src/",
                 }
             },
             ui = {
@@ -696,3 +713,19 @@ require("lazy").setup({
         "ActivityWatch/aw-watcher-vim"
     }
 })
+
+vim.api.nvim_create_user_command(
+    "GoToVaultMain",
+    function()
+        vim.loop.chdir(vim.fn.expand("~/vaults/main/"))
+    end,
+    {}
+)
+
+vim.api.nvim_create_user_command(
+    "GoToVaultNotes",
+    function()
+        vim.loop.chdir(vim.fn.expand("~/git/github.com/stephane-klein/obsidian-quartz-playground/content/src/"))
+    end,
+    {}
+)
