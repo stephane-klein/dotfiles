@@ -120,6 +120,11 @@ vim.opt.rtp:prepend(lazypath)
 -- Au fur et à mesure que j'ajoute ici des plugins, je les supprimes de le fichier d'origin plugins.lua
 require("lazy").setup({
     {
+        "vhyrro/luarocks.nvim",
+        priority = 1000,
+        config = true,
+    },
+    {
         "folke/which-key.nvim",
         event = "VimEnter",
         config = function()
