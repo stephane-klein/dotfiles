@@ -126,16 +126,11 @@ require("lazy").setup({
     },
     {
         "folke/which-key.nvim",
-        event = "VimEnter",
-        config = function()
-            require("which-key").setup()
-
-            -- Document existing key chains
-            require("which-key").register {
-                ["<leader><leader>"] = { name = "split windows", _ = "which_key_ignore" },
-                ["<leader>s"] = { name = "[S]earch", _ = "which_key_ignore" }
-            }
-        end
+        event = "VeryLazy",
+        keys = {
+            { "<leader><leader>", group = "split windows" },
+            { "<leader>s", group = "[S]earch" }
+        }
     },
     {
         "catppuccin/nvim",
