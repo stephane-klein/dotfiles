@@ -560,7 +560,8 @@ require("lazy").setup({
                 "go", "graphql", "html", "json", "markdown",
                 "ninja", "svelte", "toml",
                 "yaml",
-                "diff", "lua", "luadoc", "vim", "vimdoc"
+                "diff", "lua", "luadoc", "vim", "vimdoc",
+                "terraform"
             },
             auto_install = false,
             sync_install = false,
