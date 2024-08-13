@@ -712,6 +712,9 @@ require("lazy").setup({
     },
     {
         "ActivityWatch/aw-watcher-vim"
+    },
+    {
+        "TheGrandmother/peggy-vim"
     }
 })
 
