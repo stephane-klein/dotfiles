@@ -93,6 +93,9 @@ vim.opt.swapfile = off
 
 -- [[ Basic Keymaps ]]
 --
+-- Disable Neovim builtin keyword completion
+vim.api.nvim_set_keymap('i', '<C-n>', '<Nop>', { noremap = true, silent = true });
+
 -- [[Window management]]
 vim.keymap.set("n", "<Leader><Up>",    "<C-W><C-K>", { desc = "Move to up window"})
 vim.keymap.set("n", "<Leader><Left>",  "<C-W><C-H>", { desc = "Move to left window"})
@@ -458,6 +461,7 @@ require("lazy").setup({
                     --  Generally you don"t need this, because nvim-cmp will display
                     --  completions whenever it has completion options available.
                     ["<C-Space>"] = cmp.mapping.complete {},
+                    ["<C-n>"] = cmp.mapping.complete {},
 
                     -- Think of <c-l> as moving to the right of your snippet expansion.
                     --  So if you have a snippet that"s like:
