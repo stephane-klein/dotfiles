@@ -717,6 +717,10 @@ require("lazy").setup({
     },
     {
         "TheGrandmother/peggy-vim"
+    },
+    {
+        'numToStr/Comment.nvim',
+        opts = {}
     }
 })
 
