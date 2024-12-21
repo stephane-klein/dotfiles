@@ -712,9 +712,10 @@ require("lazy").setup({
             },
         }
     },
-    {
-        "ActivityWatch/aw-watcher-vim"
-    },
+    -- I decided to temporarily disable Activity Watch because of flood in gnome-shell logs
+    -- {
+    --     "ActivityWatch/aw-watcher-vim"
+    -- },
     {
         "TheGrandmother/peggy-vim"
     },
