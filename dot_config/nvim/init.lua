@@ -186,10 +186,17 @@ require("lazy").setup({
 
             telescope.setup({
                 defaults = {
+                    layout_config = {
+                        scroll_speed = 1
+                    },
                     mappings = {
                         i = {
                             ["<C-Left>"] = actions.results_scrolling_left,
-                            ["<C-Right>"] = actions.results_scrolling_right
+                            ["<C-Right>"] = actions.results_scrolling_right,
+                            ["<A-Left>"] = actions.preview_scrolling_left,
+                            ["<A-Right>"] = actions.preview_scrolling_right,
+                            ["<A-Up>"] = actions.preview_scrolling_up,
+                            ["<A-Down>"] = actions.preview_scrolling_down
                         },
                     },
                 },
@@ -203,6 +210,9 @@ require("lazy").setup({
                                 ["<c-d>"] = "delete_buffer",
                             }
                         }
+                    },
+                    lsp_references = {
+                        layout_strategy = 'vertical'
                     }
                 }
             })
