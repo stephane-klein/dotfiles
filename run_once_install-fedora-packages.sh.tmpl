@@ -10,6 +10,8 @@ sudo dnf copr enable atim/starship -y
 sudo dnf config-manager --add-repo https://mise.jdx.dev/rpm/mise.repo -y
 sudo dnf update -y
 
+sudo dnf copr enable alternateved/keyd
+
 sudo dnf install -y \
     flatpak \
     git \
@@ -41,7 +43,8 @@ sudo dnf install -y \
     gnome-extensions-app \
     mise \
     bsdtar \
-    compat-lua-devel-5.1.5 # https://github.com/vhyrro/luarocks.nvim?tab=readme-ov-file#requirements
+    compat-lua-devel-5.1.5 \ # https://github.com/vhyrro/luarocks.nvim?tab=readme-ov-file#requirements
+    keyd
 
 sudo dnf copr enable vstanek/gnome-info-collect -y
 sudo dnf install gnome-info-collect -y
@@ -127,3 +130,12 @@ sudo sed -i -r "s/^installonly_limit=.*$/installonly_limit=8/" /etc/dnf/dnf.conf
 {{ end }}
 
 git config --global pull.rebase true
+
+sudo tee /etc/keyd/defaultnconf > /dev/null <<EOF
+[ids]
+*
+
+[main]
+capslock = v
+EOF
+sudo systemctl enable --now keyd
