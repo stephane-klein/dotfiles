@@ -1,4 +1,4 @@
-general.import = ["/home/stephane/.config/alacritty/themes/tokyonight/tokyonight/tokyonight_storm.yml"]
+general.import = ["/home/stephane/.config/alacritty/themes/tokyonight/tokyonight/tokyonight_storm.toml"]
 general.live_config_reload = true
 
 [env]
