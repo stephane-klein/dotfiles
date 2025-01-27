@@ -783,6 +783,10 @@ require("lazy").setup({
                 ft = { "markdown", "Avante" },
             },
         }
+    },
+    {
+        "sindrets/winshift.nvim",
+        opts = {}
     }
 })
 
