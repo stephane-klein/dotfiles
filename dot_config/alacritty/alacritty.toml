@@ -39,3 +39,4 @@ args = ["new-session", "-n", ""]
 
 [window]
 decorations = "none"
+startup_mode = "Maximized"
