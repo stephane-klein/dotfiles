@@ -155,6 +155,7 @@ See the above repository for updates as well as full license text. */
   background-color: inherit;
   -moz-user-focus: normal;
 }
+/*
 #sidebar-header::before{
   visibility: visible;
   content: "";
@@ -167,14 +168,15 @@ See the above repository for updates as well as full license text. */
   width: 14px;
   margin-top: -9px;
   margin-inline-start: -4px;
-}
+}*/
 #sidebar-switcher-target.active{
   pointer-events: none;
 }
+/*
 #sidebar-header:focus-within,
 #sidebar-header:hover{
   visibility: visible;
-}
+}*/
 #sidebar-spacer{
   flex-grow: 1;
 }
