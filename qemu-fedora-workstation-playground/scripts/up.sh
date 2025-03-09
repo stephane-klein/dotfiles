@@ -40,5 +40,5 @@ qemu-system-x86_64 \
     -display gtk,gl=on \
     -nic user,hostfwd=tcp::2222-:22 \
     -drive file=cloud-init.img,format=raw \
-    -fsdev local,id=fsdev0,path=$(pwd)/../,security_model=mapped-file \
+    -fsdev local,id=fsdev0,path=$(pwd)/shared/,security_model=mapped-file \
     -device virtio-9p-pci,fsdev=fsdev0,mount_tag=host_share
