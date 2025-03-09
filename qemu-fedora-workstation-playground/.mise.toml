@@ -1,0 +1,6 @@
+[tools]
+rclone="1.69.1"
+age="1.2.1"
+
+[env]
+_.source = { value = "./.envrc", tools = true }
