@@ -377,6 +377,7 @@ require("lazy").setup({
     },
     {
         "nvim-neo-tree/neo-tree.nvim",
+        lazy = false,
         branch = "v3.x",
         event = "VimEnter",
         dependencies = {
