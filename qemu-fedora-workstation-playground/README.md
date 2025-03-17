@@ -21,7 +21,7 @@ Operations to create the `fedora-workstation-sklein.qcow2` image from the Fedora
 $ ./scripts/decrypt_secrets.sh
 $ source .envrc
 $ rm *.qcow2
-$ ./scripts/up.h --use-fedora-cloud-upstream-image
+$ ./scripts/up.sh --use-fedora-cloud-upstream-image
 $ ./scripts/install-vm-workstation.sh
 $ ./scripts/upload-fedora-workstation.sh
 ```
