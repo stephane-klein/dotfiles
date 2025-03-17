@@ -14,7 +14,8 @@
 }
 
 @-moz-document domain("github.com") {
-    UL.emoji-suggestions {
+    [class^="AutocompleteSuggestions"] {
         display: none !important;
+        visibility: hidden !important;
     }
 }
