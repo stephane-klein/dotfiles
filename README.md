@@ -156,7 +156,7 @@ window-list@gnome-shell-extensions.gcampax.github.com
 
 - [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
 
-### Firefox extensions
+### LibreWolf extensions
 
 See this evergreen note: https://notes.sklein.xyz/extension%20Browser/
 
