@@ -158,35 +158,7 @@ window-list@gnome-shell-extensions.gcampax.github.com
 
 ### Firefox extensions
 
-- https://github.com/fabiocchetti/wide-github/
-- https://addons.mozilla.org/fr/firefox/addon/close-all-button/
-- https://addons.mozilla.org/fr/firefox/addon/languagetool/
-- https://darkreader.org/
-- https://duckduckgo.com/app
-- https://github.com/mozilla/multi-account-containers
-- https://addons.mozilla.org/fr/firefox/addon/hnes/
-- https://addons.mozilla.org/fr/firefox/addon/hohser/
-- https://addons.mozilla.org/fr/firefox/addon/joplin-web-clipper/
-- https://addons.mozilla.org/fr/firefox/addon/old-reddit-redirect/
-- https://addons.mozilla.org/fr/firefox/addon/reddit-enhancement-suite/
-- https://addons.mozilla.org/fr/firefox/addon/sponsorblock/
-- https://addons.mozilla.org/fr/firefox/addon/styl-us/
-  - I use this [Disable GitLab, GitHub Emoji Picker](https://userstyles.org/styles/244590/disable-gitlab-github-emoji-picker) userstyle
-- https://addons.mozilla.org/fr/firefox/addon/tab-counter-webext/
-- https://addons.mozilla.org/fr/firefox/addon/tournesol-extension/
-- https://addons.mozilla.org/fr/firefox/addon/ublock-origin/
-- https://addons.mozilla.org/fr/firefox/addon/video-downloadhelper/
-- https://github.com/gdh1995/vimium-c ([here is](vimium_c.json) my config that I can import)
-- https://addons.mozilla.org/fr/firefox/addon/wappalyzer/
-- https://addons.mozilla.org/fr/firefox/addon/view-page-archive/
-- https://addons.mozilla.org/en-US/firefox/addon/always-open-in-current-tab/
-- https://markdown-here.com/ (I use it to write email with Fastmail and Gmail)
-- https://github.com/filips123/PWAsForFirefox - To install all website as [Progressive Web Apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
-- https://github.com/lawrencehook/remove-youtube-suggestions
-- [DeepL Translate: Reading & writing translator by DeepL](https://addons.mozilla.org/en-US/firefox/addon/deepl-translate/)
-- [Wayback Machine by Internet Archive](https://addons.mozilla.org/en-US/firefox/addon/wayback-machine_new/) - [My toots about this extension](https://mamot.fr/@stephane_klein/111657786068559121)
-
-Firefox Theme: https://github.com/elibroftw/matte-black-theme/releases
+See this evergreen note: https://notes.sklein.xyz/extension%20Browser/
 
 ## My default directory structure
 
