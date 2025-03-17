@@ -1,8 +1,8 @@
 /* ==UserStyle==
-@name         Disable GitLab, GitHub Emoji Picker
+@name         Disable GitLab, GitHub, Discourse Emoji Picker
 @namespace    USO Archive
-@version      20220709.20.55
-@description  Disable GitLab, GitHub Emoji Picker
+@version      20250317.19.36
+@description  Disable GitLab, GitHub, Discourse Emoji Picker
 @author       Stéphane Klein
 @license      CC-BY-4.0
 ==/UserStyle== */
@@ -17,5 +17,11 @@
     [class^="AutocompleteSuggestions"] {
         display: none !important;
         visibility: hidden !important;
+    }
+}
+
+@-moz-document regexp(".*discourse.*"), regexp(".*discussion.*") {
+    .autocomplete.ac-emoji {
+        display: none !important;
     }
 }
