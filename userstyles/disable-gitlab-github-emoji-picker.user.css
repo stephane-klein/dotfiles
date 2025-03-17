@@ -1,0 +1,20 @@
+/* ==UserStyle==
+@name         Disable GitLab, GitHub Emoji Picker
+@namespace    USO Archive
+@version      20220709.20.55
+@description  Disable GitLab, GitHub Emoji Picker
+@author       Stéphane Klein
+@license      CC-BY-4.0
+==/UserStyle== */
+
+@-moz-document regexp("http.*gitlab.*") {
+    .atwho-container #at-view-58 {
+        display: none !important;
+    }
+}
+
+@-moz-document domain("github.com") {
+    UL.emoji-suggestions {
+        display: none !important;
+    }
+}
