@@ -150,6 +150,7 @@ background-logo@fedorahosted.org
 launch-new-instance@gnome-shell-extensions.gcampax.github.com
 places-menu@gnome-shell-extensions.gcampax.github.com
 window-list@gnome-shell-extensions.gcampax.github.com
+monitor@astraext.github.io
 ```
 
 ### On macOS

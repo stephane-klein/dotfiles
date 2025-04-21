@@ -139,3 +139,12 @@ sudo tee /etc/keyd/defaultnconf > /dev/null <<EOF
 capslock = v
 EOF
 sudo systemctl enable --now keyd
+
+# Dependencies to install GNOME Extension https://github.com/AstraExt/astra-monitor
+sudo dnf install \
+    libgtop2-devel \
+    nethogs \
+    iotop \
+    libdrm-devel \
+    https://github.com/Umio-Yasuno/amdgpu_top/releases/download/v0.10.4/amdgpu_top-0.10.4-1.x86_64.rpm
+# Import setting in astra-monitor-settings.json file
