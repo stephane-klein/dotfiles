@@ -1,0 +1,6 @@
+[user]
+name = "Stéphane Klein"
+email = "contact@stephane-klein.info"
+
+[ui]
+paginate = "never"
