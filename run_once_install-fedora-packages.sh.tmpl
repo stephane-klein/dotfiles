@@ -126,9 +126,6 @@ dconf load / < gnome-settings.ini
 # https://old.reddit.com/r/Fedora/comments/1aod454/to_fix_a_kernel_issue_how_can_i_safely_downgrade/kpyz6xi/
 sudo sed -i -r "s/^installonly_limit=.*$/installonly_limit=8/" /etc/dnf/dnf.conf
 
-{{   end }}
-{{ end }}
-
 git config --global pull.rebase true
 
 # Dependencies to install GNOME Extension https://github.com/AstraExt/astra-monitor
@@ -139,3 +136,6 @@ sudo dnf install \
     libdrm-devel \
     https://github.com/Umio-Yasuno/amdgpu_top/releases/download/v0.10.4/amdgpu_top-0.10.4-1.x86_64.rpm
 # Import setting in astra-monitor-settings.json file
+
+{{   end }}
+{{ end }}
