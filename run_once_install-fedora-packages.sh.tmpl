@@ -131,15 +131,6 @@ sudo sed -i -r "s/^installonly_limit=.*$/installonly_limit=8/" /etc/dnf/dnf.conf
 
 git config --global pull.rebase true
 
-sudo tee /etc/keyd/defaultnconf > /dev/null <<EOF
-[ids]
-*
-
-[main]
-capslock = v
-EOF
-sudo systemctl enable --now keyd
-
 # Dependencies to install GNOME Extension https://github.com/AstraExt/astra-monitor
 sudo dnf install \
     libgtop2-devel \
