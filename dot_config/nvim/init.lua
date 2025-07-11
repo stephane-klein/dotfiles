@@ -1,3 +1,10 @@
+-- Loading my secrets into environment variables
+-- for now, only the openroute.ia key for Avante.nvim
+local secret_path = vim.fn.stdpath('config') .. '/.secret.lua'
+if vim.fn.filereadable(secret_path) == 1 then
+    dofile(secret_path)
+end
+
 -- [[ Setting options ]]
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -747,29 +754,38 @@ require("lazy").setup({
     -- Avante (Code Assistant) https://github.com/yetone/avante.nvim/
     {
         "yetone/avante.nvim",
-        -- event = "VeryLazy",
-        lazy = false,
+        build = "make",
+        event = "VeryLazy",
         version = false,
         opts = {
-            provider = "copilot",
-            auto_suggestions_provider = "copilot",
-            copilot = {
-                model = "claude-3.5-sonnet"
-            }
+            provider = "claude",
+            providers = {
+                claude = {
+                    __inherited_from = 'openai',
+                    endpoint = "https://openrouter.ai/api/v1",
+                    model = "",
+                    api_key_name="AVANTE_OPENROUTER_API_KEY",
+                    -- Choose a model with "tools" support
+                    -- https://openrouter.ai/models?fmt=cards&supported_parameters=tools
+                    model = 'google/gemini-2.0-flash-001',
+                }
+            },
+            repo_map = {
+                ignore_patterns = { "%.git", "%.worktree", "__pycache__", "node_modules" }, -- ignore files matching these
+                negate_patterns = {}, -- negate ignore files matching these.
+            },
+            file_selector = {
+                provider = "telescope",
+                provider_opts = {},
+            },
         },
-        build = "make",
         dependencies = {
-            "stevearc/dressing.nvim",
             "nvim-lua/plenary.nvim",
             "MunifTanjim/nui.nvim",
+            -- optional
+            "stevearc/dressing.nvim",
             "hrsh7th/nvim-cmp",
             "nvim-tree/nvim-web-devicons",
-            {
-                "zbirenbaum/copilot.lua",
-                config = function()
-                    require("copilot").setup({})
-                end
-            },
             {
                 "HakonHarnes/img-clip.nvim",
                 event = "VeryLazy",
@@ -786,9 +802,9 @@ require("lazy").setup({
             {
                 'MeanderingProgrammer/render-markdown.nvim',
                 opts = {
-                    file_types = { "markdown", "Avante" },
+                    file_types = { "Avante" },
                 },
-                ft = { "markdown", "Avante" },
+                ft = { "Avante" },
             },
         }
     },
