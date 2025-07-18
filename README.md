@@ -75,7 +75,7 @@ I don't use MacOS anymore.
   - [Neoformat](https://github.com/sbdchd/neoformat)
   - [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
   - [ActivityWatch/aw-watcher-vim](https://github.com/ActivityWatch/aw-watcher-vim)
-  - [epwalsh/obsidian.nvim](https://github.com/epwalsh/obsidian.nvim)
+  - [obsidian-nvim/obsidian.nvim](https://github.com/obsidian-nvim/obsidian.nvim)
 
 
 ### On Linux

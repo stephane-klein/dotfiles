@@ -624,14 +624,14 @@ require("lazy").setup({
         end
     },
     {
-        "epwalsh/obsidian.nvim",
-        version = "v3.8.1",
+        "obsidian-nvim/obsidian.nvim",
+        version = "*",
         lazy = false,
         ft = "markdown",
-        event = {
-            "BufReadPre ~/vaults/main/**.md",
-            "BufNewFile ~/vaults/main/**.md"
-        },
+        -- event = {
+        --     "BufReadPre ~/vaults/main/**.md",
+        --     "BufNewFile ~/vaults/main/**.md"
+        -- },
         dependencies = {
             "nvim-lua/plenary.nvim",
         },
@@ -659,12 +659,18 @@ require("lazy").setup({
                     path = "~/git/github.com/stephane-klein/obsidian-quartz-playground/content/src/",
                 }
             },
-            ui = {
-                enable = false
-            },
             follow_url_func = function(url)
                 vim.fn.jobstart({"xdg-open", url})
             end,
+            ui = {
+                enable = true,
+                ignore_conceal_warn = true
+            },
+            callbacks = {
+                enter_note = function(client, note)
+                    vim.wo.conceallevel = 2
+                end
+            }
         }
     },
     {
