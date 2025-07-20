@@ -1,5 +1,5 @@
--- Loading my secrets into environment variables
--- for now, only the openroute.ia key for Avante.nvim
+-- Chargement de mes secret dans des variables d'environnement
+-- pour le moment, uniquement la clé openroute.ia pour Avante.nvim
 local secret_path = vim.fn.stdpath('config') .. '/.secret.lua'
 if vim.fn.filereadable(secret_path) == 1 then
     dofile(secret_path)
