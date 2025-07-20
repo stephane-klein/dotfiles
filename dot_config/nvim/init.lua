@@ -636,26 +636,42 @@ require("lazy").setup({
             "nvim-lua/plenary.nvim",
         },
         opts = {
-            notes_subdir = "",
-            new_notes_location = "notes_subdir",
-            note_id_func = function(title)
-                local suffix = ""
-                if title ~= nil then
-                    return title
-                else
-                    for _ = 1, 4 do
-                        suffix = suffix .. string.char(math.random(65, 90))
-                    end
-                end
-                return tostring(os.time()) .. "-" .. suffix
-            end,
             workspaces = {
                 {
                     name = "main",
                     path = "~/vaults/main/",
+                    overrides = {
+                        note_id_func = function(title)
+                            title = nil
+                            if title ~= nil then
+                                return title
+                            end
+                            return "/000 My Zettelkasten/001 Fleeting Notes/" .. os.date("%Y-%m-%d_%H%M")
+                        end,
+                        note_frontmatter_func = function(note)
+                            local out = { }
+                            if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
+                                for k, v in pairs(note.metadata) do
+                                    out[k] = v
+                                end
+                            end
+
+                            return out
+                        end,
+                        daily_notes = {
+                            folder = "Journaux/00_Daily/",
+                            date_format = "%Y-%m-%d",
+                            default_tags = { "daily-notes" },
+                            template = "Daily note template",
+                            workdays_only = false
+                        },
+                        templates = {
+                            folder = "Templates"
+                        }
+                    },
                 },
                 {
-                    name = "notes",
+                    name = "notes.sklein.xyz",
                     path = "~/git/github.com/stephane-klein/obsidian-quartz-playground/content/src/",
                 }
             },
@@ -835,3 +851,5 @@ vim.api.nvim_create_user_command(
     end,
     {}
 )
+
+require("custom")
