@@ -636,6 +636,7 @@ require("lazy").setup({
             "nvim-lua/plenary.nvim",
         },
         opts = {
+            legacy_commands = false,
             workspaces = {
                 {
                     name = "main",
