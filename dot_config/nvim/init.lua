@@ -679,9 +679,16 @@ require("lazy").setup({
             follow_url_func = function(url)
                 vim.fn.jobstart({"xdg-open", url})
             end,
+            checkboxes = {
+                ["x"] = { char = "✔", hl_group = "obsidiandone" },
+                [" "] = { char = "☐", hl_group = "obsidiantodo" },
+                [">"] = { char = ">", hl_group = "obsidianrightarrow" },
+                ["-"] = { char = "-", hl_group = "obsidiancanceled" },
+            },
             ui = {
-                enable = true,
-                ignore_conceal_warn = true
+                enable = false,
+                ignore_conceal_warn = true,
+                bullets = { char = "-", hl_group = "ObsidianBullet" }
             },
             callbacks = {
                 enter_note = function(client, note)
