@@ -647,7 +647,7 @@ require("lazy").setup({
                             if title ~= nil then
                                 return title
                             end
-                            return "/000 My Zettelkasten/001 Fleeting Notes/" .. os.date("%Y-%m-%d_%H%M")
+                            return "000 My Zettelkasten/001 Fleeting Notes/" .. os.date("%Y-%m-%d_%H%M")
                         end,
                         note_frontmatter_func = function(note)
                             local out = { }
