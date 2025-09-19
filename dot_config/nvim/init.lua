@@ -437,15 +437,27 @@ require("lazy").setup({
             -- Snippet Engine & its associated nvim-cmp source
             {
                 "L3MON4D3/LuaSnip",
+                build = "make install_jsregexp", -- Optional: for regex support
                 dependencies = {
-                    {
-                        "rafamadriz/friendly-snippets",
-                        config = function()
-                            require("luasnip.loaders.from_vscode").lazy_load()
-                            require("luasnip.loaders.from_lua").lazy_load()
-                        end,
-                    }
-                }
+                    "rafamadriz/friendly-snippets",
+                },
+                config = function()
+                    local ls = require("luasnip")
+
+                    -- Load VSCode-style snippets from friendly-snippets
+                    require("luasnip.loaders.from_vscode").lazy_load()
+
+                    -- Load custom Lua snippets
+                    require("luasnip.loaders.from_lua").load({
+                        paths = "~/.config/nvim/luasnippets/"
+                    })
+
+                    -- Optional: some nice keymaps
+                    ls.config.set_config({
+                        history = true,
+                        updateevents = "TextChanged,TextChangedI",
+                    })
+                end,
             },
             "saadparwaiz1/cmp_luasnip",
             "hrsh7th/cmp-nvim-lsp",
