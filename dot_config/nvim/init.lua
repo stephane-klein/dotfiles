@@ -666,7 +666,7 @@ require("lazy").setup({
                             end
                             return "000 My Zettelkasten/001 Fleeting Notes/" .. os.date("%Y-%m-%d_%H%M")
                         end,
-                        note_frontmatter_func = function(note)
+                        frontmatter_func = function(note)
                             local out = { }
                             if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
                                 for k, v in pairs(note.metadata) do
