@@ -193,8 +193,13 @@ require("lazy").setup({
 
             telescope.setup({
                 defaults = {
+                    layout_strategy = "vertical",
                     layout_config = {
-                        scroll_speed = 1
+                        scroll_speed = 1,
+                        vertical = {
+                            width = 0.95,
+                            height = 0.95
+                        }
                     },
                     mappings = {
                         i = {
