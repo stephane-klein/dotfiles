@@ -159,7 +159,18 @@ require("lazy").setup({
         end,
     },
     {"tpope/vim-fugitive"},
-    {"shumphrey/fugitive-gitlab.vim"},
+    { -- I use this plugin to open the current line in my browser, allowing me to take notes about the source code, for example.
+        'claydugo/browsher.nvim',
+        event = "VeryLazy",
+        keys = {
+            { '<leader>b', '<cmd>Browsher commit<CR>', mode = 'n', desc = 'Browsher commit (current line)' },
+            { '<leader>b', ":'<,'>Browsher commit<CR>gv", mode = 'v', desc = 'Browsher commit (selection)' },
+        },
+        config = function()
+            -- Specify empty to use below default options
+            require('browsher').setup()
+        end
+    },
     {"lewis6991/gitsigns.nvim"},
     { -- Fuzzy Finder (files, lsp, etc)
         "nvim-telescope/telescope.nvim",
