@@ -163,8 +163,8 @@ require("lazy").setup({
         'claydugo/browsher.nvim',
         event = "VeryLazy",
         keys = {
-            { '<leader>b', '<cmd>Browsher commit<CR>', mode = 'n', desc = 'Browsher commit (current line)' },
-            { '<leader>b', ":'<,'>Browsher commit<CR>gv", mode = 'v', desc = 'Browsher commit (selection)' },
+            { '<leader>gb', '<cmd>Browsher commit<CR>', mode = 'n', desc = '"G"o "B"rowsher commit (current line)' },
+            { '<leader>gb', ":'<,'>Browsher commit<CR>gv", mode = 'v', desc = '"G"o "B"rowsher commit (selection)' },
         },
         config = function()
             -- Specify empty to use below default options
