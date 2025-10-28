@@ -869,6 +869,12 @@ require("lazy").setup({
     {
         "sindrets/winshift.nvim",
         opts = {}
+    },
+    {
+        "kevinhwang91/nvim-bqf",
+        ft = "qf",
+        branch = "main",
+    },
     }
 })
 
