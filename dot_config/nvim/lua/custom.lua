@@ -39,3 +39,10 @@ vim.keymap.set(
     "<Cmd>:ObsidianQuickSwitch<CR>",
     { desc = "Quick switch to another note" }
 )
+
+-- Set .bu files to use YAML filetype
+vim.filetype.add({
+    extension = {
+        bu = 'yaml',
+    },
+})
