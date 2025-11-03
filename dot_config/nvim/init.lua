@@ -400,6 +400,7 @@ require("lazy").setup({
                         local server = servers[server_name] or {}
                         server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
                         vim.lsp.config[server_name] = server
+                        vim.lsp.enable(server_name)
                     end,
                 },
             }
