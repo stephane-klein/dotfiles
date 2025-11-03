@@ -876,6 +876,16 @@ require("lazy").setup({
         ft = "qf",
         branch = "main",
     },
+    {
+        'stevearc/aerial.nvim',
+        opts = {},
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+            "nvim-tree/nvim-web-devicons"
+        },
+        keys = {
+            { '<leader>|', '<cmd>AerialToggle<CR>', mode = 'n', desc='Aerial (Symbols)'}
+        }
     }
 })
 
