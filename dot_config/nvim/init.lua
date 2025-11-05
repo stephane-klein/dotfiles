@@ -219,7 +219,9 @@ require("lazy").setup({
                             ["<A-Left>"] = actions.preview_scrolling_left,
                             ["<A-Right>"] = actions.preview_scrolling_right,
                             ["<A-Up>"] = actions.preview_scrolling_up,
-                            ["<A-Down>"] = actions.preview_scrolling_down
+                            ["<A-Down>"] = actions.preview_scrolling_down,
+                            ["<C-Up>"] = actions.cycle_history_prev,
+                            ["<C-Down>"] = actions.cycle_history_next
                         },
                     },
                 },
