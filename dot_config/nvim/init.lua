@@ -442,8 +442,53 @@ require("lazy").setup({
                     position = "float",
                     popup = {
                         size = { height = "95%", width = "50%" }
+                    },
+                    mappings = {
+                        ["<leader>gcd"] = {
+                            function(state)
+                                local node = state.tree:get_node()
+                                local path = node:get_id()
+
+                                -- If it's a file, use its parent directory
+                                if node.type == "file" then
+                                    path = vim.fn.fnamemodify(path, ":h")
+                                end
+
+                                vim.cmd("cd " .. path)
+                                print("CWD changed to: " .. path)
+                            end,
+                            desc = "Change CWD to this directory",
+                        },
+                        ["<leader>gcr"] = {
+                            function(state)
+                                vim.cmd("cd " .. state.path)
+                                print("CWD: " .. state.path)
+                            end,
+                            desc = "CD to Neo-tree root",
+                        },
+                        ["<leader>gcR"] = {
+                            function(state)
+                                local root_patterns = { ".git" }
+                                local root = vim.fs.find(root_patterns, {
+                                    path = state.path,
+                                    upward = true,
+                                })[1]
+
+                                if root then
+                                    local root_dir = vim.fs.dirname(root)
+                                    vim.cmd("cd " .. root_dir)
+                                    print("CWD: " .. root_dir)
+                                else
+                                    print("No Git root found")
+                                end
+                            end,
+                            desc = "CD to Git root",
+                        },
                     }
-                }
+                },
+                filesystem = {
+                    bind_to_cwd = false
+                },
             })
         end
     },
