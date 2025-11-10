@@ -442,7 +442,7 @@ require("lazy").setup({
                     type = { enabled = false }
                 },
                 window = {
-                    position = "float",
+                    auto_expand_width = true,
                     popup = {
                         size = { height = "95%", width = "75%" }
                     },
@@ -487,7 +487,8 @@ require("lazy").setup({
                             end,
                             desc = "CD to Git root",
                         },
-                    }
+                        ["e"] = "toggle_auto_expand_width",
+                    },
                 },
                 filesystem = {
                     bind_to_cwd = false,
