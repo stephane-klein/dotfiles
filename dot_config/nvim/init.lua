@@ -432,6 +432,7 @@ require("lazy").setup({
         },
         config = function()
             require("neo-tree").setup({
+                source = { "filesystem" },
                 popup_border_style = "rounded",
                 sort_case_insensitive = false,
                 default_component_configs = {
@@ -443,7 +444,7 @@ require("lazy").setup({
                 window = {
                     position = "float",
                     popup = {
-                        size = { height = "95%", width = "50%" }
+                        size = { height = "95%", width = "75%" }
                     },
                     mappings = {
                         ["<leader>gcd"] = {
@@ -489,7 +490,10 @@ require("lazy").setup({
                     }
                 },
                 filesystem = {
-                    bind_to_cwd = false
+                    bind_to_cwd = false,
+                    follow_current_file = {
+                        enabled = true,
+                    },
                 },
             })
         end
