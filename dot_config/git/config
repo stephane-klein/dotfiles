@@ -3,6 +3,7 @@
 [user]
     name = Stéphane Klein
     email = contact@stephane-klein.info
+    signingkey = 2918F482FCE7DCBE
 [push]
     default = current
     autoSetupRemote = true
@@ -15,3 +16,7 @@
     excludesFile = /home/stephane/.config/git/ignore
 [merge]
     conflictstyle = diff3
+[commit]
+    gpgsign = true
+[tag]
+    gpgsign = true
