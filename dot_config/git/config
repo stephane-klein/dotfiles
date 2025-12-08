@@ -1,16 +1,17 @@
 [init]
-        defaultBranch = main
+    defaultBranch = main
 [user]
-        email = contact@stephane-klein.info
-        name = Stéphane Klein
+    name = Stéphane Klein
+    email = contact@stephane-klein.info
 [push]
-        default = current
+    default = current
+    autoSetupRemote = true
 [pull]
-        rebase = true
+    rebase = true
 [color]
-        ui = true
+    ui = true
 [core]
-        pager = cat
+    pager = cat
+    excludesFile = /home/stephane/.config/git/ignore
 [merge]
-        conflictstyle = diff3
-
+    conflictstyle = diff3
