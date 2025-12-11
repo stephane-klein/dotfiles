@@ -12,7 +12,7 @@
 [color]
     ui = true
 [core]
-    pager = cat
+    pager = delta
     excludesFile = /home/stephane/.config/git/ignore
 [merge]
     conflictstyle = diff3
@@ -20,3 +20,11 @@
     gpgsign = true
 [tag]
     gpgsign = true
+
+[delta]
+    side-by-side = true
+    line-numbers = true
+    syntax-theme = Monokai Extended
+
+[pager]
+    diff = delta --side-by-side
