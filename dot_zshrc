@@ -1,7 +1,4 @@
 # vim: syntax=zsh
-{{ if eq .chezmoi.os "darwin" }}
-PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-{{ end }}
 export PATH=$HOME/bin:$HOME/.local/bin/:$PATH
 
 # Path to your oh-my-zsh installation.
