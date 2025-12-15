@@ -1,6 +1,10 @@
 [mise]
 disabled=false
 
+[env_var.AIDER_API_KEY_NAME]
+variable = "AIDER_API_KEY_NAME" 
+format = "aider:[$env_value](bold fg:blue) "
+
 [custom.jj]
 description = "The current jj status"
 when = "jj --ignore-working-copy root"
