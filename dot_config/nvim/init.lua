@@ -64,9 +64,20 @@ vim.opt.splitright = true
 -- typing
 vim.opt.timeoutlen = 600
 
+-- Create some data folder
+local xdg_data_home = vim.env.XDG_DATA_HOME or (vim.env.HOME .. '/.local/share')
+
+local undo_dir = xdg_data_home .. '/nvim/undo'
+local swap_dir = xdg_data_home .. '/nvim/swap'
+local backup_dir = xdg_data_home .. '/nvim/backup'
+
+vim.fn.mkdir(undo_dir, 'p')
+vim.fn.mkdir(swap_dir, 'p')
+vim.fn.mkdir(backup_dir, 'p')
+
 -- undo
 vim.opt.undofile = true
-vim.opt.undodir = vim.env.XDG_DATA_HOME .. '/nvim/undo'
+vim.opt.undodir = undo_dir
 -- reduce from default (1000)
 vim.opt.undolevels = 500
 vim.opt.history = 10000
@@ -78,8 +89,8 @@ vim.opt.wildmenu = true
 vim.opt.wildmode = 'longest:full,full'
 
 --  swap and backup files
-vim.opt.directory = vim.env.XDG_DATA_HOME .. '/nvim/swap'
-vim.opt.backupdir = vim.env.XDG_DATA_HOME .. '/nvim/backup'
+vim.opt.directory = swap_dir
+vim.opt.backupdir = backup_dir
 
 -- buffer control; usetab = use already open buffer(s) or tab(s), if possible, when switching tabs
 vim.opt.switchbuf = 'usetab'
