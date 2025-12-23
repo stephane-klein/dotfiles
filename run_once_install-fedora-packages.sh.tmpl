@@ -12,6 +12,10 @@ sudo dnf update -y
 
 sudo dnf copr enable alternateved/keyd
 
+if [ ! -f /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:rivenirvana:lazydocker.repo ]; then
+  sudo dnf copr enable -yq rivenirvana/lazydocker
+fi
+
 sudo dnf install -y \
     flatpak \
     git \
@@ -46,7 +50,8 @@ sudo dnf install -y \
     compat-lua-devel-5.1.5 \ # https://github.com/vhyrro/luarocks.nvim?tab=readme-ov-file#requirements
     keyd \
     git-delta \
-    fd-find
+    fd-find \
+    lazydocker
 
 sudo dnf copr enable vstanek/gnome-info-collect -y
 sudo dnf install gnome-info-collect -y
