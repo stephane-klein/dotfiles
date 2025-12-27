@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+plugins=(
+    git
+    docker
+    docker-compose
+    kubectl
+    systemd
+    dnf
+    colored-man-pages
+    command-not-found
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    npm
+    yarn
+    node
+    starship
+    mise
+)
