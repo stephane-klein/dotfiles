@@ -3,4 +3,14 @@ name = "Stéphane Klein"
 email = "contact@stephane-klein.info"
 
 [ui]
-paginate = "never"
+default-command = "log"
+pager = "delta"
+diff-formatter = ":git"
+
+[merge-tools]
+diff-args = ["--line-numbers", "--side-by-side", "--navigate", "$left", "$right"]
+delta.diff-expected-exit-codes = [0, 1]
+
+[aliases]
+push-main = ["git", "push", "--bookmark", "main", "-r", "@-"]
+all = ["log", "-r", "all()"]
