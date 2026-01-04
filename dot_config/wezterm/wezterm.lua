@@ -13,9 +13,12 @@ end)
 -- }}}
 
 require("plugins.wez-tmux.plugin").apply_to_config(config, {})
+config.tab_max_width = 50
 
 -- Init https://github.com/michaelbrusegard/tabline.wez {{{
-local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
+-- local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
+local tabline = require("plugins.tabline-wez.plugin")
+
 tabline.setup({
   options = {
     theme = 'Tokyo Night',
@@ -51,21 +54,29 @@ tabline.setup({
         end,
       }
     },
-    tabline_b = { 'workspace' },
+    tabline_b = {
+      'workspace',
+    },
     tabline_c = { ' ' },
     tab_active = {
       'index',
-      { 'cwd', padding = { left = 0, right = 1 } },
+      {'cwd', max_length=100},
+      -- { 'tab',    padding = { left = 1, right = 1 } },
       { 'zoomed', padding = 0 },
     },
-    tab_inactive = { 'index', { 'cwd', padding = { left = 0, right = 1 } } },
-    tabline_x = {},
+    tab_inactive = {
+      'index',
+      {'cwd', max_length=100},
+      -- { 'tab', padding = { left = 1, right = 1 } },
+    },
+    tabline_x = {
+      'gitbranch',
+    },
     tabline_y = { 'ram', 'cpu' },
     tabline_z = { 'hostname' },
   },
 })
 tabline.apply_to_config(config)
-wezterm.log_info('Theme:', tabline.get_theme())
 --- }}}
 
 table.insert(
@@ -74,6 +85,14 @@ table.insert(
     key = 'f',
     mods = 'LEADER',
     action = wezterm.action.ToggleFullScreen,
+  }
+)
+table.insert(
+  config.keys,
+  {
+    key = 'b',
+    mods = 'LEADER',
+    action = wezterm.action.ShowLauncherArgs { flags = 'FUZZY|TABS' },
   }
 )
 
