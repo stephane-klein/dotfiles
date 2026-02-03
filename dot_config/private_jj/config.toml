@@ -1,3 +1,6 @@
+[git]
+sign-commits = true
+
 [user]
 name = "Stéphane Klein"
 email = "contact@stephane-klein.info"
