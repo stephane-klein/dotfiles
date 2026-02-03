@@ -12,5 +12,8 @@ diff-args = ["--line-numbers", "--side-by-side", "--navigate", "$left", "$right"
 delta.diff-expected-exit-codes = [0, 1]
 
 [aliases]
-push-main = ["git", "push", "--bookmark", "main", "-r", "@-"]
+move-main = ["bookmark", "set", "main", "-r"]
+push-main = ["git", "push", "--bookmark", "main"]
 all = ["log", "-r", "all()"]
+recent = ["log", "-r", "ancestors(@)", "--limit", "20"]
+
