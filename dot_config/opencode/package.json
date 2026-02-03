@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@franlol/opencode-md-table-formatter": "latest",
+    "@opencode-ai/plugin": "1.1.48"
+  }
+}

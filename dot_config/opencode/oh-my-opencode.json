@@ -1,0 +1,67 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "agents": {
+    "sisyphus": {
+      "model": "anthropic/claude-opus-4-5",
+      "variant": "max"
+    },
+    "oracle": {
+      "enabled": true,
+      "model": "anthropic/claude-opus-4-5",
+      "variant": "max"
+    },
+    "librarian": {
+      "enabled": true,
+      "model": "anthropic/claude-sonnet-4-5"
+    },
+    "explore": {
+      "enabled": true,
+      "model": "anthropic/claude-haiku-4-5"
+    },
+    "multimodal-looker": {
+      "model": "anthropic/claude-haiku-4-5"
+    },
+    "prometheus": {
+      "model": "anthropic/claude-opus-4-5",
+      "variant": "max"
+    },
+    "metis": {
+      "model": "anthropic/claude-opus-4-5",
+      "variant": "max"
+    },
+    "momus": {
+      "model": "anthropic/claude-opus-4-5",
+      "variant": "max"
+    },
+    "atlas": {
+      "model": "anthropic/claude-sonnet-4-5"
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "anthropic/claude-opus-4-5",
+      "variant": "max"
+    },
+    "ultrabrain": {
+      "model": "anthropic/claude-opus-4-5",
+      "variant": "max"
+    },
+    "artistry": {
+      "model": "anthropic/claude-opus-4-5",
+      "variant": "max"
+    },
+    "quick": {
+      "model": "anthropic/claude-haiku-4-5"
+    },
+    "unspecified-low": {
+      "model": "anthropic/claude-sonnet-4-5"
+    },
+    "unspecified-high": {
+      "model": "anthropic/claude-opus-4-5",
+      "variant": "max"
+    },
+    "writing": {
+      "model": "anthropic/claude-sonnet-4-5"
+    }
+  }
+}

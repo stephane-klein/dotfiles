@@ -1,0 +1,9 @@
+{
+  "playwright": {
+    "command": "npx",
+    "args": ["@playwright/mcp@latest", "--browser", "chromium"],
+    "env": {
+      "PLAYWRIGHT_BROWSERS_PATH": "/home/stephane/.cache/ms-playwright"
+    }
+  }
+}
